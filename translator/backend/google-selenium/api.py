@@ -34,3 +34,6 @@ class Client(object):
           traceback.print_exc()
       print(translation)
       return (translation)
+
+  def __del__(self):
+    self.driver.quit()
