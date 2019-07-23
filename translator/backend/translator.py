@@ -1,10 +1,11 @@
 from importlib import import_module
 from .keys import keys
-backends = {'google-api': 'google-api'}
+backends = {'dummy': 'dummy',
+            'google-api': 'google-api',}
 
 class Engine(object):
-  def __init__(self, engine='google-api'):
-    self.backend = import_module('translator.backend.'+engine+'.api')
+  def __init__(self, engine='dummy'):
+    self.backend = import_module('translator.backend.'+backends.get(engine, 'dummy')+'.api')
     self.client = self.backend.Client(key=keys.get(engine, None))
 
   def translate(self, text=None, src_lang='en', dst_lang='hi'):
