@@ -29,10 +29,13 @@ class Client(object):
           dest = self.driver.find_element_by_css_selector(".tlid-translation.translation")
           children = dest.find_elements_by_css_selector("*")
           for child in children:
-            translation += child.text+'\n'
+            if (child.tag_name).lower() == 'span':
+              translation += child.text
+            elif (child.tag_name).lower() == 'br':
+              translation += '\n'
       except:
           traceback.print_exc()
-      print(translation)
+      #print(translation)
       return (translation)
 
   def __del__(self):
