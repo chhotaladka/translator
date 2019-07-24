@@ -4,7 +4,7 @@ Created on 19-Jul-2019
 @author: anshul
 '''
 
-from rest_framework import viewsets, permissions
+from rest_framework import viewsets, permissions, status
 from rest_framework.response import Response
 
 from translator.rest.serializers import TranslatorSerializer
@@ -16,23 +16,16 @@ class TranslateView(viewsets.ViewSet):
         permission_classes = [permissions.AllowAny]
         return [permission() for permission in permission_classes]
 
-    def post(self, request, format=None):
-        data = request.data.get('text', None)
-        
-        engine = translator.Engine(engine='dummy')
-        translation = engine.translate(data)
-        
-        result = TranslatorSerializer({"text": data, "translation": translation}).data
-        return Response(result)
-
     def create(self, request, format=None):
-        data = request.data.get('text', None)
-        
-        engine = translator.Engine()
-        translation = engine.translate(data)
-
-        result = TranslatorSerializer({"text": data, "translation": translation}).data
-        return Response(result)
+        serializer = TranslatorSerializer(data=request.data)
+        if serializer.is_valid():
+          engine = translator.Engine()
+          translation = engine.translate(serializer.data.get('text'))
+          result = TranslatorSerializer({"text": serializer.data.get('text'), 
+                                         "translation": translation}).data
+          return Response(result, status=status.HTTP_200_OK)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
 class SaveView(viewsets.ViewSet):
     http_method_names = ['get', 'head']
