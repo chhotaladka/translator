@@ -1,0 +1,95 @@
+<form method="post" action=".">
+
+<table border="0" align="center" width="90%" cellpadding="1" cellspacing="1">
+<tr>
+  <td align="right" bgcolor="#D3DAE3" nowrap><b>From:</b></td>
+  <td bgcolor="#D3DAE3">
+    <table border="0" cellpadding="0" cellspacing="1">
+    <tr>
+      <td><select name="from"  accesskey="F">
+<option value="&quot;athakur&quot; &lt;athakur@cdot.in&gt;">&quot;athakur&quot; &lt;athakur@cdot.in&gt;</option>
+</select>&nbsp;&nbsp;</td>
+      <td><b>Priority:</b></td>
+      <td><select name="priority" >
+<option value="urgent">Urgent</option>
+<option selected="selected" value="normal">Normal</option>
+<option value="non-urgent">Non-Urgent</option>
+</select></td>
+    </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+  <td align="right" bgcolor="#D3DAE3" nowrap><b>To:</b></td>
+  <td bgcolor="#D3DAE3"><input type="text" name="to"  size="66" accesskey="T" />
+ <a href="javascript:GoAddressWindow()" title="Address book"><IMG SRC="/data/openwebmail/images/iconsets/Cool3D.English/addrbook.s.gif" border="0" align="absmiddle" alt="Address book"></a></td>
+</tr>
+<tr>
+  <td align="right" bgcolor="#D3DAE3" nowrap><b>CC:</b></td>
+  <td bgcolor="#D3DAE3"><input type="text" name="cc"  size="66" accesskey="C" /></td>
+</tr>
+<tr>
+  <td align="right" bgcolor="#D3DAE3" nowrap><b>BCC:</b></td>
+  <td bgcolor="#D3DAE3"><input type="text" name="bcc"  size="66" /></td>
+</tr>
+<tr>
+  <td align="right" bgcolor="#D3DAE3" nowrap><b>Reply-To:</b></td>
+  <td bgcolor="#D3DAE3">
+    <table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td><input type="text" name="replyto"  size="45" accesskey="R" />&nbsp;&nbsp;</td>
+      <td><b>Confirm Reading</b></td>
+      <td><label><input type="checkbox" name="confirmreading" value="1" /></label></td>
+    </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+  <td align="right" bgcolor="#D3DAE3" nowrap><b>Attachment:</b></td>
+  <td bgcolor="#D3DAE3"><input type="file" name="attachment"  size="45" accesskey="A" /><input type="submit" name="addbutton" value="Add" onclick="bodygethtml(); return sessioncheck();" />&nbsp;<INPUT TYPE="hidden" NAME="webdisksel" VALUE="">
+
+ <a href="#" title="WebDisk"><IMG SRC="/data/openwebmail/images/iconsets/Cool3D.English/webdisk.s.gif" border="0" align="absmiddle" alt="WebDisk"></a></td>
+</tr>
+<tr>
+  <td align="right" bgcolor="#D3DAE3" nowrap><b>Subject:</b></td>
+  <td bgcolor="#D3DAE3">
+    <table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td><input type="text" name="subject"  size="45" accesskey="S" />&nbsp;&nbsp;</td>
+      <td><b>Backup sent message</b></td>
+      <td><label><input type="checkbox" name="backupsentmsg" value="1" checked="checked" /></label></td>
+    </tr>
+    </table>
+  </td>
+</tr>
+
+<tr>
+  <td colspan="2" bgcolor="#EAEDF2" class=msgbody>
+<table cellspacing="2" cellpadding="2" border="0"><tr><td align="center"><input type="submit" name="sendbutton" value="Send" accesskey="G" override="1" onclick="bodygethtml(); return (sessioncheck() &amp;&amp; sendcheck());" /></td>
+<td align="center"><input type="submit" name="savedraftbutton" value="Save Draft" accesskey="W" override="1" onclick="bodygethtml(); return sessioncheck();" /></td>
+<td nowrap align="center"><!--spellcheckstart-->
+<table cellpadding="0" cellspacing="0"><tr><td><select name="dictionary2"  onchange="JavaScript:document.spellcheckform.dictionary.value=this.value;">
+<option selected="selected" value="english">english</option>
+<option value="american">american</option>
+</select></td><td><input type="button"  name="spellcheckbutton" value="Spell Check" onclick="owmspellcheck(); return (sessioncheck() &amp;&amp; document.spellcheckform.submit());" override="1" title="aspell" /></td></tr></table><!--spellcheckend-->
+</td>
+<td align="center">
+<!--newmsgformatstart-->
+<table cellspacing="1" cellpadding="1" border="0"><tr><td nowrap align="right">&nbsp;MsgFormat</td><td><select name="newmsgformat"  onclick="msgfmthelp();">
+<option value="text">Text</option>
+</select><INPUT TYPE="hidden" NAME="msgformat" VALUE="text">
+</td></tr></table>
+<!--newmsgformatend-->
+</td>
+<td align="center"><input type="button"  name="cancelbutton" value="Cancel" onclick="document.cancelform.submit();" override="1" /></td>
+<td><!--kbdiconstart-->
+<!--kbdiconend-->
+</td>
+</tr></table>
+
+<table width="100%" cellspacing="1" cellpadding="0" border="0"><tr valign=top><td width="2"></td><td>
+<textarea name="body"  rows="28" cols="88" accesskey="M" wrap="hard" id="body">
+
+</textarea></td><td width="2"></td></tr></table>
+
+</form><!-- End of message composition form -->

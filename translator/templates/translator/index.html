@@ -1,4 +1,12 @@
 {% extends "translator/base.html" %}
+{% load static %}
+
+{% block js %}
+<script src="{% static "js/translateDemo.js" %}" ></script>
+{% endblock %}
+
 {% block content %}
-<!-- Show the form here (render via JS?) -->
+<div>
+  {% include "translator/form.html" %}
+</div>
 {% endblock %}

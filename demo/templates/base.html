@@ -4,15 +4,15 @@
   <head>
     <title>Translator Project</title>
     <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
-  </head>
-  <body>
-    {% block content %}
-    <h1>Home Page</h1>
-    {% endblock %}
     <script src="{% static "js/jquery-3.3.1.min.js" %}" ></script>
     
     {% block js %}
 
+    {% endblock %}
+  </head>
+  <body>
+    {% block content %}
+    <h1>Home Page</h1>
     {% endblock %}
   </body>
 </html>
