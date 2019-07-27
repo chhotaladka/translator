@@ -43,6 +43,17 @@ $(document).ready(function(){
       return(false);
     },
     
+    addSaveButton: function(){
+      console.log('Adding Save button to DOM');
+      
+      cancelButton = $('input[name="translateButton"]');
+      tdElement = cancelButton.closest('td');
+      tdElement.after("<td align='center'><input id='saveButton' type='button'  name='saveButton' value='Save'/></td>");
+      $('#saveButton').on("click", translator.saveTranslation);
+      
+      return(false);
+    },
+    
     renderTranslation: function(response){
         console.log(response);
         
@@ -79,10 +90,47 @@ $(document).ready(function(){
       }
       
       return(false);
+    },
+    
+    saveTranslation: function(event){
+        console.log('Saving...');
+      
+      event.preventDefault();
+      text = $('#body').val();
+      src = text.slice(0, text.indexOf('********'));
+      dest = text.slice(text.indexOf('********')+'********'.length, text.length);
+      console.log('Text: '+src.trim());
+      console.log('Translation: '+dest.trim());
+      
+      if (text.length >0){
+        data = {'text': src,
+                'translation': dest};
+        $.ajaxSetup({
+                  beforeSend: function(xhr, settings) {
+                      if (!translator.csrfSafeMethod(settings.type) && !this.crossDomain) {
+                          xhr.setRequestHeader("X-CSRFToken", translator.csrftoken);
+                      }
+                  }
+              });
+        $.ajax({
+                cache: false,
+                url : translator.urls.save,
+                type: translator.save_method,
+                dataType : "json",
+                contentType: "application/json;",
+                data : JSON.stringify(data),
+                context : this,
+                success : function(response){console.log('Saved.')},
+                error : translator.handleAjaxError
+              });
+      }
+      
+      return(false);
     }
   };
   
   translator.csrftoken = translator.getCookie('csrftoken');
   
   translator.addTranslateButton();
+  translator.addSaveButton();
 });

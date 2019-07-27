@@ -11,6 +11,7 @@ from translator.rest.serializers import TranslatorSerializer
 from translator.backend import translator
 
 from translator.models import (Wordlist, Translations)
+from django.shortcuts import get_object_or_404
 
 class TranslateView(viewsets.ViewSet):
     http_method_names = ['post', 'put']
@@ -30,9 +31,12 @@ class TranslateView(viewsets.ViewSet):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
 class SaveView(viewsets.ViewSet):
-    http_method_names = ['get', 'head']
+    http_method_names = ['get', 'head', 'post', 'put']
     def get_permissions(self):
-        permission_classes = [permissions.AllowAny]
+        if self.action == 'list':
+            permission_classes = [permissions.IsAdminUser]
+        else:
+            permission_classes = [permissions.AllowAny]
         return [permission() for permission in permission_classes]
 
     def post(self, request):
@@ -63,14 +67,17 @@ class SaveView(viewsets.ViewSet):
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         
-    def retrieve(self, request):
+    def retrieve(self, request, pk=None):
         #Access protected to authorized people only
-        result = TranslatorSerializer({"text": "Fetch from DB", "translation": "TBD"}).data
+        qs = Translations.objects.all()
+        obj = get_object_or_404(qs, pk=pk)
+        result = TranslatorSerializer(obj).data
         return Response(result)
 
     def list(self, request, format=None):
         #Access protected to authorized people only
-        result = TranslatorSerializer([{"text": "Fetch from DB", "translation": "TBD"}], many=True).data
+        qs = Translations.objects.all()
+        result = TranslatorSerializer(qs, many=True).data
         return Response(result)
 
 
