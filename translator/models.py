@@ -7,24 +7,25 @@ LANGUAGES = [('EN', 'English'),
              ('HI', 'Hindi')]
     
 class Wordlist(models.Model):
-    source = models.TextField(blank=False, null=False)
+    source = models.TextField(blank=False, 
+                              null=False, 
+                              db_index=True, 
+                              unique=True)
     src_lang = models.CharField(choices = LANGUAGES, 
-                                blank=False, 
                                 default='EN',
                                 max_length=2)
     
-    target = models.ForeignKey("Translations", 
-                               null=False, 
-                               on_delete=models.DO_NOTHING)
+    target = models.ManyToManyField("self")
 
 
 class Translations(models.Model):
-    source = models.TextField(blank=False, null=False)
+    source = models.TextField(blank=False, 
+                              null=False, 
+                              db_index=True, 
+                              unique=True)
     src_lang = models.CharField(choices = LANGUAGES, 
                                 blank=False, 
                                 default='EN',
                                 max_length=2)
     
-    target = models.ForeignKey("Translations", 
-                               null=False,
-                               on_delete=models.DO_NOTHING)
+    target = models.ManyToManyField("self")
