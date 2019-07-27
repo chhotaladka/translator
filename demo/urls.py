@@ -19,8 +19,11 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from . import views
+
 urlpatterns = [
-    path('',include('translator.urls', namespace="translator"), name='translator'),
+    path('', views.index, name='index'),
+    #path('',include('translator.urls', namespace="translator"), name='translator'),
     path('rest/', include('demo.rest.urls'), name="demo"),
     path('admin/', admin.site.urls),
 ]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
