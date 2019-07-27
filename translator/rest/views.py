@@ -55,15 +55,20 @@ class SaveView(viewsets.ViewSet):
             if translation is None or len(translation.strip()) ==0:
                 serializer.errors['translation']='This field must be provided'
                 return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-            src = Translations.objects.create(source=text, src_lang= 'EN')
-            dest = Translations.objects.create(source=translation, src_lang= 'HI')
-            src.target = dest
-            dest.target = src
-            
+            src, created = Translations.objects.get_or_create(source=text, src_lang= 'EN')
+            # if(created is False):
+            #     print('Updating, if necessary')
+            dest, created = Translations.objects.get_or_create(source=translation, src_lang= 'HI')
+            # if(created is False):
+            #     print('Updating, if necessary')
+            #print(src.target.all())
+            #print(dest)
+            src.target.add(dest)
+            dest.target.add(src)
             src.save()
             dest.save()
             
-            return Response(serializer, status=status.HTTP_200_OK)
+            return Response(serializer.data, status=status.HTTP_200_OK)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         
