@@ -68,5 +68,83 @@ class translateAPITests(BaseTest):
                           count=1,
                           status_code=status.HTTP_400_BAD_REQUEST)
 class saveAPITests(BaseTest):
-    #Nothing is allowed without login credentials
-    pass
+    #Retrieving saved lists is not allowed without credentials
+    def test_save_translation(self):
+      response = self.client.post('/rest/save/', 
+                                    {'text': 'Data needs translation.',
+                                     'translation': 'deta ko anuvaad ki jaroorat hai'})
+      response.render()
+      #print(response.rendered_content)
+      self.assertContains(response, 
+                          text='Data needs translation.',
+                          count=1,
+                          status_code=status.HTTP_200_OK)
+
+    def test_save_without_translation_gives_error(self):
+      response = self.client.post('/rest/save/', 
+                                    {'text': 'Data needs translation.'})
+      response.render()
+      #print(response.rendered_content)
+      self.assertContains(response, 
+                          text='Translation is not provided',
+                          count=1,
+                          status_code=status.HTTP_400_BAD_REQUEST)
+
+    def test_save_without_text_gives_error(self):
+      response = self.client.post('/rest/save/', 
+                                    {'translation': 'deta ko anuvaad ki jaroorat hai'})
+      response.render()
+      #print(response.rendered_content)
+      self.assertContains(response, 
+                          text='This field is required.',
+                          count=1,
+                          status_code=status.HTTP_400_BAD_REQUEST)
+
+    def test_save_empty_text_gives_error(self):
+      response = self.client.post('/rest/save/', 
+                                    {'text': '',
+                                     'translation': 'deta ko anuvaad ki jaroorat hai'})
+      response.render()
+      #print(response.rendered_content)
+      self.assertContains(response, 
+                          text='This field may not be blank.',
+                          count=1,
+                          status_code=status.HTTP_400_BAD_REQUEST)
+
+    def test_save_empty_translation_gives_error(self):
+      response = self.client.post('/rest/save/', 
+                                    {'text': 'Data needs translation.',
+                                     'translation': ''})
+      response.render()
+      #print(response.rendered_content)
+      self.assertContains(response, 
+                          text='Translation is not provided',
+                          count=1,
+                          status_code=status.HTTP_400_BAD_REQUEST)
+
+    def test_get_without_login_gives_error(self):
+        response = self.client.get('/rest/save/')
+        response.render()
+        #print(response.rendered_content)
+        self.assertContains(response, 
+                            text='Authentication credentials were not provided.',
+                            count=1,
+                            status_code=status.HTTP_403_FORBIDDEN)
+
+    def test_get_with_login_gets_list(self):
+        self.client.force_authenticate(user=self.user)
+        self.client.post('/rest/save/', 
+                                    {'text': 'Data needs translation.',
+                                     'translation': 'deta ko anuvaad ki jaroorat hai'})
+        self.client.post('/rest/save/', 
+                                    {'text': 'Data needs more translation.',
+                                     'translation': 'deta ko aur anuvaad ki jaroorat hai'})
+        response = self.client.get('/rest/save/')
+        response.render()
+        #print(response.rendered_content)
+        listing = response.rendered_content
+        #print(listing)
+        self.assertContains(response, 
+                            text='Data needs more translation.',
+                            count=1,
+                            status_code=status.HTTP_200_OK)
