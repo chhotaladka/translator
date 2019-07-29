@@ -7,7 +7,7 @@ Created on 19-Jul-2019
 from rest_framework import viewsets, permissions, status
 from rest_framework.response import Response
 
-from translator.rest.serializers import TranslatorSerializer
+from translator.rest.serializers import (TranslatorSerializer,TranslationListing)
 from translator.backend import translator
 
 from translator.models import (Wordlist, Translations)
@@ -53,8 +53,7 @@ class SaveView(viewsets.ViewSet):
             text = serializer.data.get('text')
             translation = serializer.data.get('translation', None)
             if translation is None or len(translation.strip()) ==0:
-                serializer.errors['translation']='This field must be provided'
-                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+                return Response({'detail': 'Translation is not provided'}, status=status.HTTP_400_BAD_REQUEST)
             src, created = Translations.objects.get_or_create(source=text, src_lang= 'EN')
             # if(created is False):
             #     print('Updating, if necessary')
@@ -76,13 +75,13 @@ class SaveView(viewsets.ViewSet):
         #Access protected to authorized people only
         qs = Translations.objects.all()
         obj = get_object_or_404(qs, pk=pk)
-        result = TranslatorSerializer(obj).data
+        result = TranslationListing(obj).data
         return Response(result)
 
     def list(self, request, format=None):
         #Access protected to authorized people only
         qs = Translations.objects.all()
-        result = TranslatorSerializer(qs, many=True).data
+        result = TranslationListing(qs, many=True).data
         return Response(result)
 
 
