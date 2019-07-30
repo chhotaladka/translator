@@ -12,7 +12,7 @@ class Client(object):
     chrome_options = Options()
     chrome_options.add_argument('--headless')
 
-    self.driver = webdriver.Chrome(executable_path = os.path.dirname(os.path.abspath(__file__))+"/chromedriver", chrome_options=chrome_options)
+    self.driver = webdriver.Chrome(executable_path = os.path.dirname(os.path.abspath(__file__))+"/../resources/chromedriver", chrome_options=chrome_options)
     self.url = "https://translate.google.com/#view=home&op=translate&sl=en&tl=hi"
     self.driver.get(self.url)
 
