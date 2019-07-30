@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'translator.apps.TranslatorConfig',
+    'inputtools.apps.InputtoolsConfig',
     'rest_framework',
 ]
 
