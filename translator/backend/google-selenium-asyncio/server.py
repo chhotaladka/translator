@@ -56,7 +56,7 @@ def main():
   chrome_options = Options()
   chrome_options.add_argument('--headless')
   #chrome_options.binary_location='/opt/google/chrome/google-chrome'
-  driver = webdriver.Chrome(os.path.dirname(os.path.abspath(__file__))+"/chromedriver", chrome_options=chrome_options)
+  driver = webdriver.Chrome(os.path.dirname(os.path.abspath(__file__))+"/../resources/chromedriver", chrome_options=chrome_options)
   try:
     driver.get("https://translate.google.com/#view=home&op=translate&sl=en&tl=hi")
   except:

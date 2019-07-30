@@ -140,4 +140,5 @@ REST_FRAMEWORK = {
 
 TRANSLATOR = {
         'USE_REST': True,
+        'BACKEND': 'google-selenium',
     }

@@ -13,6 +13,9 @@ from translator.backend import translator
 from translator.models import (Wordlist, Translations)
 from django.shortcuts import get_object_or_404
 
+from translator.settings import translator_settings
+
+
 class TranslateView(viewsets.ViewSet):
     http_method_names = ['post', 'put']
     def get_permissions(self):
@@ -22,7 +25,7 @@ class TranslateView(viewsets.ViewSet):
     def create(self, request, format=None):
         serializer = TranslatorSerializer(data=request.data)
         if serializer.is_valid():
-            engine = translator.Engine()
+            engine = translator.Engine(engine=translator_settings.BACKEND)
             translation = engine.translate(serializer.data.get('text'))
             result = TranslatorSerializer({"text": serializer.data.get('text'), 
                                          "translation": translation}).data
