@@ -3,6 +3,12 @@
 import os
 import sys
 
+import threading
+from importlib import import_module
+server = import_module('translator.backend.google-selenium-asyncio.server')
+selenium_server = threading.Thread(target=server.main)
+selenium_server.setDaemon(True)
+selenium_server.start()
 
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'demo.settings')
