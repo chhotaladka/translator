@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>jQuery IME example</title>
+
+	<link href="style.css" rel="stylesheet" />
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
+	<script src="../../libs/rangy/rangy-core.js"></script>
+	<script src="../../src/jquery.ime.js"></script>
+	<script src="../../src/jquery.ime.preferences.js"></script>
+	<script src="../../src/jquery.ime.inputmethods.js"></script>
+	<script src="../../src/inputtools.js"></script>
+</head>
+
+<body>
+	<div>
+		<header>
+			<h1>jQuery IME example</h1>
+		</header>
+		<div id='container'>
+			<div id="toolbar">
+				<div class='langSelector'>
+					<select name="language" id="language">
+					</select>
+				</div>
+				<div class='imeSelector'>
+					<select id="imeSelector"></select>
+				</div>
+			</div>
+			<div contenteditable="true" id="ced"></div>
+		</div>
+	</div>
+</body>
+</html>
