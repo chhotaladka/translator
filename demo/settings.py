@@ -142,3 +142,7 @@ TRANSLATOR = {
         'USE_REST': True,
         'BACKEND': 'google-selenium',
     }
+SUGGESTION = {
+    'BACKEND': 'default',
+    'NUM_WORDS': 5,
+}
