@@ -1,42 +1,6 @@
 .imeselector {
 	position: absolute;
 	/* @embed */
-	/*background: url( ../images/ime-active.png ) no-repeat left center;*/
-	/* @embed */
-	/*background-image: -webkit-linear-gradient( transparent, transparent ), url( ../images/ime-active.svg );*/
-	/* @embed */
-	/*background-image: linear-gradient( transparent, transparent ), url( ../images/ime-active.svg );
-	background-position: left 3px center;*/
-	background-color: rgba( 255, 255, 255, 0.75 );
-	height: 24px;
-	font-size: small;
-	padding: 2px 2px 1px 20px;
-	box-shadow: 0 1px 3px 0 #777;
-	margin-top: 0;
-	padding: 0px 8px;
-	border: medium none;
-	border-radius: 2px;
-	text-align: left;
-	font-family: sans-serif;
-	white-space: nowrap;
-	font-size: 12px;
-	font-weight: 400;
-	color: #919191;
-	letter-spacing: 0px;
-	outline: medium none;
-	text-decoration: none;
-	text-align: center;
-	vertical-align: middle;
-	cursor: pointer;
-
-	z-index: 1000;
-}
-.action-button > * {
-    vertical-align: middle;
-}
-
-.imeselector-icon {
-	/* @embed */
 	background: url( ../images/ime-active.png ) no-repeat left center;
 	/* @embed */
 	background-image: -webkit-linear-gradient( transparent, transparent ), url( ../images/ime-active.svg );
@@ -44,7 +8,15 @@
 	background-image: linear-gradient( transparent, transparent ), url( ../images/ime-active.svg );
 	background-color: rgba( 255, 255, 255, 0.75 );
 	background-position: left 3px center;
-	width: 20px;
+	height: 15px;
+	font-size: small;
+	padding: 2px 2px 1px 20px;
+	box-shadow: 0 1px 3px 0 #777;
+	margin-top: 0;
+	text-align: left;
+	font-family: sans-serif;
+	white-space: nowrap;
+	z-index: 1000;
 }
 
 .imeselector:hover {
