@@ -1,0 +1,59 @@
+.trans-toolbar {
+  font-size: 14px;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  /*justify-content: space-between;*/
+  line-height: normal;
+  width: 100%;
+  background-color: transparent;
+  padding: 8px;
+}
+.trans-toolbar .action-button {
+  background: none repeat scroll 0px 0px transparent;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  color: #616161;
+  position: relative;
+  min-width: 64px;
+  padding: 0px 8px;
+  margin: 4px 8px 4px 8px;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 500;
+  /*height: 30px;*/
+  letter-spacing: 0px;
+  overflow: hidden;
+  outline: medium none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+}
+.trans-toolbar .action-button > * {
+  vertical-align: middle;
+}
+.trans-toolbar .action-button svg {
+  fill: #616161 !important;
+  width: 20px;
+  height: 20px;
+}
+.trans-toolbar .action-button:hover {
+  color: #1a73e8;
+}
+.trans-toolbar .action-button:focus {
+  border: 1px solid #4d90fe;
+  color: #1a73e8;
+}
+.trans-toolbar .action-button:hover svg {
+  fill: #1a73e8 !important;
+}
+.trans-toolbar .action-button.selected {
+  background-color: rgba(66,133,244,0.12);
+  color: #1a73e8;
+  border: 1px solid #d2e3fc;
+}
+.trans-toolbar .action-button.selected svg {
+  fill: #1a73e8 !important;
+}
