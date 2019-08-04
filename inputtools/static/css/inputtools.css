@@ -6,7 +6,7 @@
   line-height: normal;
   width: 100%;
   background-color: transparent;
-  padding: 8px;
+  padding: 4px 0px;
 }
 .trans-toolbar .action-button {
   background: none repeat scroll 0px 0px transparent;
@@ -56,4 +56,7 @@
 }
 .trans-toolbar .action-button.selected svg {
   fill: #1a73e8 !important;
+}
+.trans-toolbar .action-button__text {
+  margin-left: 4px;
 }
