@@ -4,25 +4,33 @@
 	var selectorTemplate, MutationObserver;
 
 	function IMESelector( element, options ) {
-		console.log(" ### IMESelector ###")
 		this.$element = $( element );
 		this.options = $.extend( {}, IMESelector.defaults, options );
 		this.active = false;
 		this.$imeSetting = null;
 		this.$menu = null;
 		this.inputmethod = null;
+		this.timer = null;
 		this.init();
-		this.prepareInputMethods( 'hi' );
-		this.hide();
 		this.listen();
+	}
+
+	function languageListTitle() {
+		return $( '<h3>' )
+			.addClass( 'ime-lang-title' )
+			.attr( 'data-i18n', 'jquery-ime-other-languages' )
+			.text( 'Other languages' );
 	}
 
 	function imeList() {
 		return $( '<ul>' ).addClass( 'ime-list' );
 	}
 
+	function imeListTitle() {
+		return $( '<h3>' ).addClass( 'ime-list-title autonym' );
+	}
+
 	function toggleMenuItem() {
-		console.log("toggleMenuItem")
 		return $( '<div class="ime-disable selectable-row">' ).append(
 			$( '<span>' )
 				.attr( {
@@ -52,9 +60,9 @@
 		constructor: IMESelector,
 
 		init: function () {
-			console.log("INIT")
 			this.prepareSelectorMenu();
 			this.position();
+			this.$imeSetting.hide();
 		},
 
 		prepareSelectorMenu: function () {
@@ -63,9 +71,14 @@
 			this.$imeSetting = $( selectorTemplate );
 			this.$menu = $( '<div class="imeselector-menu" role="menu">' );
 			this.$menu.append(
+				imeListTitle(),
 				imeList(),
 				toggleMenuItem(),
+				languageListTitle()
 			);
+
+			this.prepareLanguageList();
+			this.$menu.append( this.helpLink() );
 
 			if ( $.i18n ) {
 				this.$menu.i18n();
@@ -73,6 +86,35 @@
 
 			this.$imeSetting.append( this.$menu );
 			$( 'body' ).append( this.$imeSetting );
+		},
+
+		stopTimer: function () {
+			if ( this.timer ) {
+				clearTimeout( this.timer );
+				this.timer = null;
+			}
+
+			this.$imeSetting.stop( true, true );
+		},
+
+		resetTimer: function () {
+			var imeselector = this;
+
+			this.stopTimer();
+
+			this.timer = setTimeout(
+				function () {
+					imeselector.$imeSetting.animate( {
+						opacity: 0,
+						marginTop: '-20px'
+					}, 500, function () {
+						imeselector.$imeSetting.hide();
+						// Restore properties for the next time it becomes visible:
+						imeselector.$imeSetting.css( 'opacity', 1 );
+						imeselector.$imeSetting.css( 'margin-top', 0 );
+					} );
+				}, this.options.timeout
+			);
 		},
 
 		focus: function () {
@@ -84,10 +126,12 @@
 
 		afterKeydown: function () {
 			this.$imeSetting.show();
+			this.resetTimer();
 		},
 
 		show: function () {
 			this.$menu.addClass( 'ime-open' );
+			this.stopTimer();
 			this.$imeSetting.show();
 
 			return false;
@@ -95,6 +139,8 @@
 
 		hide: function () {
 			this.$menu.removeClass( 'ime-open' );
+			this.resetTimer();
+
 			return false;
 		},
 
@@ -113,7 +159,6 @@
 			var imeselector = this;
 
 			imeselector.$imeSetting.on( 'click.ime', function ( e ) {
-				console.log("click: click.ime")
 				var t = $( e.target );
 
 				if ( t.hasClass( 'imeselector-toggle' ) ) {
@@ -123,11 +168,30 @@
 				return false;
 			} );
 
+			imeselector.$element.on( 'blur.ime', function () {
+				if ( !imeselector.$imeSetting.hasClass( 'ime-onfocus' ) ) {
+					imeselector.$imeSetting.hide();
+					imeselector.hide();
+				}
+			} );
+
+			// Hide the menu when clicked outside
+			$( 'html' ).click( function () {
+				imeselector.hide();
+			} );
+
+			// ... but when clicked on window do not propagate it.
+			this.$menu.on( 'click', function ( event ) {
+				event.stopPropagation();
+			} );
+
 			imeselector.$imeSetting.mouseenter( function () {
 				// We don't want the selector to disappear
 				// while the user is trying to click it
+				imeselector.stopTimer();
 				imeselector.$imeSetting.addClass( 'ime-onfocus' );
 			} ).mouseleave( function () {
+				imeselector.resetTimer();
 				imeselector.$imeSetting.removeClass( 'ime-onfocus' );
 			} );
 
@@ -138,7 +202,6 @@
 			} );
 
 			imeselector.$menu.on( 'click.ime', 'li.ime-im', function () {
-				console.log("imeselector.$menu.on click.ime: li.ime-im inputMethod")
 				imeselector.selectIM( $( this ).data( 'ime-inputmethod' ) );
 				imeselector.$element.trigger( 'setim.ime', $( this ).data( 'ime-inputmethod' ) );
 
@@ -146,7 +209,6 @@
 			} );
 
 			imeselector.$menu.on( 'click.ime', 'li.ime-lang', function () {
-				console.log("imeselector.$menu.on click.ime: li.ime-lang")
 				var im = imeselector.selectLanguage( $( this ).attr( 'lang' ) );
 
 				imeselector.$element.trigger( 'setim.ime', im );
@@ -155,14 +217,17 @@
 			} );
 
 			imeselector.$menu.on( 'click.ime', 'div.ime-disable', function () {
-				console.log("imeselector.$menu.on click.ime: div.ime-disable")
 				imeselector.disableIM();
 
 				return false;
 			} );
 
+			// Just make it work as a regular link
+			imeselector.$menu.on( 'click.ime', '.ime-help-link', function ( e ) {
+				e.stopPropagation();
+			} );
+
 			imeselector.$element.on( 'focus.ime', function ( e ) {
-				console.log("imeselector.element.on focus.ime:")
 				imeselector.selectLanguage( imeselector.decideLanguage() );
 				imeselector.focus();
 				e.stopPropagation();
@@ -195,7 +260,6 @@
 		 * @return {boolean}
 		 */
 		keydown: function ( e ) {
-			console.log("keudown shortcut key handler")
 			var ime = $( e.target ).data( 'ime' ),
 				firstInputmethod,
 				previousInputMethods,
@@ -328,7 +392,6 @@
 		 * @return {string|bool} Selected input method id or false
 		 */
 		selectLanguage: function ( languageCode ) {
-			console.log("selectLanguage "+ languageCode)
 			var ime, imePref, language;
 
 			// consider language codes case insensitive
@@ -336,8 +399,9 @@
 
 			ime = this.$element.data( 'ime' );
 			imePref = $.ime.preferences.getIM( languageCode );
-			console.log(imePref)
 			language = $.ime.languages[ languageCode ];
+
+			this.setMenuTitle( this.getAutonym( languageCode ) );
 
 			if ( !language ) {
 				return false;
@@ -352,8 +416,12 @@
 
 				return $.ime.preferences.getIM( languageCode );
 			}
-			console.log("XXXXX")
 
+			this.$menu.find( 'li.ime-lang' ).show();
+			this.$menu.find( 'li[lang=' + languageCode + ']' ).hide();
+
+			this.prepareInputMethods( languageCode );
+			this.hide();
 			// And select the default inputmethod
 			ime.setLanguage( languageCode );
 			this.inputmethod = null;
@@ -374,21 +442,42 @@
 		},
 
 		/**
+		 * Set the title of the selector menu.
+		 *
+		 * @param {string} title
+		 */
+		setMenuTitle: function ( title ) {
+			this.$menu.find( '.ime-list-title' ).text( title );
+		},
+
+		/**
 		 * Decide on initial language to select
 		 * @return {string}
 		 */
 		decideLanguage: function () {
-			console.log("decideLanguage")
+			if ( $.ime.preferences.getLanguage() ) {
+				// There has been an override by the user,
+				// so return the language selected by user
+				return $.ime.preferences.getLanguage();
+			}
+
+			if ( this.$element.attr( 'lang' ) &&
+				$.ime.languages[ this.$element.attr( 'lang' ) ]
+			) {
+				return this.$element.attr( 'lang' );
+			}
+
+			// There is either no IMs for the given language attr
+			// or there is no lang attr at all.
 			return $.ime.preferences.getDefaultLanguage();
 		},
 
-		/**RAJEEV
+		/**
 		 * Select an input method
 		 *
 		 * @param {string} inputmethodId
 		 */
 		selectIM: function ( inputmethodId ) {
-			console.log("selectIM: " + inputmethodId)
 			var imeselector = this,
 				ime;
 
@@ -402,32 +491,31 @@
 			ime = this.$element.data( 'ime' );
 
 			if ( inputmethodId === 'system' ) {
-				this.disableIM();//RAJEEV
+				this.disableIM();
+
 				return;
 			}
-			// Load the language rules js file
+
 			ime.load( inputmethodId ).done( function () {
-				console.log("ime.load")
 				imeselector.inputmethod = $.ime.inputmethods[ inputmethodId ];
 				imeselector.hide();
 				ime.enable();
 				ime.setIM( inputmethodId );
-
 				imeselector.$imeSetting.find( 'a.ime-name' ).text(
 					$.ime.sources[ inputmethodId ].name
 				);
-				imeselector.$imeSetting.find( 'a.ime-name' ).data('ime-inputmethod', inputmethodId);//CHECK
 
 				imeselector.position();
 
+				// Save this preference
+				$.ime.preferences.save();
 			} );
 		},
 
-		/**RAJEEV
+		/**
 		 * Disable the inputmethods (Use the system input method)
 		 */
 		disableIM: function () {
-			console.log("disableIM")
 			this.$menu.find( '.ime-checked' ).removeClass( 'ime-checked' );
 			this.$menu.find( 'div.ime-disable' ).addClass( 'ime-checked' );
 			this.$element.data( 'ime' ).disable();
@@ -435,6 +523,57 @@
 			this.hide();
 			this.position();
 
+			// Save this preference
+			$.ime.preferences.save();
+		},
+
+		/**
+		 * Prepare language list
+		 */
+		prepareLanguageList: function () {
+			var languageCodeIndex,
+				$languageListWrapper,
+				$languageList,
+				languageList,
+				$languageItem,
+				$language,
+				languageCode,
+				language;
+
+			// Language list can be very long, so we use a container with
+			// overflow auto
+			$languageListWrapper = $( '<div class="ime-language-list-wrapper">' );
+			$languageList = $( '<ul class="ime-language-list">' );
+
+			if ( $.isFunction( this.options.languages ) ) {
+				languageList = this.options.languages();
+			} else {
+				languageList = this.options.languages;
+			}
+
+			for ( languageCodeIndex in languageList ) {
+				languageCode = languageList[ languageCodeIndex ];
+				language = $.ime.languages[ languageCode ];
+
+				if ( !language ) {
+					continue;
+				}
+
+				$languageItem = $( '<a>' )
+					.attr( 'href', '#' )
+					.text( this.getAutonym( languageCode ) )
+					.addClass( 'selectable-row-item autonym' );
+				$language = $( '<li class="ime-lang selectable-row">' ).attr( 'lang', languageCode );
+				$language.append( $languageItem );
+				$languageList.append( $language );
+			}
+
+			$languageListWrapper.append( $languageList );
+			this.$menu.append( $languageListWrapper );
+
+			if ( this.options.languageSelector ) {
+				this.$menu.append( this.options.languageSelector() );
+			}
 		},
 
 		/**
@@ -443,7 +582,6 @@
 		 * @param {string} languageCode
 		 */
 		prepareInputMethods: function ( languageCode ) {
-			console.log("prepareInputMethods: " + languageCode)
 			var language = $.ime.languages[ languageCode ],
 				$imeList = this.$menu.find( '.ime-list' ),
 				imeSelector = this;
@@ -469,14 +607,35 @@
 					.addClass( 'ime-im selectable-row' )
 					.append( '<span class="ime-im-check"></span>', $imeItem );
 
+				if ( imeSelector.options.helpHandler ) {
+					$inputMethod.append( imeSelector.options.helpHandler.call( imeSelector, inputmethod ) );
+				}
+
 				$imeList.append( $inputMethod );
 			} );
 		},
 
+		/**
+		 * Create a help link element.
+		 *
+		 * @return {jQuery}
+		 */
+		helpLink: function () {
+			return $( '<div class="ime-help-link selectable-row">' )
+				.append( $( '<a>' ).text( 'Help' )
+					.addClass( 'selectable-row-item' )
+					.attr( {
+						href: 'http://github.com/wikimedia/jquery.ime',
+						target: '_blank',
+						'data-i18n': 'jquery-ime-help'
+					} )
+				);
+		}
 	};
 
 	IMESelector.defaults = {
 		defaultLanguage: 'en',
+		timeout: 2500 // Milliseconds after which IME widget hides itself.
 	};
 
 	/*
@@ -500,16 +659,9 @@
 
 	$.fn.imeselector.Constructor = IMESelector;
 
-	selectorTemplate = '' +
-	'<div class="imeselector imeselector-toggle action-button">' +
-		'<span class="" style="color: #1a73e8; font-weight: 500; margin-right:8px;">हिन्दी</span>' +
-		'<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="margin-right:8px;">' +
-		  '<path d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z"/>' +
-		  '<path d="M0 0h24v24H0zm0 0h24v24H0z" fill="none"/>' +
-		'</svg>' +
+	selectorTemplate = '<div class="imeselector imeselector-toggle">' +
 		'<a class="ime-name imeselector-toggle" href="#"></a>' +
-		'<b class="ime-setting-caret imeselector-toggle"></b>' +
-	'</div>';
+		'<b class="ime-setting-caret imeselector-toggle"></b></div>';
 
 	MutationObserver = window.MutationObserver ||
 		window.WebKitMutationObserver ||

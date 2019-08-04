@@ -318,7 +318,6 @@
 		 * Disable the input method
 		 */
 		disable: function () {
-			console.log("ime: disable")
 			this.active = false;
 			$.ime.preferences.setIM( 'system' );
 		},
