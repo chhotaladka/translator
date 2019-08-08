@@ -1,10 +1,12 @@
 const scriptsToLoad = [
+	"static/js/jquery/jquery-3.3.1.min.js",
 	"static/js/ime/libs/rangy/rangy-core.js",
 	"static/js/ime/src/jquery.ime.js",
 	"static/js/ime/src/jquery.ime.preferences.js",
 	"static/js/ime/src/jquery.ime.inputmethods.js",
 	"static/js/translator.js"
 ];
+
 const stylesToLoad = [
 	"static/css/inputtools.css"
 ];
@@ -18,6 +20,7 @@ const systemInputMethod = 'system';
 
 
 function loadScript(url) {
+	//console.info(url);
 	return new Promise((resolve, reject) => {
 		// Adding the script tag to the head
 		var head = document.head;
@@ -341,14 +344,14 @@ function bindEvents() {
 
 document.addEventListener('DOMContentLoaded', function(event) {
 
-	loadScript("static/js/jquery/jquery-3.3.1.min.js")
+	Promise.resolve(stylesToLoad.map((file) => loadStyle(file)))
 		.then(() => {
-			const promiseArr = scriptsToLoad.map((file) => loadScript(file))
-				.concat(stylesToLoad.map((file) => loadStyle(file)));
-			return Promise.all(promiseArr)
+			Promise.each = async function(arr) {
+			   for(const item of arr) await loadScript(item);
+			}
+			return Promise.each(scriptsToLoad);
 		})
 		.then(() => {
-
 			if (createActionButtons()) {
 				bindEvents();
 			}
