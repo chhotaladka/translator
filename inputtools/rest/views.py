@@ -4,6 +4,12 @@ from django.shortcuts import get_object_or_404
 
 from inputtools.rest.serializers import WordSuggestionSerializer
 
+from inputtools.backend import suggestions as suggest
+
+from inputtools.settings import suggestion_settings
+
+
+
 
 class WordSuggestionView(viewsets.ViewSet):
     http_method_names = ['post', 'put']
@@ -14,8 +20,9 @@ class WordSuggestionView(viewsets.ViewSet):
     def create(self, request, format=None):
         serializer = WordSuggestionSerializer(data=request.data)
         if serializer.is_valid():
+            engine = suggest.Engine(engine=suggestion_settings.BACKEND)
             word = serializer.data.get('word')
-            suggestions = "suggestion 123" # Prepare suggestion list for the `word`
+            suggestions = engine.suggest(word)
             result = WordSuggestionSerializer({"word": word, 
                                          "suggestions": suggestions}).data
             return Response(result, status=status.HTTP_200_OK)
