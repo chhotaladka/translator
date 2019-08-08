@@ -7,6 +7,9 @@ import traceback
 import time
 import os
 
+class CloseException(Exception):
+  def __init__(self, *args, **kwargs):
+    super().__init__(*args, **kwargs)  
 
 def translate(driver, text=None):
     if text is not None and len(text.strip()) > 0:
@@ -16,7 +19,7 @@ def translate(driver, text=None):
         if src is not None:
           src.clear();
           src.send_keys(text)
-          time.sleep(0.5)
+          time.sleep(0.9)
           dest = driver.find_element_by_css_selector(".tlid-translation.translation")
           children = dest.find_elements_by_css_selector("*")
           for child in children:
@@ -42,6 +45,10 @@ class EchoServerClientProtocol(asyncio.Protocol):
 
   def data_received(self, data):
     message = data.decode()
+    if(message=='ctrl:shutdown')
+    {
+      print('terminate thread')
+    }
     print('Data received: {!r}'.format(message))
 
     translation = translate(self.driver, message)
@@ -73,6 +80,9 @@ def main():
     try:
       loop.run_forever()
     except KeyboardInterrupt:
+      pass
+    except CloseException():
+      print('Shut down command received')
       pass
 
     try:
