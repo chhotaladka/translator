@@ -140,4 +140,9 @@ REST_FRAMEWORK = {
 
 TRANSLATOR = {
         'USE_REST': True,
+        'BACKEND': 'google-selenium-asyncio',
     }
+SUGGESTION = {
+    'BACKEND': 'default',
+    'NUM_WORDS': 5,
+}
