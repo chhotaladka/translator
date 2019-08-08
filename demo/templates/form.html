@@ -1,4 +1,5 @@
-<form method="post" action=".">
+{% load static %}
+<form method="post">
 
 <table border="0" align="center" width="90%" cellpadding="1" cellspacing="1">
 <tr>
@@ -86,6 +87,13 @@
 <!--kbdiconend-->
 </td>
 </tr></table>
+
+<!-- ####################################################################### -->
+			<!-- Translator Wrapper HTML -->
+			<div id="translatorWrapper" class="translator-wrapper">
+        <script src="{% static 'js/inputtools.js' %}" ></script>
+			</div> <!-- END: Translator Wrapper HTML -->
+<!-- ####################################################################### -->
 
 <table width="100%" cellspacing="1" cellpadding="0" border="0"><tr valign=top><td width="2"></td><td>
 <textarea name="body"  rows="28" cols="88" accesskey="M" wrap="hard" id="body">
