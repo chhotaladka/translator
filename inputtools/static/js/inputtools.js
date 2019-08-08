@@ -54,9 +54,33 @@ function loadStyle(url) {
 }
 
 var inputtools = {
+	// status of inputtools
+	active: false,
+
+	// enable/disable buttton element
+
+	/**
+	 * Check whether the inputtool is active or not
+	 *
+	 * @return {boolean}
+	 */
+	isActive: function () {
+		return this.active;
+	},
+
+	// Disable the input method
+	disable: function () {
+		this.active = false;
+	},
+
+	// Enable the input method
+	enable: function () {
+		this.active = true;
+	},
 
 	// toggle input method
 	toggleIM: function() {
+		//console.log(this);
 		if (this.dataset.inputmethod === systemInputMethod) {
 			// Change the input method to hindiInputMethod
 			console.log("Enabling IM")
@@ -65,12 +89,14 @@ var inputtools = {
 					ime.setIM( hindiInputMethod );
 				});
 			ime.enable();
+			inputtools.enable();
 			this.setAttribute('data-inputmethod', hindiInputMethod);
 			this.classList.add('selected');
 		} else {
 			// Disable the inputMethods (Use the system input method)
 			console.log("Disabling IM")
 			ime.disable();
+			inputtools.disable();
 			this.setAttribute('data-inputmethod', systemInputMethod);
 			this.classList.remove('selected');
 		}
@@ -88,6 +114,11 @@ var inputtools = {
 				event.preventDefault();
 				inputtools.toggleIM.call(this);
 			});
+			// .addEventListener("click", event => {
+			// 	event.preventDefault();
+			// 	this.toggleIM();
+			// 	// do something
+			// });
 	},
 
 	// register IME on all target input elements
@@ -111,6 +142,124 @@ var inputtools = {
 		//ime.getLanguage()
 		// Get input methods for a given `language`
 		//ime.getInputMethods( language )
+	},
+
+};
+
+var suggestions = {
+
+	// Create html elements for input suggestions
+	createElements: function() {
+		let box = document.createElement("div");
+		box.className = "ita-ppe-box";
+		box.setAttribute("style", "direction: ltr; display: none; -moz-user-select: none;");
+		box.setAttribute("tabindex", "-1");
+
+		let edit = document.createElement("div");
+		edit.className = "ita-ppe-edit";
+		let span = document.createElement("span");
+		span.className = "ita-ppe-uds";
+		edit.appendChild(span);
+		span = document.createElement("span");
+		span.className = "ita-ppe-cur";
+		edit.appendChild(span);
+		box.appendChild(edit);
+
+		let div = document.createElement("div");
+		div.className = "ita-ppe-div";
+		let list = document.createElement("div");
+		list.className = "ita-ppe-can-list";
+		div.appendChild(list);
+		box.appendChild(div);
+
+		document.body.appendChild(box);
+	},
+
+	// Listen for events and bind to handlers
+	listen: function () {
+		console.log("listen");
+		document
+			.getElementById("body")
+			.addEventListener("keydown", event => {
+				suggestions.keypress(event);
+	  		// do something
+			});
+		//			.addEventListener( 'keydown', inputtools.keypress);
+	},
+
+	/**
+	 * Keypress handler
+	 *
+	 * @param {jQuery.Event} e Event
+	 * @return {boolean}
+	 */
+	keypress: function ( e ) {
+		console.log(e.code);
+		console.log(this);
+		return false;
+		var altGr = false,
+			c, input, replacement;
+
+		if ( !this.active ) {
+			return true;
+		}
+
+		if ( !this.inputmethod ) {
+			return true;
+		}
+
+		// handle backspace
+		if ( e.which === 8 ) {
+			// Blank the context
+			this.context = '';
+			return true;
+		}
+
+		if ( e.altKey || e.altGraphKey ) {
+			altGr = true;
+		}
+
+		// Don't process ASCII control characters except linefeed,
+		// as well as anything involving Ctrl, Meta and Alt,
+		// but do process extended keymaps
+		if ( ( e.which < 32 && e.which !== 13 && !altGr ) || e.ctrlKey || e.metaKey ) {
+			// Blank the context
+			this.context = '';
+
+			return true;
+		}
+
+		c = String.fromCharCode( e.which );
+
+		// Append the character being typed to the preceding few characters,
+		// to provide context for the transliteration regexes.
+		input = this.textEntry.getTextBeforeSelection( this.inputmethod.maxKeyLength );
+		replacement = this.transliterate( input + c, this.context, altGr );
+
+		// Update the context
+		this.context += c;
+
+		if ( this.context.length > this.inputmethod.contextLength ) {
+			// The buffer is longer than needed, truncate it at the front
+			this.context = this.context.substring(
+				this.context.length - this.inputmethod.contextLength
+			);
+		}
+
+		// Allow rules to explicitly define whether we match something.
+		// Otherwise we cannot distinguish between no matching rule and
+		// rule that provides identical output but consumes the event
+		// to prevent normal behavior. See Udmurt layout which uses
+		// altgr rules to allow typing the original character.
+		if ( replacement.noop ) {
+			return true;
+		}
+
+		this.textEntry.replaceTextAtSelection( input.length, replacement.output );
+
+		e.stopPropagation();
+
+		return false;
 	},
 
 };
@@ -165,6 +314,19 @@ function createActionButtons() {
 	btn3.insertAdjacentHTML('beforeend', '<span class="action-button__text">Save</span>');
 	toolbar.appendChild(btn3);
 
+	var btn4 = document.createElement("button");
+	btn4.setAttribute("class", "action-button help");
+	btn4.setAttribute("id", "helpButton");
+	btn4.setAttribute("title", "Help");
+	var svg_help =
+		'<svg name="help_outline" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">' +
+			'<path fill="none" d="M0 0h24v24H0z"/>' +
+			'<path d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/>' +
+		'</svg>';
+	btn4.insertAdjacentHTML('beforeend', svg_help);
+	btn4.insertAdjacentHTML('beforeend', '<span class="action-button__text"></span>');
+	toolbar.appendChild(btn4);
+
 	wrapper.appendChild(toolbar);
 	return true;
 }
@@ -190,6 +352,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 			if (createActionButtons()) {
 				bindEvents();
 			}
-
+			suggestions.createElements();
+			//suggestions.listen();
 	});
 });
