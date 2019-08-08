@@ -7,9 +7,23 @@ import traceback
 import time
 import os
 
-class CloseException(Exception):
-  def __init__(self, *args, **kwargs):
-    super().__init__(*args, **kwargs)  
+import signal
+
+loop = None
+driver = None
+server = None
+
+def handler(signum, frame):
+  print('Shutting down...')
+  if driver is not None:
+    driver.close()
+    driver.quit()
+  if server is not None and loop is not None:
+    server.close()
+    loop.run_until_complete(server.wait_closed())
+    loop.close()
+  import sys
+  sys.exit(0)
 
 def translate(driver, text=None):
     if text is not None and len(text.strip()) > 0:
@@ -36,7 +50,8 @@ def translate(driver, text=None):
 class EchoServerClientProtocol(asyncio.Protocol):
   def __init__(self, driver, *args, **kwargs):
     super().__init__(*args, **kwargs)
-    self.driver = driver 
+    self.driver = driver
+    self.terminate = False
 
   def connection_made(self, transport):
     peername = transport.get_extra_info('peername')
@@ -45,10 +60,6 @@ class EchoServerClientProtocol(asyncio.Protocol):
 
   def data_received(self, data):
     message = data.decode()
-    if(message=='ctrl:shutdown')
-    {
-      print('terminate thread')
-    }
     print('Data received: {!r}'.format(message))
 
     translation = translate(self.driver, message)
@@ -60,6 +71,12 @@ class EchoServerClientProtocol(asyncio.Protocol):
     self.transport.close()
 
 def main():
+  global loop
+  global server
+  global driver
+
+  signal.signal(signal.SIGTERM, handler)
+
   chrome_options = Options()
   chrome_options.add_argument('--headless')
   #chrome_options.binary_location='/opt/google/chrome/google-chrome'
@@ -80,9 +97,6 @@ def main():
     try:
       loop.run_forever()
     except KeyboardInterrupt:
-      pass
-    except CloseException():
-      print('Shut down command received')
       pass
 
     try:

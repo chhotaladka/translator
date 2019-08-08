@@ -3,11 +3,12 @@
 import os
 import sys
 
-import threading
+import multiprocessing
 from importlib import import_module
 server = import_module('translator.backend.google-selenium-asyncio.server')
-selenium_server = threading.Thread(target=server.main)
-#selenium_server.setDaemon(True)
+client = import_module('translator.backend.google-selenium-asyncio.api')
+selenium_server = multiprocessing.Process(target=server.main)
+selenium_server.daemon = True
 selenium_server.start()
 
 def main():
@@ -25,4 +26,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+    selenium_server.terminate()
     selenium_server.join()
