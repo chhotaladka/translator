@@ -42,6 +42,13 @@
   width: 20px;
   height: 20px;
 }
+.trans-toolbar .action-button.help svg {
+  height: inherit !important;
+}
+.trans-toolbar .action-button.help {
+  border: medium none !important;
+  min-width: inherit;
+}
 .trans-toolbar .action-button:hover {
   color: #1a73e8;
 }
@@ -63,6 +70,22 @@
 }
 .trans-toolbar .action-button__text {
   margin-left: 4px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    flex-wrap: wrap;
+}
+.row.r2l {
+    flex-direction: row-reverse;
+}
+.row.fill {
+	justify-content: space-between;
+}
+.row.center {
+	justify-content: center;
 }
 
 .ita-ppe-box {

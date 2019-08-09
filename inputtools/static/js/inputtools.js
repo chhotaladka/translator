@@ -151,6 +151,9 @@ var inputtools = {
 
 var suggestions = {
 
+	// Max number of suggestions
+	max_suggest: 6,
+
 	// Create html elements for input suggestions
 	createElements: function() {
 		let box = document.createElement("div");
@@ -172,6 +175,14 @@ var suggestions = {
 		div.className = "ita-ppe-div";
 		let list = document.createElement("div");
 		list.className = "ita-ppe-can-list";
+		for(let x = 0; x < this.max_suggest; x++) {
+			var li = document.createElement("div");
+			li.className = "ita-ppe-can";
+			li.setAttribute("style", "-moz-user-select: none;");
+			li.innerHTML = x + ". desolation";
+			list.appendChild(li);
+		}
+		list.firstChild.classList.add("ita-ppe-hlt");
 		div.appendChild(list);
 		box.appendChild(div);
 
@@ -197,8 +208,9 @@ var suggestions = {
 	 * @return {boolean}
 	 */
 	keypress: function ( e ) {
+		//console.log($('#body').prop('selectionStart') + ',' + $('#body').prop('selectionEnd'));
 		console.log(e.code);
-		console.log(this);
+		//console.log(this);
 		return false;
 		var altGr = false,
 			c, input, replacement;
@@ -317,10 +329,12 @@ function createActionButtons() {
 	btn3.insertAdjacentHTML('beforeend', '<span class="action-button__text">Save</span>');
 	toolbar.appendChild(btn3);
 
-	var btn4 = document.createElement("button");
+	var btn4 = document.createElement("a");
 	btn4.setAttribute("class", "action-button help");
 	btn4.setAttribute("id", "helpButton");
 	btn4.setAttribute("title", "Help");
+	btn4.setAttribute("href", "/help");
+	btn4.setAttribute("target", "_blank");
 	var svg_help =
 		'<svg name="help_outline" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">' +
 			'<path fill="none" d="M0 0h24v24H0z"/>' +
