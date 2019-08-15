@@ -13,26 +13,21 @@ class Client(object):
     chrome_options.add_argument('--headless')
 
     self.driver = webdriver.Chrome(executable_path = os.path.dirname(os.path.abspath(__file__))+"/../resources/chromedriver", chrome_options=chrome_options)
-    self.url = "https://translate.google.com/#view=home&op=translate&sl=en&tl=hi"
+    self.url = "https://www.bing.com/translator?from=en&to=hi"
     self.driver.get(self.url)
 
   def translate(self, text=None, src_lang='en', dst_lang='hi'):
     if text is not None and len(text.strip()) > 0:
       translation = ''
       try:
-        #self.driver.get("https://translate.google.com/#view=home&op=translate&sl=en&tl=hi")
-        src = self.driver.find_element_by_id("source")
+        src = self.driver.find_element_by_id("tta_input")
         if src is not None:
           src.clear();
           src.send_keys(text)
           time.sleep(1)
-          dest = self.driver.find_element_by_css_selector(".tlid-translation.translation")
-          children = dest.find_elements_by_css_selector("*")
-          for child in children:
-            if (child.tag_name).lower() == 'span':
-              translation += child.text
-            elif (child.tag_name).lower() == 'br':
-              translation += '\n'
+          dest = self.driver.find_element_by_id("tta_output")
+          translation = dest.get_attribute('value')
+
       except:
           traceback.print_exc()
       #print(translation)
