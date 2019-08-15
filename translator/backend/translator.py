@@ -4,10 +4,11 @@ from .keys import keys
 backends = {'dummy': 'dummy',
             'google-api': 'google-api',
             'google-selenium': 'google-selenium',
-            'google-selenium-asyncio':'google-selenium-asyncio'}
+            'google-selenium-asyncio':'google-selenium-asyncio',
+            'microsoft-api': 'microsoft-api',}
 
 class Engine(object):
-  def __init__(self, engine='google-selenium-asyncio'):
+  def __init__(self, engine='microsoft-api'):
     self.backend = import_module('translator.backend.'+backends.get(engine, 'dummy')+'.api')
     self.client = self.backend.Client(key=keys.get(engine, None))
 
