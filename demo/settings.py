@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'translator.apps.TranslatorConfig',
     'inputtools.apps.InputtoolsConfig',
     'rest_framework',
+    # 'debug_toolbar',
 ]
 
 MIDDLEWARE = [
@@ -51,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'demo.urls'
@@ -82,8 +84,12 @@ WSGI_APPLICATION = 'demo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'transdb', 
+        'HOST': '127.0.0.1', 
+        'USER': 'root', 
+        'PASSWORD': 'root1234', 
+        'PORT': '',
     }
 }
 

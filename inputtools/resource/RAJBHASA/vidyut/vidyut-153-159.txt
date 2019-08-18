@@ -1,0 +1,111 @@
+﻿________________
+
+
+Rectifier, gas filled
+Redistribution
+Rectifier, gas filled
+गैस पूरित दिष्टकारी Rectifier, grid controlled arc ग्रिड नियंत्रित आर्क दिष्टकारी Rectifier, half wave
+अर्ध तरंग दिष्टकारी Rectifier, ignitron
+इग्निट्रॉन दिष्टकारी Rectifier, mechanical यांत्रिक दिष्टकारी Rectifier, mercury arc पारद-आर्क दिष्टकारी Rectifier, mercury vapour पारद वाष्प दिष्टकारी Rectifier, metallic
+धात्विक दिष्टकारी Rectifier, selenium
+सिलीनियम दिष्टकारी Rectifier, steel tank इस्पात टंकी दिष्टकारी Rectifier, thermionic तापायनिक दिष्टकारी Rectifier, Tungar
+टंगर दिष्टकारी Rectifier, valve
+वाल्व दिष्टकारी Rectifier, vibrating reed कंपमान रीड दिष्टकारी Rectifier, discharge tube विसर्जन नलिका दिष्टकारी Rectify
+1. दिष्टकरण 2. संशोधन Rectifying device
+दिष्टकारी युक्ति Rectifying effect
+दिष्टकारी प्रभाव Rectilinear blower
+सरलरेखीय धौंकनी Rectilinear coordinate सरलरेखीय निर्देशांक Rectilinear current
+सरलरेखीय धारा Rectilinear motion
+सरलरेखीय गति Recuperative heater पुनर्योजी तापक Recurrence interval पुनरावृत्ति अंतराल Recurrence
+पुनरावृत्ति Recurrent event
+पुनरावृत्ति घटना Recurring
+आवर्ती, आवर्तक Redeemable bonds विमोच्य बांड Redemption
+विमोचन Redistribution
+पुनः वितरण
+153
+Redressal
+Reference zone
+Redressal Reduced kVA tap Reduced system Reduced voltage starter Reducer, speed Reducing atmosphere Reduction in arrears Reduction in manpower Reduction Redundant Reed oscillator Reed relay Reed valve Re-energising Re-engineering Re-entrant angle Re-entrant cavity Re-entrant code Re-entrant oscillator Re-entrant winding Re-examine Reference field Reference input Reference line Reference noise Reference phase Reference plane Reference register Reference voltage Reference zone
+निवारण न्यूनीकृत के.वी.ए. टैप लघुकृत प्रणाली न्यूनीकृत वोल्टता स्टार्टर गति न्यूनकारी अपचायक वातावरण बकाया में कमी जनशक्ति में कमी 1. कमी, घटौती 2. अपचयन अपेक्षाधिक, अतिरिक्त, अनावश्यक रीड दोलित्र रीड रिले रीड वाल्व पुन: ऊर्जन पुनः अभिकल्पन, पुनः इंजीनियरी अंतः प्रविष्ट कोण पुनः प्रवेशी कोटर पुनः प्रवेशी कूट पुनः प्रवेशी दोलित्र पुनः प्रवेशी कुंडली पुनः परीक्षा संदर्भ क्षेत्र संदर्भ निवेश संदर्भ रेखा संदर्भ रव संदर्भ फेज संदर्भ समतल संदर्भ रजिस्टर संदर्भ वोल्टता संदर्भ क्षेत्र
+154
+Reflection coefficient
+Regulating rod
+Reflection coefficient परावर्तन गुणांक Reflex amplification प्रतिवर्ती प्रवर्धन Reflex circuit
+प्रतिवर्ती परिपथ Reflex Klystron
+प्रतिवर्ती क्लाइस्ट्रॉन Refundable
+प्रतिदेय, लौटाया जाने योग्य Refurbishment
+1. पुनरुद्धार, 2. संपोषण Regeneration
+1. पुनः उत्पादन 2. पुनर्योजन Regenerative cycle पुनर्योजी चक्र Regenerative detector पुनर्योजी संसूचक Regenerative divider पुनर्योजी विभाजक Regenerative dynamometer पुनर्योजी डायनमोमीटर Regenerative feed back संपोषक पुनः प्रदाय,
+रिजनरेटिव फीड बैक Regenerative feed heating पुनर्योजी प्रभरण तापन Region
+क्षेत्र Register constant
+रजिस्टर स्थिरांक Register ratio
+रजिस्टर अनुपात Register, memory
+मेमोरी रजिस्टर, स्मृति पंजी Registration of meter मीटर का पंजीयन Registration scheme पंजीकरण स्कीम Registration
+पंजीकरण Regulated circuit
+नियंत्रित परिपथ Regulated frequency नियंत्रित आवृत्ति Regulated function नियंत्रित प्रकार्य Regulated line
+नियंत्रित लाइन Regulated oven
+नियामित ऑवन Regulated power supply नियंत्रित विद्युत आपूर्ति Regulating relay
+नियामक रिले Regulating ring
+नियामक वलय Regulating rod
+नियामक छड़
+155
+Regulating switch
+Regulator, slip
+Regulating switch
+नियामक स्विच Regulating valve
+नियामक वाल्व Regulating winding नियामक कुंडली Regulating, flow
+प्रवाह नियंत्रण Regulating, time
+काल नियामक Regulation by rotation आवर्तन नियमन Regulation of injection अन्तः क्षेपण नियमन Regulation
+विनियम, नियमन, नियंत्रण Regulation, automatic स्वतः नियमन Regulation, deflector विक्षेपक नियमन Regulation, double
+दुहरा नियमन Regulation, down
+अधो नियमन Regulation, inherent अन्तर्निहित नियमन Regulation, partial
+आंशिक नियमन Regulation, speed
+चाल नियमन Regulation, voltage वोल्टता नियंत्रण, वोल्टता नियमन Regulator cell
+नियामक सेल Regulator operator नियामक प्रचालन Regulator system
+नियामक तंत्र Regulator
+नियामक, नियंत्रक Regulator, automatic voltage par: alecat lihah Regulator, balanced pressure संतुलित दाब नियामक Regulator, deflector विक्षेपक नियामक Regulator, field
+क्षेत्र (धारा) नियामक Regulator, induction voltage प्रेरण वोल्टता नियामक Regulator, moving coil चल कुंडली वोल्टता नियामक
+voltage Regulator, oblique तिर्यक नियामक Regulator, potential विभव नियामक Regulator, slip
+स्लिप नियामक
+156
+Regulator, voltage
+Relay protection
+Regulator, voltage
+वोल्टता नियामक Regulator, welding वेल्डिंग नियामक Regulatory management नियामक प्रबंधन Rehabilitation
+पुनर्वास Reimbursement
+प्रतिपूर्ति Reinforce
+सुदृढ़ करना, प्रबलित करना Reinforced concrete pole प्रबलित कंक्रीट पोल Reinforcement
+प्रबलन Reinstate
+बहाल करना, पुनः स्थापित करना Rejection band
+अस्वीकरण बैंड Rejection factor
+अस्वीकरण गुणक Rejection filter
+अस्वीकारक फिल्टर Rejection of heat
+ऊष्मा-त्याग Rejection
+अस्वीकरण Relative luminosity factor सापेक्षिक ज्योति गुणक Relative permeability सापेक्षिक पारगम्यता । Relative permittivity सापेक्षिक विद्युतशीलता Relative pressure
+सापेक्षिक दाब Relative stability
+सापेक्षिक स्थायित्व Relative volume
+सापेक्षिक आयतन Relaxation frequency विश्रांति आवृत्ति Relaxation invertor विश्रांति इन्वर्टर Relaxation of standards मानकों में छूट Relaxation oscillation विश्रांति दोलन Relay gear
+रिले गियर Relay lever
+रिले लीवर Relay operated controller रिले प्रचालित नियंत्रक Relay operated
+रिले प्रचालित Relay operating winding रिले प्रचालक कुंडली Relay protection
+रिले रक्षण
+157
+Relay setting
+Relay, track
+Relay setting
+रिले अवस्थापन Relay stop magnet
+रिले रोक चुंबक Relay type amplifier रिले नुमा प्रवर्धक / एम्प्लीफायर Relay type echo suppressor रिलेनुमा प्रतिध्वनि निरोधक Relay type graphic instrumentरिलेनुमा आलेखी मापयंत्र Relay valve
+रिले वाल्व Relay with dead zone निष्क्रिय खंड रिले Relay
+1. रिले 2. प्रतिसारण Relay, balanced beam संतुलित दंड रिले Relay, biased overload अभिनत अतिभार रिले
+Relay, directional overload दिशात्मक अतिभार रिले Relay, distance
+दूरी-रिले Relay, load levelling भार समकारी रिले Relay, muting
+मूकन रिले Relay, over current अति धारा रिले Relay, over voltage अति वोल्टता रिले Relay, radio
+रेडियो रिले Relay, reverse current विपरीत धारा रिले Relay, reverse power विपरीत विद्युत शक्ति रिले Relay, selective
+चयनात्मक रिले Relay, servo mechanism सर्वो क्रियाविधि रिले Relay, solenoid
+परिनालिका रिले Relay, thermal
+तापीय रिले Relay, thermionic
+तापायनिक रिले Relay, time graded overload काल क्रमित अतिभार रिले Relay, time lag over current काल पश्चता अतिधारा रिले Relay, time lag reverse काल पश्चता विपरीत विद्युत power
+शक्ति रिले Relay, time lag
+काल पश्चता रिले Relay, track
+पथ रिले
+158

@@ -1,0 +1,91 @@
+﻿________________
+
+
+Criterion
+Crust
+Criterion Critical frequency Critical gradient Critical inductance Critical resistance Critical specific volume Critical speed Critical velocity Critical Cross arm Cross bar Cross bracing Cross drainage
+Cross section Cross arc Cross checking Cross examination Cross field connection Crossing Cross-sectional Area Crow bar Crown density Crowning radius Crucial date Crucial stage Crude Crush Crusher Crust
+1. मानदंड 2. कसौटी, निकष क्रांतिक आवृत्ति क्रांतिक ढाल, क्रांतिक प्रवणता क्रांतिक प्रेरकत्व क्रांतिक प्रतिरोध क्रांतिक विशिष्ट आयतन क्रांतिक चाल क्रांतिक वेग 1. क्रांतिक 2. महत्वपूर्ण क्रॉस आर्म क्रॉस बार क्रास ब्रेसिंग पारगामी निकास, क्रॉस निकासी अनुप्रस्थ काट, परिच्छेद काट क्रॉस आर्क प्रति जांच प्रति परीक्षण क्रॉस फील्ड कनेक्शन पार–पथ, क्रासिंग अनुप्रस्थ काट क्षेत्रफल सब्बल, क्रो बार शिखर घनत्व शिखर त्रिज्या निर्णायक तिथि अति महत्वपूर्ण अवस्था कच्चा, अपरिष्कृत संदलन दलित्र पर्पटी
+58
+Cube
+Cut off grid voltage
+तराई
+Cube
+घन Culvert
+पुलिया Cumulative
+संचयी Cumulative benefits सचंयी लाभ Curing Current limiting reactor धारा सीमाकारी प्रतिघातक Current transformer (CT) धारा ट्रांसफार्मर (सी.टी.) Current assets
+चालू परिसंपत्तियां Current carrying capacity धारा-वहन क्षमता Current expenses
+चालू व्यय, चालू खर्च Current liabilities
+चालू देयताएं, देनदारियां Current limiter
+धारा सीमक Current price
+वर्तमान कीमत Current voltage characteristic धारा वोल्टता-अभिलक्षण Current
+धारा, करंट Curtailment of scheme योजना में कटौती Curve
+वक्र Curved
+घुमावदार, वक्राकार Cusec
+क्यूसेक, घनफुट प्रति सेकेंड Custodian
+अभिरक्षक Custody
+अभिरक्षा, हिरासत Custom duty
+सीमा शुल्क Customer orientated skill ग्राहकोन्मुखी दक्षता Cut out
+कट-आउट Cut down
+कम करना Cut off current
+विच्छेदन धारा Cut off date
+निर्धारित तिथि Cut off frequency
+विच्छेद आवृत्ति Cut off governing
+विच्छेद अधिनियंत्रण Cut off grid voltage विच्छेदन-ग्रिड-वोल्टता
+59
+Cut off voltage
+Data bank
+Cut off voltage Cut off wave length Cut-motion Cut-off Cutter, cast iron (C.I.) C.W.pump motor Cycle Cyclic order Cyclic process Cyclone Cylinder Cylindrical rotor
+विच्छेदन-वोल्टता अंतक तंरगदैर्ध्य कटौती–प्रस्ताव कट-ऑफ, क्रियांत ढलवां लोहा (सी.आई.) कर्तक सी.डब्ल्यू. पंप मोटर चक्र चक्रीय क्रम चक्रीय प्रक्रम चक्रवात बेलन, सिलेंडर बेलनाकार रोटर, बेलनाकार
+घूर्णक
+Cylindrical
+बेलनाकार
+Dam axis Dam rock- filled Dam Damage Damp proof course Damp Damper winding Damping Damping coefficient Danger Data analysis Data bank
+बांध-अक्ष पत्थर भरित बांध बांध क्षति सीलन रोधी रद्दा नम, आर्द्र, सीला अवमंदन कुंडली अवमंदन अवमंदन गुणांक खतरा, संकट डाटा विश्लेषण डाटा बैंक
+60
+Data communication equipment
+Decrease
+डाटा संचार उपस्कर
+Data communication
+equipment Data processing Data Database Datum line D.C. amplifier
+D.C. battery D.C. board D.C. Lamp D.C. network analyser D.C. outlet De hors De jure De novo Dead end tower Dead line Dead lock Debris
+डाटा प्रक्रमण डाटा डाटाबेस निर्देश रेखा डी.सी. प्रवर्धक, डी.सी. ऐम्प्लीफायर डी.सी.बैटरी डी.सी.बोर्ड डी.सी.लैम्प डी.सी. नेटवर्क विश्लेषक डी.सी. निर्गम बाहर , असंबद्ध विधितः, कानूनी तौर पर नए सिरे से अंतिम टॉवर समय सीमा गतिरोध
+मलबा
+Decay
+Decaying oscillations Decentralisation Decibel Decimal Decision Declaration Decoder Decouple Decrease
+क्षय क्षयी दोलन विकेंद्रीकरण डेसीबल दशमलव निर्णय, फैसला घोषणा विकोडक, कूटवाचक वियुग्मन कम करना, कम होना, कमी
+Dedicated unit
+Delegated authority
+Dedicated unit Deduction at source Deduction Deed of hypothecation Deed Deed, sale De-electrified Deep beam Deep well pump De-facto Defamation case Default Defaulter Defective Defendant Deferred payment Deferred tax liability Deferred Deficiency Deficit Deflection Deforestation Deformed steel bar Degradation Degraded forest Degree Dehydration Delay Delayed trigger Delegated authority
+समर्पित इकाई स्रोत पर कटौती कटौती दृष्टिबंधक विलेख विलेख विक्रय विलेख निर्विद्युतीकृत गहरी धरन गहरा कुआं पंप वस्तुतः, वास्तव में मान हानि का मामला 1. चूक 2. बकाया 1. चूककर्ता 2. बकायादार दोषपूर्ण, त्रुटिपूर्ण प्रतिवादी आस्थगित भुगतान आस्थगित कर देयता आस्थगित कमी, न्यूनता घाटा, कमी विक्षेप वनों की कटाई, वन उन्मूलन विरूपित सरिया निम्नीकरण निम्नीकृत वन डिग्री, अंश, कोटि निर्जलीकरण विलंब, देरी विलंबित ट्रिगर प्रत्यायोजित प्राधिकार
+62
+Delegation of power
+Derated capacity
+ढहाना
+Delegation of power शक्तियों का प्रत्यायोजन Deliberation
+विचार-विमर्श Delinquent
+अपचारी Delivery
+सुपुर्दगी Delta connection
+डेल्टा संबंधन Delta modulation
+डेल्टा मॉडुलेन Delta
+नदी का मुहाना, डेल्टा Demand draft
+डिमांड ड्राफ्ट Demand notice
+मांग नोटिस Demand
+मांग Demerit
+अवगुण Demodulation
+विमॉडुन, डिमॉड्यूलेशन Demolish Demonstration
+1. प्रदर्शन 2. निदर्शन Demurrage
+डेमरेज, विलंब शुल्क Wharfage
+घाटा शुल्क Dense
+घना, सघन Density
+1. सघनता 2. घनत्व Density, current
+धारा घनत्व Density, flux
+फ्लक्स-घनत्व Dependable year
+निर्भरता वर्ष Depletion
+अवक्षय, ह्रास Deployment of fund निधि का परिनियोजन Deployment of manpower जनशक्ति तैनाती Deposit account bill
+जमा खाता बिल Deposition
+1. जमा, निक्षेपण 2. अभिसाक्ष्य Depreciation
+मूल्यह्रास Depth
+गहराई Derated capacity
+अवनिर्धारित क्षमता
+63

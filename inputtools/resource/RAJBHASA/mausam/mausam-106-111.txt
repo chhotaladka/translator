@@ -1,0 +1,35 @@
+﻿________________
+
+
+Upper air observations Upper air temperature Upper atmosphere Upper bound Upper level Upper Slid Band (USB) Upper wind Upslope Upstream Upthrust Upvalley Upwarp Upwelling Uranus Urban Usable frequency User agency User interests
+उपरितन वायु प्रेक्षण उपरितन वायुमंडल तापमान उपरि वायुमंडल उपरिसीमा उपरिस्तर उच्च पार्श्व बैंड (यू एस बी) उपरि पवन आरोही उर्ध्वप्रवाह उत्क्षेपी, उत्प्लावक उपरि घाटी उर्ध्वावलि उत्प्रवाह
+यूरेनस
+नगरीय, शहरी उपयोज्य आवृत्ति प्रयोक्ता अभिकरण/एजेंसी प्रयोक्ता हित
+Vacuum Vacuum gauge
+Valid
+शून्य, निर्वात निर्वात मापी वैध, मान्य वैधता जाँच वैध काल, मान्य काल घाटी मूल्यांकन, मानांकन मूल्य, मान वाल्व परीक्षक
+पंख
+Validity check Validity period Valley Valuation Value Valve tester Vane Vaporimeter Vaporization Vapour pressure Vapour transfer Variability Variable Variable field Variable format Variable range marker Variable resistor Variac Variance Variant Variate Variation
+वाष्पमापी वाष्पन, वाष्पीकरण वाष्प दाब वाष्प स्थानान्तरण परिवर्तिता परिवर्तनशील, परिवर्ती चल क्षेत्र परिवर्ती फार्मेट परिवर्ती दूरी चिह्नक परिवर्ती प्रतिरोधक परिवर्तक प्रसरण परिवर्त विचर विविधता, परिवर्तन, विचरण
+95
+Varistor Vector Veering wind Vegetation Vegetation cover Vehicular emission Vegetation index Vegetation monitor Velocity Velocity scale Vent Ventilation Ventilator motor Venus Verification Vernalization Vernier callipers Vernier constant Vernier protractor Vernier scale Version Vertex Vertical Vertical angle Vertical graduation Vertical mixing Vertical profile Vertical section Vertical velocity Very High Frequency (VHF) Very high sea Very slow Very strong Vessel Vibrating Vibration Vibrator Vibrograph Vicinity Video Video display unit (VDU) Video monitor View finder Vigorous Violent Virtual
+वैरिस्टर, चररोधक सदिश, वेक्टर दक्षिणावर्त पवन वनस्पति वनस्पति आवरण यानीय उत्सर्जन वनस्पति सूचकांक वनस्पति प्रबोधक वेग वेग मापी निकास, द्वार, मुख संवातन संवातक मोटर शुक्र, वीनस सत्यापन, जांच वसन्तीकरण वर्नियर कैलिपर्स वर्नियर स्थिरांक वर्नियर कोणमापी, वर्नियर प्रोट्रैक्टर वर्नियर स्केल, वर्नियर मापनी रूपान्तर शीर्ष ऊर्ध्वाधर शीर्ष कोण ऊर्ध्वाधर अंशांकन ऊर्ध्वाधर मिलावट ऊर्ध्वाधर रूपरेखा खड़ा परिच्छेद, खड़ी काट ऊर्ध्व वेग अत्युच्च आवृत्ति (वी एच एफ) अत्युच्च तरंगित सागर अतिमंद अति प्रबल पात्र, जहाज, पोत, जलयान कम्पमान कम्पन कम्पित्र कम्पनलेखी परिवेश, सामीप्य वीडियो वीडियो प्रदर्शी एकक (वी डी यू) वीडियो मॉनीटर दृश्यदर्शी प्रबल उग्र, प्रचंड कल्पित, आभासी
+96
+आभासी ऊंचाई आभासी स्मृति आभासी ताप वाइरस, विषाणु श्यान प्रत्यास्थ श्यानतरमापी श्यानता श्यान, विस्कासी दृश्यता - अत्युत्तम - साधारण - उत्तम - अल्प
+दृश्य .
+Virtual height Virtual memory Virtual temperature Virus Viscoelastic Viscometer Viscosity Viscous Visibility - Excellent - Fair - Good - Poor Visible Visual range Voice communication Voice frequency telegraphy (VFT) Void ratio Volatile Volatile hydrocarbon Volcanic Volcanic eruption/ash Voltage Voltage drop Voltage eliminator Voltage gain Voltage regulator Voltage stabiliser Voltage Standing Wave Ratio (VSWR) Volt meter Volume Voluminous Voluntary observing fleet Vortex Vorticity Voyage Vulnerable
+दृश्यता दूरी वाक्संचरण, वाणी संचार वाणी आवृत्ति तार संचार (वी एफ टी) रिक्ति अनुपात सुवाष्प, वाष्पशील वाष्पशील हाइड्रोकार्बन ज्वालामुखीय ज्वालामुखीय उद्भेदन / राख वोल्टता वोल्टता पात वोल्टेज विलोपक वोल्टतालब्धि वोलटेज नियंत्रक वोल्टता स्थिरक वोल्टता अप्रगामी तरंग अनुपाल (वी एस डब्ल्यू आर) वोल्टमापी, वोल्टमीटर, विद्युत विभवमापी आयतन विपुल, आयतनी स्वैच्छिक प्रेक्षण बेड़ा भ्रमिल भ्रमिलता समुद्र यात्रा
+सुभेद्य
+W
+Waiting time Wake Walkie-talkie Wandering Warehouse Warm front
+प्रतीक्षा काल पश्चवर्त्य वाकी-टाकी परिभ्रमी गोदाम उष्ण वाताग्र
+Warm sector Warning system Warranty Washer Washing Waste land Waste product Watch Watch hours Watch tower Water balance Water bath Water body Water budget Water content Water cooled Water cycle Water deficient Water fall Waterfed Water flow Water level Waterlogged Water mill Water pollution Water proof Water resources Water shed Water spout Water table Water tight Water vapour Water way Wattage Wave Wave form Wave front Wave group Wave guide Wave height Wave length Wavelet Wavelike Wave phase Wave propagation Wave shaper/clipping circuit
+उष्ण क्षेत्र चेतावनी तंत्र वारंटी, आश्वासन वाशर, छल्ला प्रक्षालन, धोना परती भूमि अपशिष्ट उत्पाद घड़ी, निगरानी निगरानी समय आवेक्षण मीनार, वाच टावर, निगरानी बुर्ज जल संतुलन जल-कुंडिका, जल-ऊष्मक जलाशय जल बजट जलांश जल-शीतित जल चक्र जलन्यून जल प्रपात जल भरित जल प्रवाह जल स्तर जलाक्रांत पनचक्की जल प्रदूषण जल सह जल संसाधन जल संभर जल वितंड, जल स्तंभ भौम जलस्तर जलरोधी जलवाष्प जलमार्ग वाटता तरंग तरंग का रूप तरंगाग्र तरंग समूह तरंग पथक तरंग उच्चता तरंग दैर्ध्य तरंगिका तरंगित, तरंग रूपी तरंग प्रावस्था तरंग-संचरण तरंग आकार/कर्तन परिपथ
+98
+Wave train Weak Weak echo Weaken Weather -Cloudy - Cold - Disturbed - Dry - Hot - Rainy - Rough - Stormy - Sultry - Sunny Weather briefing Weather chart Weather cock Weathered Weathering Weather lore Weather modification Weather - reconnaissance flight Weather - report Weather satellite Weather summary Weather telegraph office Web designing Website Wedge Weight Weightage Weighted average Weighting Weightlessness Welder Welding Well defined Well distributed Well marked West Westerlies Western Western depression Western disturbance West ward
+तरंगावलि मंद, दुर्बल, कमजोर धुंधली (मंद) प्रतिध्वनि क्षीण होना मौसम -मेघमय - ठंडा - विक्षुब्ध, गड़बड़ - शुष्क, सूखा - गर्म - वृष्टिमय, बरसाती - प्रक्षुब्ध, खराब - तूफानी - उमसभरा - साफ मौसम विवरण मौसम चार्ट, मौसम संचित्र वात सूचक अपक्षीण अपक्षयण मौसम लोकोक्ति मौसम रूपांतरण मौसम टोही उड़ान मौसम रिपोर्ट मौसम उपग्रह मौसम सारांश मौसम तार कार्यालय . . संजाल अभिकल्पन भूमंडलीय संजाल, वेबसाइट फान, सफॉन, वेज भार भारण भारित माध्य भारण, तोल भारहीनता वेल्डर, झलाईगर झलाई सुनिश्चित सुवितरित सुस्पष्ट पश्चिम पश्चिमी हवाएं पश्चिमी पश्चिमी अवदाब पश्चिमी विक्षोभ पश्चिमी अभिमुख, पश्चिम की ओर
+15-587 IMD/2004
+Wet Wet bulb Wet spell Wetting agent Wheel Whip antenna Whirling wind White noise Wide angle Wide band Wide spread Width Wilting Wind -Backing - Upper - Veering - Zonal Wind barrier/breaker Wind blown Wind chill Wind component Wind cyclonic Wind direction Wind discontinuity Wind field Wind finding radar Wind force Winding Wind maxima Wind mill Window (atmospheric) Wind rose Wind shear Wind shield Wind speed Wind vane Wind ward Winter Winter solstice Wire Wire gauge Wireless telegraphy (W/T)
+Withdrawal (of monsoon) Woodland Word length
+आर्द्र, नम, गीला आर्द्र बल्ब आर्द्र बेला, नम दौर क्लेदक, क्लेदनकारक पहिया हिप एंटेना वातावर्त, भंवरी पवन श्वेत रव विस्तृत कोण विस्तृत बैंड व्यापक, विस्तृत, दूर-दूर तक विस्तार, चौड़ाई मुरझाना, कुम्हलाना पवन, वात - पश्च - उपरि - दक्षिणावर्त - कटिबंधीय पवनरोधक वातोढ़ पवन द्रुतशीतन, पवन ठिठुरन पवन अवयव, पवन घटक पवन चक्रवाती पवन दिशा पवन असांतत्य पवन क्षेत्र वायु सूचक रेडार वायु बल कुंडलन, कुंडली, विसी पवन उच्चिष्ठ पवन चक्की गवाक्ष पवन पुष्पचित्र पवन अपरूपण वायु परिरक्षी पवन गति पवन दिक्सूचक पवनाभिमुख शीतकाल, सर्दी का मौसम शिशिर अयनांत, मकर संक्राति तार, तार सम्बन्ध करना तार की जाली बेतार प्रणाली (डब्ल्यू/टी) पीछे हटना (मानसून) वनस्थली, अरण्यभूमि शब्द लम्बाई, शब्द दैर्ध्य
+100

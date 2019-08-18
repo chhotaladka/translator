@@ -1,0 +1,97 @@
+﻿________________
+
+
+Constant pressure cycle
+Contingent fund
+Constant pressure cycle स्थिर-दाब चक्र Constant temperature bath स्थिर ताप कुंड Constant voltage
+स्थिर वोल्टता Constant
+1. स्थिर 2. स्थिरांक 3. निरंतर Constituent
+संघटक, अवयव, घटक Constraint
+अवरोध, बाधा Construction Joint निर्माण जोड़ Construction period निर्माण अवधि मूल्यांकन
+valuation (CPV) (सीपीवी) Constructional features निर्माण संबंधी विशेषताएं Consultancy service परामर्शी सेवा Consultant
+परामर्शदाता, परामर्शी,
+सलाहकार Consultation
+परामर्श, सलाह Consultative committee परामर्शदात्री समिति Consumer article purchase उपभोक्ता वस्तु क्रय अग्रिम
+advance Consumer
+उपभोक्ता Consumption
+उपभोग, खपत Contact
+संपर्क Contact programme संपर्क कार्यक्रम Contamination
+संदूषण Contents
+अंतर्वस्तु, विषय-सूची,
+विषय-वस्तु Context
+संदर्भ, प्रसंग, प्रकरण Contingency
+आकस्मिकता Contingent charges आकस्मिक प्रभार, प्रासंगिक
+प्रभार Contingent expenditure आकस्मिक व्यय, प्रासंगिक व्यय Contingent fund
+आकस्मिक निधि
+52
+Contingent liability
+Control room
+Contingent liability
+आकस्मिक देयता Contingent staff
+आकस्मिक स्टाफ Contingent
+आकस्मिक, प्रासंगिक Continuation sheet अनुवर्ती शीट Continuous
+सतत, लगातार, निरंतर Continuous d.c.system सतत डीसी प्रणाली, सतत
+दिष्ट-धारा प्रणाली Continuous duty machine सतत क्रिय मशीन Continuous flow
+सतत प्रवाह Continuous full-load rating अविरत पूर्ण भार निर्धार Continuous loading सतत भारण Continuous maximum rating अविरत अधिकतम निर्धार Continuous process
+सतत प्रक्रिया Continuous rating
+सतत निर्धार, सतत रेटिंग Continuous service अविरत सेवा Continuous system
+सतत प्रणाली Contour
+समोच्च रेखा Contract performance
+संविदा निष्पादन Contract performance संविदा निष्पादन गारंटी
+guarantee Contract
+ठेका, संविदा Contributory provident fund अंशदायी भविष्य निधि Control & relay board नियंत्रण तथा रिले बोर्ड Control and relay Panel नियंत्रण और रिले पैनल Control cable
+नियंत्रण केबिल, कंट्रोल केबिल Control centre
+नियंत्रण केंद्र Control desk
+नियंत्रण डेस्क Control grid
+नियंत्रण ग्रिड Control panel
+नियंत्रण पैनल Control room
+नियंत्रण कक्ष
+53
+Control system
+Cooling
+Control system Control Control, push-button Controlled damper Controlled rectifier Controlled Controller Controller, master Controller, rheostatic
+Controlling officer Convener Convenient Conventional Convergence yoke Convergence Conversion Conversion charges Conversion rate Conversion table Converter Convex Convey Conveyance advance Conveyance deed Conveyor Conveyor belt Conviction Cooling water Cooling
+नियंत्रण तंत्र नियंत्रण दाब-बटन नियंत्रण नियंत्रित अवमंदक नियंत्रित दिष्टकारी नियंत्रित नियंत्रक मास्टर नियंत्रक रियोस्टेटी नियंत्रक, धारा नियामक नियंत्रक नियंत्रण अधिकारी संयोजक सुविधाजनक परंपरागत, पारंपरिक अभिसरण योक 1. अभिसरण 2. अभिसारिता रूपांतरण, परिवर्तन परिवर्तन प्रभार परिवर्तन दर रूपांतरण सारणी परिवर्तक उत्तल ले जाना, सूचित करना, संवहन वाहन अग्रिम हस्तांतरण विलेख वाहक वाहक पट्टी, कन्वेयर बेल्ट 1. दोष सिद्धि 2. दृढ़ धारणा शीतन जल शीतलन
+54
+Cooling system
+Corona
+Cooling system
+शीतन तंत्र, कलिंग सिस्टम Cooling tower
+शीतन टॉवर, कूलिंग टॉवर Cooling water pump शीतन जल पंप Cooling water system शीतन जल प्रणाली Cooperation
+सहयोग Co-opted member
+सहयोजित सदस्य Coordinate
+1. समन्वयन 2. निर्देशांक Co-ordination
+समन्वय Co-ordinator
+समन्वयक Copper conductor ताम्र चालक, कॉपर कंडक्टर Copper conductor cable ताम्र चालक केबिल, कॉपर
+कंडक्टर केबिल Copper plate
+ताम्र प्लेट, कॉपर प्लेट Copy
+प्रतिलिपि, प्रति, कापी, नकल Cord
+डोरी, तार Cordless remote control कॉर्डलेस रिमोट कंट्रोल Core balance protective कोर संतुलन रक्षी तंत्र
+system Core loss
+क्रोड हानि Core type ignition coil क्रोड प्ररूपी प्रज्वलन कुंडली Core type induction funace क्रोड प्ररूपी प्रेरण-भट्टी Core type transformer क्रोड ट्रांसफार्मर Core
+क्रोड, कोर Core, air
+वायु क्रोड, वायु-कोर Cornice
+कार्निस Corona effect
+कोरोना प्रभाव Corona power loss कोरोना शक्ति हानि Corona ring
+कोरोना वलय, कोरोना रिंग Corona voltmeter
+कोरोना वोल्टमापी Corona
+कोरोना
+55
+Corona, visual disruptive
+Counter weight
+Corona, visual disruptive Corporate governance
+Corporate planning
+दृश्य विदारी कोरोना निगमित शासन, कार्पोरेट शासन निगमित आयोजना, कार्पोरेट योजना निगमित योजनाएं निगमित सामाजिक दायित्व
+Corporate plans Corporate social
+responsibility Correlation Corresponding points Corrigendum Corrosion Cost accounting Cost analysis Cost benefit Cost data Cost estimate Cost implication Cost insurance freight Cost insurance freight Cost price Cost Coulomb's law Coulomb's theorem Counter action Counter affidavit Counter charge Counter electromotive Counter signature Counter weight
+सहसंबंध संगत बिंदु शुद्धि-पत्र संक्षारण लागत लेखाकरण लागत विश्लेषण लागत लाभ लागत संबंधी आँकड़े लागत अनुमान निहित लागत लागत बीमा भाड़ा संविदा लागत बीमा भाड़ा लागत मूल्य लागत कूलॉम नियम कूलॉम प्रमेय जवाबी कार्रवाई प्रति हलफनामा, प्रति शपथ-पत्र प्रत्यारोप प्रतिकारी विद्युतवाहक बल सेल प्रति हस्ताक्षर प्रतितोलक भार
+56
+Counter-claim
+Crisis
+Counter-claim Coupler Coupling capacitor
+Coupling circuit Coupling device Coupling inductor Coupling network Coupling parameter Coupling Course
+Coursed rubble Cover Coverage Crack Craft terminal Crane beam Crane girder Crane Crane, gantry Credit note Credit rating Creep Creepage length Crest elevation Crest length of dam Crisis communication Crisis management
+प्रतिदावा युग्मक, योजक, कप्लर युग्मन संधारित्र, कपलिंग केपेसिटर युग्मन परिपथ युग्मन-युक्ति युग्मन-प्रेरक युग्मन नेटवर्क युग्मन प्राचल, युग्मन पैरामीटर 1. युग्मन 2. कपलिंग 1. स्तर 2. परत 3. रद्दा 4. पथ तराशे हुए पत्थर आवरण 1. व्याप्ति 2. आच्छादन दरार क्राफ्ट टर्मिनल, यान टर्मिनल क्रेन बीम क्रेन गर्डर क्रेन गैंट्री क्रेन जमा-पत्र साख निर्धारण 1. विसर्पण 2. मंद विरूपण विसर्पण लंबाई
+शीर्ष ऊंचाई बांध के शीर्ष की लंबाई आपात संचार आपात प्रबंधन संकट, आपात
+Crisis
+57

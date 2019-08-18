@@ -1,0 +1,88 @@
+﻿________________
+
+
+Ballast
+Basic
+Ballast Band Bandpass filter Bandstop filter Bandwidth Bank Banki turbine Barbed wire Bare wire Bare Barrage Barrel type bolt Barrel Barrier Base current Base plate Base drain Base impedance Base kVA Base line
+गिट्टी बैंड, पट्टी बैंड पारक फिल्टर बैंड स्टॉप फिल्टर बैंड-चौड़ाई बंध, तट, किनारा बंकी टरबाइन कांटेदार तार नंगा तार अनावृत बैराज बैरल टाइप चटखनी
+बैरल
+रोध, बैरियर आधार धारा, बेस करंट आधार प्लेट, बेस प्लेट भूमिगत जलनिकास आधार प्रतिबाधा आधार कि.वो.ए. 1. आधार रेखा 2. आधारभूत
+रेखा
+Base space Base station controller Base year Base Basement Basic insulation level Basic load rating Basic
+आधार स्थान बेस स्टेशन नियंत्रक आधार वर्ष 1. आधार 2. क्षार तहखाना, बेसमेन्ट मूल विद्युतरोधन स्तर मूल लोड निर्धार बुनियादी, मूल, आधारभूत, क्षारीय
+33
+Basin flooding
+Benching
+बेसिन आप्लावन बेसिन आवाह क्षेत्र, जलग्रहण क्षेत्र पुनः पूरण बेसिन निस्सादन बेसिन सिल्टिंग बेसिन बैच प्रक्रमण बैचिंग बैटरी चार्जर बैटरी ऐलिमिनेटर बैटरी
+Basin flooding Basin Basin, catchment Basin, recharge Basin, settling Basin, silting Batch processing Batching Battery charger Battery eliminator Battery Bay Beaded joint Beam compass Beam connection Beam end-connection Beam Beam, flitched Beam, I section Beam, over hanging Beam, trussed Beam, wall Bearing Bed plate Bed slope Bed Bedding Behavioural traits Bellows Benching
+मनका जोड़ बीम कम्पास धरन संबंधन धरन अंत-संबंधन 1. धरन 2. किरण पुंज लौह काष्ठ धरन I सेक्शन धरन प्रलम्ब धरन कैंचीदार धरन भीत धरन बेयरिंग आधार प्लेट तल ढाल तल, आधार संस्तरण, बैठाना आचरणगत लक्षण धौंकनी पैड़ी बनाना
+34
+Bend
+Bimetallic
+Bend
+मोड़ Bending combined with ऐंठनयुक्त बंकन
+torsion Bending moment diagram बंकन आघूर्ण आरेख Bending moment
+बंकन आघूर्ण Bending moment, hogging उत्तलन बंकन आघूर्ण Bending moment, sagging अवतलन बंकन आघूर्ण Bending stress
+बंकन प्रतिबल Bending
+बंकन, मोड़ना Bending, brake
+आरोध बंकन Bending, simple
+साधारण बंकन Bending, symmetrical सममित बंकन Bending, theory of बंकन सिद्धांत Bending, unsymmetrical असममित बंकन Beneficiary state
+लाभार्थी राज्य Bentonite
+बैन्टोनाइट Benzene
+बेन्जीन Bessel's transformation बेसेल रूपांतरण Best practices
+श्रेष्ठ कार्यपद्धतियां Betterment
+खुशहाली, उन्नति, बेहतरी Bi-metal
+द्विधातु Biannual programme अर्धवार्षिक कार्यक्रम, छमाही
+कार्यक्रम Bias distortion
+पूर्वाग्रह विरूपण, अभिनत
+विरूपण Bias
+अभिनति, झुकाव, पूर्वाग्रह, पक्षपात Biased line protection अभिनत लाइन प्रतिरक्षण Biased protective system अभिनत रक्षण–प्रणाली Bifurcate
+द्विविभाजन, दो भागों में बांटना Bimetallic
+द्विधात्विक
+35
+Bi-monthly
+Blend
+Bi-monthly Binary coded decimal
+(BCD) Binary digit Binary Binding wire Binding Binocular Bio chemical oxygen
+demand Biodiversity Bioelectricity Biosphere Bipartite Bisect Bit error rate analyzer Bit Bitumen felt Bitumen Black tape Black list Blade speed Blade Blank cheque Blank form Blank Blanket order Blasting Bleed Blend
+1. द्विमासिक 2. पाक्षिक द्विअंकी कूट दशमलव (बीसीडी) द्विआधारी अंक द्विअंकी, द्विआधारी संयोजी, बंधनकारी तार बंधनकारी, बाध्यकारी दूरवीक्षण यंत्र जैव रासायनिक ऑक्सीजन मांग जैवविविधता जैवविद्युत जैवमंडल द्विपक्षीय समद्विभाग बिट त्रुटि दर विश्लेषक 1. अणी 2. बिट (द्वयंक) डामर नमदा, बिटुमन फैल्ट डामर, बिटुमेन काला फीता, टेप काली सूची ब्लेड गति फलक, ब्लेड कोरा चैक रिक्त फॉर्म कोरा, शून्य, खाली व्यापक आदेश विस्फोटन रिसना, स्राव सम्मिश्रण
+36
+Block letter
+Boring machine
+Block letter Block
+Block, anchor Blow off Blow off cock Blow off, fuse Blow out Blower Blowing Blown bitumen Blue print Boiler Boiler feed pump
+1. साफ अक्षर 2. बड़ा अक्षर 1. अवरुद्ध, रोक, 2. ब्लॉक, खंड स्थिरक खंडक निकास अपधमन टोंटी फ्यूज उड़ना निर्धमन, ब्लो आउट ब्लोअर आधमन धमित बिटुमेन ब्लूप्रिन्ट बॉयलर बॉयलर फीड पंप, बॉयलर प्रभरण पंप क्वथनांक क्वथन क्षमता काबला, बोल्ट बोल्ट टाइप जोड़ सतत बंधन प्रतिबाधा बंधन बंधपत्र मोचन बोनस खाता बही वर्धक/बूस्टर पंप वर्धक ट्रांसफार्मर बैटरी बूस्टर वेध छिद्र
+Boiling point Boiling potential
+Bolt
+Bolted type joints Bond, continuity Bond, impedance Bonds redemption Bonus Book of accounts Booster pump Booster transformer Booster, battery Bore hole Borer Boring machine
+वेधक
+वेधन यंत्र, बोरिंग मशीन
+37
+Borrower card
+Breach of contract
+Borrower card
+उधारकर्ता कार्ड Borrower
+उधारकर्ता, ऋणी, कर्जदार,
+उधार लेने वाला Borrowing power
+उधार लेने की सामर्थ्य Bottleneck
+अवरोध, गत्यावरोध, रुकावटें Bought back
+वापसी खरीद Boundary condition
+1. परिसीमा अवस्था
+2. परिसीमा प्रतिबंध Boundary drag
+परिसीमा विकर्ष Boundary friction theory सीमांत घर्षण सिद्धांत Boundary lubrication सीमांत लुब्रिकेशन Boundary shear
+परिसीमा अपरूपण Boundary stress
+परिसीमा प्रतिबल Boundary sub layer सीमा उपस्तर Boundary transition
+सीमांत संक्रमण Boundary
+1. परिसीमा, सीमा, 2. सीमांत Bounded
+आबद्ध, परिबद्ध Bourdon's pressure gauge बूर्दो दाब गेज Boxing activities
+बॉक्सिग गतिविधियां Bracing , cross arm क्रॉस आर्म ब्रेसिंग Bracket
+1. ब्रेकेट 2. कोष्ठक Brake panel
+ब्रेक पैनल Brake relief valve
+आरोध मोचन वाल्व Brake, disc
+चक्रिका ब्रेक, डिस्क ब्रेक Branch Joint Box
+शाखा जोड़ बॉक्स Branch
+शाखा Brazing
+ब्रेजिंग, टांका लगाना, पीतल
+का रंग चढ़ाना Breach of agreement करार भंग, अनुबंध भंग Breach of contract
+संविदा भंग
+38

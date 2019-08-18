@@ -1,0 +1,122 @@
+﻿________________
+
+
+Design parameters
+Diagram
+Design parameters
+Design
+Designate Desilting chamber Desilting Destination Detail Detailed project report Detection Detector unit Detector Deteriorate Deterrance Deterrence Detonation Detonator Detrimental Devaluation Development expenses Development surcharge Development system Deviation Device Dew point Dewatering Diagnose Diagnostic Diagram
+अभिकल्प प्राचल, डिजाइन पैरामीटर डिजाइन, अभिकल्प, अभिकल्पना नामोद्दिष्ट करना, पदनामित विगादन कक्ष / चैम्बर विगादन गंतव्य ब्यौरा, विस्तृत विवरण विस्तृत परियोजना रिपोर्ट 1. खोज, पता लगाना 2. संसूचन संसूचक यूनिट / इकाई संसूचक खराब होना, बिगड़ना, अपकर्ष प्रतिवारण निवारण, अवरोध, रुकावट अधिस्फोटन अधिस्फोटक हानिकारक, अहितकर अवमूल्यन विकास–व्यय विकास-अधिभार विकास-प्रणाली विचलन अंतर साधन, युक्ति ओसांक विजलन निदान करना नैदानिक, निदान संबंधी आरेख
+64
+Diameter
+Diode
+Diameter Die (impression) Dielectric flux Dielectric hysterisis loss Dielectric loss angle Dielectric power factor Dielectric Diesel engine Differential protection Differential relay Diffuser Diffusion current Diffusion pump Diffusion, eddy Digit Digital Digital control
+व्यास डाई, ठप्पा परावैद्युत फ्लक्स परावैद्युत हिस्टेरीसिस हानि परावैद्युत हानि-कोण परावैद्युत शक्ति गुणक डाइइलेक्ट्रिक, परावैद्युत डीजल इंजन विभेदी रक्षण विभेदी रिले विसारक विसरण धारा विसरण पंप भंवर विसरण अंक अंकीय, डिजिटल अंकीय नियंत्रण, डिजिटल कंट्रोल अंक-चक्रीय अभिग्राही, डिजिटल चक्रीय रिसीवर अंक-चक्रीय दूरमापन, डिजिटल चक्रीय दूरमापन अंक-चक्रीय पारेषक, डिजिटल चक्रीय पारेषक अंकीय वितरण क्षेत्र, डिजिटल वितरण क्षेत्र विमा दीप्ति मंदक डायोड
+Digital cyclic receiver
+Digital cyclic telemetering
+Digital cyclic transmitter
+Digital distribution field
+Dimension Dimmer Diode
+65
+Dipole
+Disclaimer
+Dipole
+द्विध्रुव, डाइपोल Direct current transmission दिष्ट-धारा संचरण Direct current
+दिष्ट-धारा, डी.सी. Direct digital control प्रत्यक्ष अंकीय नियंत्रण Direct induction heating प्रत्यक्ष प्रेरण तापन Direct measurement
+प्रत्यक्ष मापन Directional relay
+दिशात्मक रिले Directly coupled
+प्रत्यक्ष युग्मित Disability allowances अशक्तता भत्ता Disability benefit
+अशक्तता हितलाभ Disability leave
+अशक्तता छुट्टी Disabled person
+अशक्त व्यक्ति Disaster management आपदा प्रबंधन Disbursement advice संवितरण सूचना Disbursement
+संवितरण Disc insulator
+चक्रिका विद्युतरोधी Disc valve
+चक्रिका वाल्व, डिस्क वाल्व Disc
+चक्रिका, डिस्क Discard
+अलग करना, हटा देना Discharge channel निस्सरण वाहिका Discharge current विसर्जन धारा Discharge detector विसर्जन संसूचक Discharge device
+विसर्जन युक्ति Discharge magnitude 1. विसर्जन परिमाण
+2. निस्सरण परिमाण Discharge
+1. विसर्जन 2. निस्सरण Disciplinary action अनुशासनिक कार्रवाई Disciplinary procedure अनुशासनिक प्रक्रिया Discipline
+1. अनुशासन 2. विषय क्षेत्र Disclaimer
+दावा-त्याग
+66
+Disclosure
+Disruptive discharge test
+Disclosure
+प्रकटन Disconnect
+वियोजन Disconnector
+वियोजक Discounted cash flow बट्टागत नकदीप्रवाह मूल्यांकन
+valuation (DCFV) (डी.सी.एफ.वी.) Discover
+पता लगाना, खोजना Discrepancy
+विसंगति Discrete frequency analysis असतत आवृत्ति विश्लेषण Discretion
+विवेक, विवेकाधिकार Discretionary power विवेकाधिकार Discrimination
+भेदभाव Disintegration
+विघटन, विच्छेद Dismantle
+पुर्जे खोलना, विखंडीकरण Dismantling of joints जोड़ों को खोलना Disparity
+असमानता Disperse
+विसर्जित होना Dispersion
+1. प्रकीर्णन 2. परिक्षेपण Displaced person
+विस्थापित व्यक्ति Displacement
+विस्थापन Display advertisement प्रदर्श विज्ञापन Disposal
+निपटान, निपटारा, निस्तारण Dispute of differences मतांतर विवाद Dispute resolution
+विवाद समाधान तंत्र mechanism Dispute
+विवाद Disputed matter
+विवादग्रस्त मामला, विवादित
+मामला Disputes & arbitration विवाद एवं विवाचन Disqualified
+अयोग्य Disruptive discharge test विदारी विसर्जन परीक्षण
+67
+Dissemination
+Diversion weir
+Dissemination
+प्रसार Dissipation factor
+क्षय गुणक Dissipation
+1. क्षय 2. विसरण Dissolve
+1. विघटित करना 2. भंग
+करना 3. घुलना, विलीन होना Distance protection
+दूरस्थ रक्षण Distance relay
+दूरस्थ रिले Distempering
+डिस्टेम्पर करना Distillation
+आसवन Distilled water
+आसुत जल Distortion
+विकृति, विरूपण Distributed armature winding वितरित आर्मेचर कुंडली Distribution board
+वितरण बोर्ड Distribution box
+वितरण बॉक्स Distribution licence वितरण लाइसेंस Distribution management वितरण प्रबंधन प्रणाली system (D.M.S)
+(डी.एम.एस.) Distribution ring
+वितरण वलय Distribution transformer वितरण ट्रांसफार्मर Distribution
+वितरण Distributor
+वितरक Disturbance recorder विक्षोभ अभिलेखी, विक्षोभ रिकार्डर Disturbance
+1. विक्षोभ 2. उपद्रव, Ditto
+तदैव, वही Divergence
+अपसरण Diversion cum spill way पथांतर-सह-उत्प्लाव सुरंग
+tunnel Diversion tunnel
+दिक्परिवर्ती सुरंग, पथांतर
+सुरंग Diversion weir
+दिक्परिवर्ती वीयर
+68
+Diversion
+Drafting machine
+Diversion
+1. विषयांतर 2. पथांतर Diversity factor
+विविधता गुणक Document
+दस्तावेज, प्रलेख, कागजात Documentation
+प्रलेखन Dome
+गुम्बद, डोम Domestic
+घरेलू, अन्तर्देशीय Domestic consumption घरेलू खपत Domestic load
+घरेलू विद्युत भार Domestic supply
+घरेलू सप्लाई, घरेलू आपूर्ति Dominant
+प्रमुख, प्रबल Dosing system
+संभरण प्रणाली Double amplitude
+द्वि आयाम Double break O.C.B द्वि वियोजन ओ.सी.बी. Double circuit
+द्वि परिपथ Double float buchholz relay डबल फ्लोट बुखोल्ज रिले Double flow turbine
+द्वि प्रवाह टरबाइन Double leaf
+द्विपर्ण Double line-to-ground fault द्विलाइन भू-संपर्क दोष Double reinforced beam द्वि-प्रबलित धरन Down stream
+अनुप्रवाह Down time
+भंगकाल Downward
+अधोमुखी DPIC switch
+डीपीआईसी स्विच Draft gauge
+ड्राफ्ट गेज, प्रवात प्रमापी Draft tube cone
+ड्राफ्ट ट्यूब शंकु Draft tube Gate
+ड्राफ्ट ट्यूब गेट Draft tube knee lining ड्राफ्ट ट्यूब नी लाइनिंग Draft tube liner
+ड्राफ्ट ट्यूब लाइनर Draft tube
+प्रवात ट्यूब, ड्राफ्ट ट्यूब Drafting machine
+आरेखन मशीन, ड्राफ्टिग मशीन
