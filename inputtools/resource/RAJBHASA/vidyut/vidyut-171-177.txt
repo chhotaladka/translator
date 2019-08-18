@@ -1,0 +1,46 @@
+﻿________________
+
+
+Self-explanatory
+Shaded pole
+स्वतः स्पष्ट अर्धचालक, सेमी कंडक्टर अर्ध-कुशल प्रेषण सिरा शक्ति वृत्त आरेख
+Self-explanatory Semi conductor Semi-skilled Sending end power circle
+diagram Sending end transformer Sending end voltage Sending end Sense amplifier
+Sense winding Sensitive Separation Sequence relay, negative Series Server signal failure Service agreement bond Service connection
+प्रेषण सिरा ट्रांसफार्मर प्रेषण सिरा वोल्टता प्रेषण सिरा अभिदिश प्रवर्धक, सेंस एम्प्लीफायर अभिदिश कुंडली संवेदनशील, सुग्राही पृथक्करण, वियोजन ऋणात्मक अनुक्रम रिले क्रमिक, श्रृंखला, श्रेणी सर्वर सिगनल विफलता सेवा करार बंध-पत्र उपभोक्ता कनेक्शन, सर्विस कनेक्शन सर्विस द्वार सर्वो मोटर 1. जमाव 2. सेट परीक्षण सेट 1. जमना 2. दृढ़ीकरण 3. विन्यास 4. अवस्थापन बैटरी विन्यास अंतराल अवस्थापन रिले अवस्थापन छादित ध्रुव
+Service gate Servo motor Set Set, testing Setting
+Setting, battery Setting, gap Setting, relay Shaded pole
+171
+Shaded
+Shunting effect
+Shaded
+Shaft bearing Shaft coupling Shaft current Shaft spillway
+Shaft Share capital Share holder Shear Sheath current Sheave Shell type transformer Shell Shield Shipment Shock Short circuit current Short circuit ratio Short circuit reactance Short time rating Short wave Shunt capacitor Shunt characteristic motor Shunt motor Shunt transformer Shunt wound motor Shunt Shunting effect
+1. छायांकित, छायित 2. छादित शॉफ्ट बेयरिंग शॉफ्ट युग्मन शॉफ्ट धारा शॉफ्ट स्पिलवे, शाफ्ट अधिप्लव मार्ग शॉफ्ट, धुरा, स्तंभ शेयर पूंजी शेयरधारक, शेयर होल्डर अपरूपण शीथ धारा/करंट घिरनी, चरखी कोष प्ररूप ट्रांसफार्मर खोल, कवच, आवरण कवच, शील्ड लदान, खेप प्रघात लघुपथ धारा लघुपथ अनुपात लघुपथ प्रतिघात अल्पावधि निर्धार लघु तरंग शंट कैपेसिटर शंट अभिलाक्षणिक मोटर शंट मोटर शंट ट्रांसफार्मर शंट कुंडलित मोटर पार्श्व पथ शंट-प्रभाव, पार्श्वपथन प्रभाव
+172
+Shut down
+Slope
+Shut down Shutter Signal distortion Signal Silica gel Silt control Silt flushing tunnel
+Silt Silt, clayey Silting Similar beam Simply supported beam Simulation Simulator Single break switch Single circuit Single core cable Single point Sinking Site Skew Skilled labourer Skirting Slew Slide Sliding Slip Slippage Slope
+बंद करना, शट डाउन कपाट, शटर संकेत विरूपण संकेत, सिगनल सिलिका जेल गाद नियंत्रण गाद सफाई सुरंग / प्रधावन सुरंग गाद, सिल्ट मृत्तिकामय सिल्ट गादन समरूप धरन शुद्धालम्ब धरन अनुकार, सिमुलेशन अनुकारक, सिमुलेटर एकल वियोजन स्विच एकल परिपथ एकल क्रोड केबिल एकल बिंदु धंसना परियोजना स्थल, कार्यस्थल तिरछा, तिर्यक कुशल मज़दूर, कुशल श्रमिक किनारी द्रुत घूर्णन, स्लयू 1. स्लाइड 2. सर्पक सर्पण 1. सर्पण 2. स्लिप, पर्ची विसर्पण, फिसलन ढलान
+173
+Slot leakage flux
+Spacer damper
+खांच क्षरण फ्लक्स खांच क्षरण प्रतिघात खांच अंतराल स्लॉट वेज, खांच फन्नी खुली स्लॉट तिर्यक खांच अवपंक घोल, गारा सीमेंट घोल चिक्कण चालक केबिल सपाट क्रोड आर्मेचर सपाट क्रोड रोटर सपाट क्रोड हिमपरिबद्ध जलग्रहण क्षेत्र
+Slot leakage flux Slot leakage reactance Slot pitch Slot wedge Slot, open Slot, skewed Sludge Slurry Slurry, cement Smooth conductor cable Smooth core armature Smooth core rotor Smooth core Snow bound catchment's
+area Socket Sodium vapour lamp Soft clay Soil erosion Soil Investigation Solar energy Soldering flux Solid pole Solid Solitium Solvent Sorting appliance Source bypass capacitor Source impedance Spacer damper
+सॉकेट सोडियम वाष्प लैम्प नर्म मृत्तिका भू-क्षरण मिट्टी की जाँच सौर ऊर्जा टाँका गालक ठोस ध्रुव ठोस सॉलिशियम विलायक, घोलक छंटाई उपकरण स्रोत उपमार्ग संधारित्र स्रोत प्रतिबाधा स्पेसर डेम्पर
+174
+Spare parts
+Standing committee
+Spare parts Special purpose vehicle
+Special supplement Specialised Specific electric loading Specific reason Specific resistance Specifications Spectrum analyzer Speed Sphere Spillage Spillway bays Spillway Split phase motor Split Spool, insulating Spring Sprinkle Squeezed Stability Stack Stage Stake holders Standard instrument Standard Standardisation Standby Standing committee
+अतिरिक्त कल पुर्जे विशिष्ट उद्देश्य हेतु गठित संस्था (एसपीवी) विशेष पूरक विशिष्ट विशिष्ट विद्युत भारण विशिष्ट कारण विशिष्ट प्रतिरोध विनिर्देश स्पेक्ट्रम विश्लेषक गति, चाल गोला छलकाव स्पिलवे बेज स्पिलवे, अधिप्लव मार्ग विभक्त फेज मोटर विभक्त, विपाटित विद्युतरोधी स्पूल कमानी, स्प्रिंग छिड़काव निपीडित स्थायित्व चिमनी चरण, स्थिति स्टेक होल्डर, पणधारी मानक उपकरण मानक मानकीकरण आपात उपयोगी स्थायी समिति
+175
+Standing order
+Stilling basin
+Standing order Standing wave Starter Starter, rotor Starter, star delta Starter, stator rotor Static var compensator
+(SVC) Station load factor Station, high power Station, switching Station, thermal power Statistical data Stator iron loss Stator switch Stator winding Stator Stay wire Steady direct current
+स्थायी आदेश अप्रगामी तरंग स्टार्टर, प्रवर्तक रोटर / घूर्णक स्टार्टर स्टार-डेल्टा स्टार्टर स्टेटर-रोटर स्टार्टर स्टेटिक वार कम्पेन्सेटर (एसवीसी) केंद्र भार गुणक उच्च शक्ति केंद्र स्विचन केंद्र ताप विद्युत केंद्र सांख्यिकीय आंकड़े स्टेटर लौह हानि स्टेटर स्विच स्टेटर कुंडली स्टेटर तान / टेक तार अपरिवर्ती दिष्टधारा, अपरिवर्ती डाइरेक्ट करेंट साम्य अवस्था भाप प्रस्फुटन भाप, वाष्प इस्पात छड़ इस्पात पशुका आलम्बन इस्पात कार्य पैड़ी बनाना दृढ़ मृत्तिका दृढ़ता, कड़ापन स्टिलिंग बेसिन, शांत बेसिन
+Steady state Steam blow Steam Steel bar Steel rib support Steel work Stepping Stiff clay Stiffness Stilling basin
+176

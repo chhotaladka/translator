@@ -1,0 +1,145 @@
+﻿________________
+
+
+Panel
+Penstock assembly chamber
+पेनल
+Panel Paper capacitor
+कागज-संधारित्र Par excellence
+उत्कृष्ट Par Value
+सममूल्य Parallel feeder protection समांतर फीडर रक्षण Parallel line protection समांतर लाइन रक्षण Parallel magnetic field समांतर चुंबकीय क्षेत्र Parameter
+पैरामीटर, प्राचल Parasitic current
+पराश्रयी धारा Parasitic disturbance पराश्रयी विक्षोभ Pari passu
+समरूप, बराबर-बराबर Partial modification 1. आंशिक आशोधन 2. आंशिक
+आपरिवर्तन Partial reaction (turbine) आंशिक प्रतिक्रिया (टरबाइन) Partnership deed
+भागीदारी विलेख Patent
+पेटेन्ट, एकस्व Path, current
+धारा पथ Pattern
+प्रतिरूप, पैटर्न Payment security mechanism भुगतान सुरक्षा क्रियाविधि Peak demand
+अधिकतम मांग, चरम मांग,
+उच्चतम मांग Peak hours
+अधिकतम मांग घंटे Peak load
+शिखर लोड, अधिकतम लोड Peaking capacity
+चरम क्षमता, शीर्षस्थ क्षमता Penal interest
+दंड स्वरूप ब्याज Penalty factor
+पैनल्टी फैक्टर Pendency
+अनिर्णीत, लंबन Pending
+लंबित Penetration
+अन्तर्वेशन Penstock assembly chamber पेनस्टॉक असेम्बली चैम्बर
+129
+Penstock bifurcation
+Periodic sampling
+Penstock bifurcation पेनस्टॉक द्विशाखन Per capita
+प्रति व्यक्ति Perennial area
+बारहमासी क्षेत्र Perennial
+बारहमासी Perfect adjustment पूर्ण समायोजन Perfect capacitor
+आदर्श संधारित्र Perfect conductivity पूर्ण चालकता Perfect electron gas आदर्श इलेक्ट्रॉन गैस Perforated
+छिद्रयुक्त, छिद्रित Perforating machine छेद करने वाली मशीन, छिद्रक
+मशीन Perforator
+छिद्रक Performance appraisal कार्य निष्पादन मूल्यांकन Performance assessment निष्पादन निर्धारण Performance evaluation निष्पादन मूल्यांकन Performance management निष्पादन प्रबंधन Performance oriented work कार्योन्मुखी संस्कृति
+culture Performance rating निष्पादन रेटिंग, निष्पादन श्रेणी Performance reports निष्पादन रिपोर्ट Performance
+निष्पादन Period , periodic
+1. अवधि, आवधिक 2. आवर्ती Period of oscillation दोलन काल Period of recess
+विश्रांति काल Period under review समीक्षाधीन अवधि Periodic waveform
+आवर्ती तरंगरूप Periodic arrival
+आवधिक आगमन Periodic inspection
+आवधिक निरीक्षण Periodic maintenance test आवधिक अनुरक्षण परीक्षण Periodic sampling
+आवर्ती प्रतिदर्शन
+130
+Periodic setting
+Pertinent data
+Periodic setting
+आवधिक निर्धारण Periodic signals
+आवर्ती संकेत, आवर्ती सिगनल Periodic structure
+आवर्ती संरचना Periodic system
+आवर्ती प्रणाली Periodic test
+आवर्ती परीक्षण Periodic time
+आवर्ती काल Periodic variation
+आवर्ती वैभिन्न / परिवर्तन Periodical check
+आवधिक जाँच Periodical report
+आवधिक प्रतिवेदन / रिपोर्ट Periodical return
+आवधिक विवरणी Periodicity of payment भुगतान की आवर्तिता Peripheral device
+अनुषंगी युक्ति Periphery
+1. परिरेखा, 2. परिधि Perks (perquisites) अनुलब्धियां Permanency
+स्थायित्व Permanent magnet chuck स्थायी चुंबक चक Permanent magnet motor स्थायी चुंबक मोटर Permanent magnet moving स्थायी-चुंबक चल कुंडली रिले
+coil relay Permanent magnet स्थायी चुंबक Permeability
+पारगम्यता Permeameter
+1. पारगम्यतामापी
+2. चुबंकशीलता मापी Perpetual annuity
+स्थायी वार्षिकी Perpetual
+शाश्वत, निरंतर, स्थायी Persistent
+सतत Personal bond
+निजी मुचलका Personnel
+कार्मिक Perspective
+परिप्रेक्ष्य, परिदृश्य Pertinent data
+संगत आंकड़े
+131
+Perusal
+Phase fault current
+Perusal
+अवलोकन Petitions
+याचिका Phantom load
+आभासी लोड Phase adjustment फेज समायोजन Phase advance
+फेज अग्रण Phase advancer
+फेज अग्रकारी Phase angle error
+फेज-कोण त्रुटि Phase angle meter फेज कोण मापी Phase angle variation
+फेज-कोण विचलन Phase balance relay फेज-संतुलन रिले Phase band
+फेज बैंड Phase belt
+फेज पट्टी Phase cancellation
+फेज निरसन Phase change
+फेज परिवर्तन Phase characteristic फेज अभिलक्षण Phase comparator फेज तुलनित्र Phase comparison protection फेज-तुलना रक्षण Phase constant
+फेज नियतांक, फेज स्थिरांक Phase control firing circuit फेज नियंत्रित प्रसर्जन परिपथ Phase control
+फेज नियंत्रण Phase controlled rectifier फेज नियंत्रित दिष्टकारी Phase crossover
+फेज क्रॉसओवर Phase current
+फेज विद्युत धारा Phase delay distortion फेज डिले विरूपण Phase detector
+फेज संसूचक Phase displacement फेज विस्थापन Phase equaliser
+फेज समकारक Phase equilibrium
+फेज संतुलन Phase failure protection फेज व्यवधान रक्षण Phase fault current फेज दोष विद्युत धारा
+132
+Phase identification
+Phase transition
+Phase identification फेज निर्धारण Phase invertor circuit फेज इन्वर्टर परिपथ Phase invertor
+फेज इन्वर्टर Phase lag
+फेज पश्चता Phase lock loop
+फेज पाश लूप Phase margin frequency फेज मार्जिन आवृत्ति Phase margin
+फेज मार्जिन Phase modifier
+फेज आशोधित्र, फेज
+मोडिफायर Phase modifier, synchronous dretchisch Tut 37T9ITETCH Phase of combustion दहन-प्रावस्था Phase opposition
+फेज –विपरीतता, फेज सम्मुखता Phase selection switch फेज-वरण स्विच Phase selector relay फेज-वरण रिले Phase sensitivity
+फेज सुग्राहिता Phase sequence indicator फेज-अनुक्रम सूचक Phase sequence reversal फेज-अनुक्रम विपर्यय रक्षण
+protection Phase sequence reversal फेज-अनुक्रम विपर्यय Phase sequence
+फेज अनुक्रम Phase shift circuit
+फेज विस्थापन परिपथ Phase shift constant फेज विस्थापन नियतांक Phase shift oscillator फेज विस्थापन दोलित्र Phase shift
+फेज-विस्थापन Phase shifter
+फेज-विस्थापक Phase spectrum
+फेज स्पेक्ट्रम Phase splitting device फेज विभाजन युक्ति उपकरण Phase spread
+फेज-विस्तार Phase to phase voltage अन्तरफेज वोल्टता Phase transition
+फेज संक्रमण
+133
+Phase under voltage protection
+Physical Progress
+Phase under voltage फेज-अववोल्टता रक्षण
+protection Phase under voltage relay फेज-अववोल्टता रिले Phase variable
+फेज परिवर्ती Phase velocity
+फेज वेग Phase voltage
+फेज वोल्टता Phase, transient
+क्षणिक फेज Phasing
+फेजिंग, फेज समंजन Phasing lamp
+फेजिंग सूचक Phasing signal
+फेजिंग संकेत Phasing voltage
+फेजिंग वोल्टता Phosphate dosing system फॉस्फेट डोजिंग तंत्र Photo conductive cell प्रकाश चालकीय सेल Photo conductivity
+प्रकाश चालकता Photo conductor
+प्रकाश चालक Photo electric tube
+प्रकाश-विद्युत ट्यूब Photo emissive cathode प्रकाश उत्सर्जक कैथोड Photo emissive tube प्रकाश उत्सर्जक ट्यूब Photo emissive
+प्रकाश उत्सर्जक Photo excitation
+प्रकाश उत्तेजन Photo flash lamp
+फोटो दमक-लैम्प Photo flood lamp
+फोटो फ्लड लैम्प Photo sensitization
+प्रकाश-सुग्राहीकरण Photo voltaic cell
+प्रकाश-वोल्टीय सेल Photo voltaic diode
+प्रकाश वोल्टीय डायोड, फोटो
+डायोड Photo voltaic effect प्रकाश वोल्टीय प्रभाव Photocell noise
+प्रकाशिक सेल रव/शोर Photo-synthesis
+प्रकाश संश्लेषण Physical Progress
+वास्तविक प्रगति
+134

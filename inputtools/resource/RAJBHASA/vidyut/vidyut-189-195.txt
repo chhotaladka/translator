@@ -1,0 +1,106 @@
+﻿________________
+
+
+Two junction transistor
+Unexpected delay
+Two junction transistor द्वि संधि ट्रांजिस्टर Two phase three wire-system द्वि फेज त्रितार प्रणाली Two pole
+द्वि ध्रुव Two winding transformer द्विकुंडली ट्रांसफार्मर Two wire system
+दो तार प्रणाली, द्वितार प्रणाली
+Ultimate consignee अन्तिम प्रेषिती, अंतिम परेषिती Ultimately
+अंततः Unarmoured cable
+अकवचित केबिल Unaudited
+अनंकेक्षित, अलेखापरीक्षित Unavoidable circumstances अपरिहार्य परिस्थितियां Unbalanced stator winding असंतुलित स्टेटर कुंडली Unbalancing resistance असंतुलक प्रतिरोध Under construction निर्माणाधीन Under estimate
+कम अनुमान Under valuation
+अल्पमूल्यांकन Under voltage relay अव वोल्टता रिले Underground cable भूमिगत केबिल Underground sedimentation भूमिगत तलछट चैम्बर
+chamber Underground
+भूमिगत Undertaking
+1. उपक्रम 2. वचनपत्र Underwater tunnel
+जलगत सुरंग Undetermined value अनिर्धारित मूल्य Unearthed
+भूसंपर्क रहित Unelecrified
+अविद्युतीकृत Uneven
+1. असम, विषम 2. असमतल Unexpected delay
+अप्रत्याशित विलंब
+189
+Unidirectional pulse
+Utilization
+Unidirectional pulse एकदिशीय स्पन्द Unified
+एकीकृत Uniform
+1. एकसमान 2. वर्दी Unilateral
+एकपक्षीय uninhabited village बिना आबादी वाला गाँव Un-interrupted power अविरत विद्युत आपूर्ति supply (UPS)
+(यू.पी.एस.) Uninterrupted
+1. निर्बाध, 2.सतत 3. अविरत Unique
+अद्वितीय Unit magnetic pole एकांक चुंबकीय ध्रुव Unit pole
+एकांक ध्रुव Unit
+1. इकाई 2. एकक 3. एकांक Unlawful
+विधिविरुद्ध, गैर-कानूनी Unqualified
+अयोग्य, अनर्हक Unsaturated magnetic circuitअसंतृप्त चुंबकीय परिपथ Unsaturated
+असंतृप्त Unsecured loan
+अप्रतिभूत ऋण Unskilled
+अकुशल Unsymmetrical beam असममित धरन Up front fee
+अपफ्रंट शुल्क, कारोबार पूर्व
+शुल्क Updation
+अद्यतनीकरण Uplift
+उत्थान Uprating
+उन्नयन, अपरेटिंग Upstream
+उपरिप्रवाह, अपस्ट्रीम Up-to-date report
+अद्यतन रिपोर्ट, अद्यतन प्रतिवेदन Upward
+ऊर्ध्वमुखी Urban distribution
+शहरी वितरण Utilities
+यूटिलिटीज Utilization
+उपयोग
+190
+Vacuum
+Vertical
+Vacuum Valid Validity of offer Validity of the rates Validity Valuation Value added services Value addition
+1. निर्वात 2. शून्य विधिमान्य, वैध प्रस्ताव की विधिमान्यता दरों की विधिमान्यता वैधता, विधि मान्यता मूल्यांकन मूल्य वर्धित सेवाएं मूल्य परिवर्धन 1. मूल्य 2. मान वाल्व इलेक्ट्रॉनिक वाल्व तड़ित निरोधक वाल्व दिष्टकारी वाल्व वेन, फलिका
+Value
+वाष्प
+Valve Valve, electronic Valve, lightning arrester Valve, rectifier Vane Vapour Vapourisation Variability Variable Varying speed motor V-belt V-curve Velocity Ventilating pipe Ventilation Verification Vertex Vertical
+वाष्पन परिवर्तनीयता परिवर्तनशील, परिवर्ती परिवर्ती चाल मोटर v-बेल्ट V-वक्र वेग संवातन पाइप संवातन सत्यापन, साक्ष्यांकन शीर्ष ऊर्ध्वाधर
+191
+Very Small Aperture Terminal (VSAT)
+Voltage, distribution
+Very Small Aperture
+Terminal (VSAT) Vetting Viability Vibrant Vibration Vibrator View point Vigorous Violation Virtual container Viscosity Vision V-notch Void Volt Voltage amplifier Voltage drop Voltage ratio Voltage regulation Voltage regulator Voltage regulator, auto Voltage stabilizer Voltage unbalance relay Voltage Voltage, busbar Voltage, cutoff
+अत्यंत सूक्ष्म छिद्र टर्मिनल (वीसैट) पुनरीक्षण व्यवहार्यता कंपायमान, स्पंदनशील कंपन वाइब्रेटर, कंपित्र दृष्टिकोण प्रबल उल्लंघन 1. कल्पित पात्र 2. आभासी पात्र श्यानता, गाढ़ापन विजन V-नॉच 1. रिक्ति 2. रन्ध्र 3. शून्य (विधि) वोल्ट वोल्टता प्रवर्धक वोल्टता पात वोल्टता अनुपात वोल्टता नियमन वोल्टता नियामक स्वचल वोल्टता नियामक वोल्टता स्टेबिलाइजर वोल्टता-असंतुलन रिले वोल्टता बसबार वोल्टता कट-आफ वोल्टता, समापन वोल्टता विसर्जन वोल्टता वितरण वोल्टता
+Voltage, discharge Voltage, distribution
+192
+Voltage, dry flashover
+Volume
+Voltage, dry flashover शुष्क उत्स्फुरण वोल्टता Voltage, induced
+प्रेरित वोल्टता Voltage, knee point
+नी प्वाइंट वोल्टता, जानु बिंदु
+वोल्टता Voltage, line
+लाइन वोल्टता Voltage, medium
+मध्यम वोल्टता Voltage, no-load
+शून्य-लोड वोल्टता Voltage, open circuit खुला परिपथ वोल्टता Voltage, peak inverse उच्चतम प्रतीप वोल्टता Voltage, phase
+फेज वोल्टता Voltage, primary
+प्राथमिक वोल्टता Voltage, rated
+निर्धारित वोल्टता Voltage, reactance
+प्रतिघात वोल्टता Voltage, reactive
+प्रतिघाती वोल्टता Voltage, reference
+संदर्भ वोल्टता Voltage, residual
+अवशिष्ट वोल्टता Voltage, resistance प्रतिरोधक वोल्टता Voltage, root mean square वर्ग-माध्य-मूल वोल्टता Voltage, rupturing
+विभंग वोल्टता Voltage, safe operating निरापद प्रचालन वोल्टता Voltage, secondary
+द्वितीयक वोल्टता Voltage, service
+सर्विस वोल्टता, आपूर्ति वोल्टता Voltage, sparking
+स्फुलिंग वोल्टता Voltmeter
+वोल्टमापी, वोल्टमीटर Voltmeter, cell testing सेल परीक्षण वोल्टमापी Voltmeter, crest
+शिखर वोल्टमापी Voltmeter, electrostatic स्थिरवैद्यत वोल्टमापी Voltmeter, hot wire
+तप्त तार वोल्टमापी Voltmeter, peak
+शिखर वोल्टमापी Voltmeter, vacuum-tube निर्वात नलिका वोल्टमापी Volume
+1. आयतन 2. खंड 3. मात्रा
+193
+Walk-in interview
+Wave propagation, electromagnetic
+Walk-in interview Wall plate Wastage Waste pipe Water proof Water quality Watt governor Watt hour constant
+तत्काल साक्षात्कार दीवार पट्टिका 1. छीजन 2. अपव्यय अपशिष्ट नलिका जलसह जल गुणता वाट-अधिनियंत्रक वाट-ऑवर स्थिरांक, वाट-घन्टा स्थिरांक वाट-घंटा मापी वाट तुल्यकाली वाट वाट-ऑवर, वाट-घन्टा वाटहीन घटक वाटहीन धारा वाटमापी पाठ्यांक, वाटमापी
+Watt hour meter Watt Watt, synchrounous Watt-hour Wattless component Wattless current Wattmeter reading
+रीडिंग
+Wattmeter
+वाटमापी, वाटमीटर Wattmeter, compensated प्रतिकारित वाटमापी, प्रतिकारित
+वाटमीटर Wattmeter, double element द्वि-अवयव वाटमापी Wattmeter, hot wire तप्त-तार वाटमापी Wattmeter, polyphase बहुफेज वाटमापी, बहुफेज
+वाटमीटर Wave division multiplexing तरंग विभाजन मल्टीप्लेक्सिंग Wave guide
+तरंग पथिका Wave propagation, विद्युत-चुंबकीय तरंग संचरण
+electromagnetic
+194

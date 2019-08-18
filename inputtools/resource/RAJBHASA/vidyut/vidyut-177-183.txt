@@ -1,0 +1,118 @@
+﻿________________
+
+
+Stimulate
+Sub structure
+Stimulate Stimulation Stipulated conditions Stipulated Stop cock Stoplog gates Storage reservoir Storage sheds Storage Strata Strategic plan Strcutural erection Stream Strength, dielectric Strength, electric field Strength, pole Stress Stretch String Stringing of lines Strip Stroke Structural components Structure Studding Sturdiness Sub circuit Sub soil water Sub station Sub structure
+उद्दीप्त करना उद्दीपन अनुबद्ध शर्ते अनुबद्ध, निर्दिष्ट, निर्धारित स्टॉप कॉक, टोंटी स्टॉपलॉग गेट, रोधनलठ्ठा गेट भंडारण जलाशय भंडारण शैड संग्रहण, भंडारण, संचयन संस्तर कार्यनीतिक योजना ढांचागत उत्थापन धारा परावैद्युत सामर्थ्य विद्युत क्षेत्र तीव्रता ध्रुव सामर्थ्य प्रतिबल खिंचाव, फैलाव लड़ी, श्रृंखला, रज्जु लाइन खींचना, तार खींचना पट्टी, पत्ती आघात, स्ट्रोक संरचनात्मक अवयव ढांचा, संरचना जड़ा हुआ शक्तिमत्ता उप-परिपथ अवमृदा जल उप-केन्द्र, सब स्टेशन अव संरचना, उप ढांचा
+177
+Sub surface
+Supersession
+मूल्यांकन
+Sub surface
+अधःस्तल Submerged
+निमज्जित, डूबा हुआ, जलमग्न,
+निमग्न Submergence area निमज्जन क्षेत्र Submergence of reservoir जलाशय का डूब क्षेत्र Subscribed capital
+अभिदत्त पूंजी Subsequent evaluation of परियोजना का परवर्ती
+project Subsidiary charge
+सहायक प्रभार Subsidiary
+सहायक Subsidy
+इमदाद, आर्थिक सहायता Subsistence allowance निर्वाह भत्ता Substandard
+अवमानक Substation level
+उप केन्द्र स्तर Substitute
+एवजी, स्थानापन्न, प्रतिस्थापन Sub-system
+उप-तंत्र Sub-transient period प्राक्क्षणिका अवधि Sub-transient reactance प्राक्क्षणिका प्रतिघात Sub-transient time constant Argefocht chldich Succeeding
+अनुवर्ती, उत्तरवर्ती Successful tenderer सफल निविदाकर्ता Sullage
+अवजल Sump tanks
+निर्गत हौदी, सम्प टैंक Sundry
+फुटकर, विविध Super thermal power project सुपर ताप विद्युत परियोजना Supercontrol grid
+अतिनियंत्रक ग्रिड Superficial
+ऊपरी, बाहरी, सतही Superimposed alternating अध्यारोपित प्रत्यावर्ती धारा
+current Supersession
+अधिक्रमण
+178
+Supervision
+Switch board
+Supervision
+पर्यवेक्षण, देखरेख Supervisory control and पर्यवेक्षण नियंत्रण और आंकड़ों
+data acquisition (SCADA) की प्राप्ति (स्काडा) Supplementary
+पूरक, अनुपूरक Supply of electricity बिजली आपूर्ति Supply, average
+औसत आपूर्ति Supply, three phase तीन फेज आपूर्ति Support
+आलम्ब, आधार, टेक Suppressor, field
+क्षेत्र निरोधक Surcharge
+अधिभार Surety
+जमानत, प्रतिभू Surety bond
+प्रतिभू पत्र, जमानत-पत्र Surface acoustic wave पृष्ठ ध्वानिक तरंग Surface power house सतही पावर हाउस Surface tension
+पृष्ठ तनाव Surface
+सतह, पृष्ठ Surge impedance
+सर्ज प्रतिबाधा Surge
+सर्ज, प्रोत्कर्ष Surplus
+अधिशेष, अतिरिक्त Surprise, geological भूगर्भीय आश्चर्य Surrounding
+परिवेश Survey
+सर्वेक्षण Suspense account
+उचंत खाता Sustain
+बनाए रखना Sustainable
+धारणीय, सतत Sustained
+सतत, अविरत Sweep
+1. प्रसर्प 2. साफ करना Swirling device
+परिभ्रामी युक्ति Switch board
+स्विच बोर्ड
+179
+Switch mode power supply
+System element
+Switch mode power supply स्विच मोड पावर सप्लाई (SMPS)
+(एसएमपीएस) Switch rating
+स्विच रेटिंग Switching surge
+स्विचिंग सर्ज, स्विचन प्रोत्कर्ष Switchyard
+स्विचयार्ड Symmetry
+सममिति Symposium
+परिसंवाद Synchronisation
+तुल्यकालन, सिंक्रोनाइजेशन Synchronising bus bar तुल्यकाली बस बार Synchronising current तुल्यकाली धारा Synchronising transformer तुल्यकाली ट्रांसफार्मर Synchronous capacitor तुल्यकाली कैपिसेटर Synchronous converter तुल्यकाली कन्वर्टर Synchronous crawling तुल्यकाली रिंगण Synchronous digital hierarchy तुल्यकाली अंकीय पदानुक्रम Synchronous generator तुल्यकाली जेनरेटर Synchronous motor तुल्यकाली मोटर Synchronous phase modifierतुल्यकाली फेज आपरिवर्तक Synchronous sequential तुल्यकाली आनुक्रमिक परिपथ
+circuits Synchronous transport तुल्यकाली प्रतिगमन मॉड्यूल
+module Synchronous
+तुल्यकाली, तुल्यकालिक Synergy
+सहक्रिया, सिनर्जी Synopsis
+सारांश, रूपरेखा Synthetic
+कृत्रिम, सांश्लेषिक Syphon
+साइफन System availability
+तंत्र उपलब्धता System element
+तंत्र अवयव
+180
+System of distribution, radial
+Tax holiday
+त्रिज्यीय वितरण तंत्र
+श्रेणी वितरण तंत्र
+समांतर वितरण तंत्र
+System of distribution,
+radial System of distribution,
+series System of distribution,
+parallel System System, insulated System, non earthed System, overhead contact
+System, polyphase System, power System, solidly earthed System, three conductor Systematic Systems analysis
+1. प्रणाली 2. पद्धति 3. तंत्र विद्युतरोधित तंत्र भूसंपर्करहित तंत्र शिरोपरि संपर्क तंत्र, ओवरहैड संपर्क प्रणाली बहुफेज प्रणाली विद्युत शक्ति तंत्र प्रत्यक्ष भू-संपर्कित प्रणाली त्रिचालक प्रणाली क्रमबद्ध, व्यवस्थित तंत्र विश्लेषण
+Tail race tunnel Tandem operation Tank, storage Tap field motor Tap, transformer Taper-bearing Target Tariff management Task force Tax holiday
+टेल रेस सुरंग, विसर्जनी सुरंग अनुबद्ध प्रचालन स्टोरेज टैंक, भंडारण टंकी टैप क्षेत्र मोटर ट्रांसफार्मर टैप टेपर बेयरिंग लक्ष्य प्रशुल्क प्रबंधन, टैरिफ प्रबंधन कार्यदल कर-मुक्त अवधि
+181
+T-beam
+Term of office
+T-beam
+T-धरन Technical
+तकनीकी, प्राविधिक Technical & professional तकनीकी एवं व्यावसायिक qualification
+योग्यता Technical data
+तकनीकी डाटा / आंकड़े Technical know-how तकनीकी जानकारी / ज्ञान Technical parameters तकनीकी पैरामीटर, तकनीकी
+प्राचल Techno-commercial तकनीकी-वाणिज्यिक मूल्यांकन
+evaluation Techno-economic clearance तकनीकी-आर्थिक अनापत्ति Technological advances प्रौद्योगिक उन्नति Technology
+प्रौद्योगिकी Tele-communication दूर-संचार Tell tale
+स्थिति सूचक Temperature
+1. ताप 2. तापमान Temporary erection अस्थायी उन्निर्माण Temporary township अस्थाई बस्ती Tendency
+प्रवृत्ति Tender committee
+निविदा समिति Tender expenditure निविदा व्यय Tender sample
+टेंडर नमूना Tender
+निविदा, टेंडर Tensile
+तनन Tension
+तनाव Tensioned
+तनित Tentative
+अनंतिम Tenure of office
+पदधारण अवधि Tenure
+काल-अवधि Term of office
+पदावधि
+182

@@ -1,0 +1,86 @@
+﻿________________
+
+
+Rack-and-pinion rail
+Radio transmission
+Rack-and-pinion rail रैक-पिनियन रेल, दंतुर
+दंडचक्र पटरी Radar
+रेडार Radial gate
+त्रिज्यीय गेट Radial sluice
+त्रिज्यीय स्लुइस, रेडियल स्लुइस Radiant efficiency विकिरणी दक्षता Radiant energy
+विकिरणी ऊर्जा Radiant heat
+विकिरणी ऊष्मा Radiation
+रेडिएशन, विकिरण Radio detection
+रेडियो संसूचन Radio direction finding रेडियो दिक् अंवेषण Radio doppler
+रेडियो डॉप्लर Radio field intensity रेडियो क्षेत्र तीव्रता Radio frequency
+रेडियो आवृत्ति अंतर्माडुलन intermodulation Radio frequency (r-f) रेडियो-आवृत्ति Radio frequency amplifier रेडियो-आवृत्ति प्रवर्धक Radio frequency choke रेडियो आवृत्ति चोक Radio frequency pulse रेडियो आवृत्ति स्पंद Radio frequency transformer रेडियो आवृत्ति ट्रांसफार्मर Radio interference रेडियो व्यतिकरण दमन
+suppression Radio interference रेडियो व्यतिकरण Radio receiver
+रेडियो रिसीवर, रेडियो अभिग्राही Radio transmission & रेडियो पारेषण एवं अभिग्रहण
+reception Radio transmission रेडियो पारेषण/ट्रांसमिशन
+147
+Radio wave
+Rate list
+Radio wave Radius Rail head Rail Raised Ramp function Ramp input Ramp response Ramp voltage Random vibration Random access Random access storage Random error Random function Random noise Random number table Random number Random observation Random orientation Random sample size Random sample
+रेडियो तरंग त्रिज्या रेल हैड रेल, पटरी उत्थापित प्रवण फलन प्रवण इनपुट प्रवण-अनुक्रिया प्रवण वोल्टता यादृच्छिक कम्पन यादृच्छिक अभिगम यादृच्छिक अभिगम भंडार यादृच्छिक त्रुटि यादृच्छिक फलन यादृच्छिक रव यादृच्छिक संख्या सारणी यादृच्छिक संख्या यादृच्छिक प्रेक्षण अनियमित अभिविन्यास यादृच्छिक प्रतिदर्श आमाप यादृच्छिक प्रतिदर्श, यादृच्छिक नमूना यादृच्छिक प्रतिचयन यादृच्छिक संकेत यादृच्छिक भ्रमण आवृत्ति मॉडुलन यादृच्छिक तेजी से, शीघ्रता पूर्वक दर संविदा, दर ठेका दर सूची
+Random sampling Random signal Random walk frequency
+modulation Random Rapidly Rate contract Rate list
+148
+Rate
+Rating flume
+Rate
+दर Rate, lowest
+न्यूनतम दर Rated blowing current निर्धारित गलन धारा Rated breaking capacity निर्धारित वियोजन क्षमता Rated capacity
+निर्धारित क्षमता Rated current
+निर्धारित धारा Rated electric power output निर्धारित विद्युत ऊर्जा उत्पादन Rated evaporation निर्धारित वाष्पन Rated frequency
+निर्धारित आवृत्ति Rated full load current निर्धारित पूर्ण भार धारा Rated head
+रेटेड हेड, निर्धारित दाबोच्चता Rated horsepower निर्धारित अश्वशक्ति, हॉर्स पावर Rated input
+निर्धारित इनपुट, निर्धारित निवेश Rated interrupting निर्धारित अंतरायण Rated interrupting current निर्धारित अंतरायण धारा Rated interrupting time निर्धारित अंतरायण अवधि Rated latching current निर्धारित अर्गलन धारा Rated load torque निर्धारित बल आघूर्ण Rated load
+निर्धारित भार Rated making capacity निर्धारित संयोजन क्षमता Rated momentary current निर्धारित क्षणिक धारा Rated output
+निर्धारित उत्पादन Rated power
+निर्धारित विद्युत शक्ति Rated pressure
+निर्धारित दाब Rated time (of a device) निर्धारित समय (एक युक्ति का) Rated unit capacity निर्धारित इकाई क्षमता Rated voltage
+निर्धारित वोल्टता Rating curve
+निर्धार वक्र Rating factor
+निर्धार गुणक Rating flume
+अंशांकन अवनालिका
+149
+Rating of apparatus
+Reactance reduction
+Rating of apparatus Rating of fuse Rating of machine Rating plate Rating scale Rating tank Rating Ratio Ratio balance system Ratio box, kelvin bridge Ratio correction factor Ratio meter Rational Rationalisation Raw material Ray, electrode control Rayleigh acoustic formula Rayleigh Janger method R-C filter R-C oscillator R-C-coupling Reach Reactance frequency
+transformation Reactance function Reactance gyrator
+उपकरण निर्धार फ्यूज निर्धार मशीन की रेटिंग, मशीन निर्धार निर्धारण पट्टिका, रेटिंग प्लेट निर्धारण मापक्रम, निर्धार स्केल अंशांकन कुंड निर्धार अनुपात अनुपात संतुलन प्रणाली केल्विन सेतु अनुपात बॉक्स अनुपात संशोधन गुणक अनुपात मापी परिमेय, तर्कसंगत युक्तिकरण कच्चा माल, अपरिष्कृत माल इलेक्ट्रोड नियंत्रक किरण रेले ध्वानिक सूत्र रेले जेन्गर विधि आर.सी. फिल्टर आर.सी. दोलित्र आर.सी. युग्मन अभिगम, पहुँच प्रतिघात आवृत्ति रूपांतरण
+प्रतिघात फलन प्रतिघात जाइरेटर, प्रतिघात परिभ्रामक प्रतिघात मॉडुलन प्रतिघात मॉडुलक प्रतिघात न्यूनन
+Reactance modulation Reactance modulator Reactance reduction
+150
+Reactance relay
+Receiving antenna
+Reactance relay
+प्रतिघात रिले Reactance rise
+प्रतिघात वृद्धि Reactance tube frequency प्रतिघात नलिका आवृत्ति modulation
+मॉडुलन Reactance voltage प्रतिघात वोल्टता Reactance
+प्रतिघात Reactance, generator जनरेटर प्रतिघात Reaction
+1. प्रतिक्रिया 2. अभिक्रिया Reactive capacity
+प्रतिघाती क्षमता Reactive load
+प्रतिघाती भार Reactive power
+प्रतिघाती शक्ति Reactive volt ampere
+प्रतिघाती वोल्ट ऐम्पियर Real axis
+वास्तविक अक्ष Real frequency
+वास्तविक आवृत्ति Real gas mixture analysis वास्तविक गैस मिश्रण विश्लेषण Real low pass response वास्तविक निम्नपारण अनुक्रिया Real power
+वास्तविक शक्ति Real time simulation वास्तविक समय अनुकृति Realization of bills
+बिलों की वसूली Realization
+वसूली, उगाही Reamer
+परिवेधक, रीमर Reappropriate
+पुनर्विनियोजन Reassessment
+पुनर्निर्धारण Rebound
+प्रतिक्षेप Receiver compound engine अभिग्राही बहुपद इंजन Receiver noise
+अभिग्राहित्र रव Receiver relay
+अभिग्राही रिले Receiver
+अभिग्राही, रिसीवर Receiving angle
+अभिग्राही कोण Receiving antenna
+अभिग्राही ऐन्टेना
+151
+Receiving end
+Rectifier, Ferrant
+Receiving end Receiving tip Receiving tube Receptor Recess Reciprocal Reciprocating pump Reckoning Reclamation Reclassification Reconcilation Reconsideration Reconveyance Recovery of dues Rectification Rectifier anode Rectifier cathode Rectifier circuit element Rectifier fuse Rectifier regulation Rectifier ripple Rectifier transformer Rectifier unit Rectifier welding set Rectifier Rectifier, bridge Rectifier, copper oxide Rectifier, electrolytic Rectifier, electronic Rectifier, Ferrant
+अभिग्राही सिरा, प्राप्ति सिरा अभिग्राही अग्र अभिग्राही नलिका ग्राही झिरी अन्योन्य, पारस्परिक, परस्पर प्रत्यागामी पंप गणना सुधार, भूमि उद्धार पुनर्वर्गीकरण समाधान पुनर्विचार पुनः हस्तांतरण देय राशि की वसूली 1. परिशोधन 2. दिष्टकरण दिष्टकारी ऐनोड दिष्टकारी कैथोड दिष्टकारी परिपथ अवयव दिष्टकारी-फ्यूज दिष्टकारी नियमन दिष्टकारी ऊर्मि दिष्टकारी ट्रांसफार्मर दिष्टकारी एकक दिष्टकारी वेल्डिंग सेट 1. दिष्टकारी 2. परिशोधक ब्रिज दिष्टकारी कॉपर आक्साइड दिष्टकारी विद्युत अपघटनी दिष्टकारी इलेक्ट्रॉनिक दिष्टकारी फेरान्ट दिष्टकारी
+152

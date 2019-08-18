@@ -5,6 +5,6 @@ from django.db.models.functions import Length
 
 def suggest(text, dst_lang):
 	queryset = Wordlist.objects.filter(
-    Q(word__istartswith=text) | Q(word__icontains=text)
+    Q(word__istartswith=text)
 	).order_by(Length('word').asc())[:suggestion_settings.NUM_WORDS]
 	return [obj.word for obj in queryset]

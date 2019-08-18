@@ -1,0 +1,28 @@
+# Demo App for Translator
+
+## Steps:
+
+* sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-contrib
+* Run requirement.txt with pip for installing dependency
+
+## configure PostgreSQL
+
+* sudo su - postgres 
+* psql
+* CREATE DATABASE transdb;
+* CREATE USER root WITH PASSWORD 'root1234';
+* ALTER ROLE root SET client_encoding TO 'utf8';
+* ALTER ROLE root SET default_transaction_isolation TO 'read committed';
+* GRANT ALL PRIVILEGES ON DATABASE transdb TO root;
+* \q
+* exit
+
+## Migrate the database
+
+* python manage.py makemigrations
+* python manage.py migrate
+* python manage.py createsuperuser
+
+## Populate the database for suggestions feature
+* python manage.py loadwordlist "hi" inputtools/resource/misc/1000_hi_words.txt
+* python manage.py runserver

@@ -1,0 +1,115 @@
+﻿________________
+
+
+Term
+Three core cable
+Term
+मियाद, अवधि Terminal benefit
+सेवांत हित लाभ Terminal multiplexer टर्मिनल मल्टीप्लेक्सर Terminal pole
+अंतस्थ खंभा Terminal
+टर्मिनल, अन्तस्थ, अन्तिम Terms and conditions निबंधन एवं शर्ते Terms of reference विचारार्थ विषय Terms of service
+सेवा शर्ते Terrace
+बारजा, छत Test procedure
+जांच प्रक्रिया Test results
+जांच परिणाम Test, motoring
+मोटरी परीक्षण Tester, mutual conductance पारस्परिक चालकत्व टेस्टर Testing and commissioning परीक्षण और कमीशनिंग (T&C)
+(टी. एवं सी.) Testing transformer परीक्षण ट्रांसफार्मर Tetrode
+टेट्रोड Texture
+गठन, बनावट Theoretical
+सैद्धांतिक Thermal bad conductor ऊष्मा कुचालक Thermal cycle
+तापीय चक्र Thermal cycle optimisation तापीय चक्र इष्टतमीकरण Thermal power station (TPS) ताप विद्युत केंद्र (टी.पी.एस.) Thermal power
+ताप विद्युत, थर्मल पावर Thermal probe
+ऊष्मीय ऐषणी, थर्मल ऐषणी Thermal
+तापीय Thermodynamics
+ऊष्मागतिकी, ऊष्मागति विज्ञान Thermometer
+तापमापी, थर्मामीटर Thickness
+मोटाई, स्थूलता Three core cable
+त्रिक्रोड केबिल
+183
+Three phase four wire system
+Topographical survey
+Three phase four wire systemत्रिफेज चतुष्तार प्रणाली Three phase load, balanced संतुलित त्रिफेज लोड Three phase three-wire त्रिफेज त्रितार प्रणाली
+system Three phase
+त्रिफेज, तीन फेज Three winding transformer त्रिकुंडली ट्रांसफॉर्मर Three-ammeter method त्रि-ऐमीटर विधि Throttle
+उपरोध Thrust
+प्रणोद Thyristor
+थाइरिस्टर Tightness
+कसाव Time barred
+कालातीत Time bound
+समय-बद्ध Time gap
+समय अंतराल Time lag overcurrent relay समय पश्ची अतिधारा रिले Time lag relay
+समय पश्ची रिले Time lag reverse power समय पश्ची विपरीत शक्ति relay
+रिले Time lag
+समय पश्चता Time lag, definite
+निश्चित समय पश्चता Time lag, inverse
+विलोम समय पश्चता Time overrun
+समय सीमा लंघन Time rating
+अवधि निर्धार, रेटिंग Time schedule
+समय अनुसूची Title deed
+अधिकार-पत्र, हक विलेख Tool box
+औजार बॉक्स Tool
+औजार Tools and plant (T&P) औजार एवं संयंत्र (टी. एवं पी.) Top bars
+शीर्ष बार, टॉप बार Topographical survey स्थलाकृतिक सर्वेक्षण
+184
+Torque motor
+Transformer, high reactance
+Torque motor
+बलाघूर्ण मोटर Torque
+बलाघूर्ण Torsion galvanometer मरोड़ी गैल्वैनोमीटर Torsion wattmeter
+मरोड़ी वाटमीटर Tower erection
+टावर उन्निर्माण Tower foundation work टावर नींव कार्य Tower line
+टावर लाइन Toxic
+विषाक्त Tracing
+1. अनुरेखण 2. पता लगाना Trail termination point ट्रेल समापन बिंदु Trans border data flow ट्रान्स बार्डर डाटा फ्लो Transaction
+लेन-देन Transducer
+ट्रांसड्यूसर Transfer admittance अंतरण प्रवेश्यता Transfer impedance अंतरण प्रतिबाधा Transfer line
+अंतरण लाइन Transformation, delta star डेल्टा स्टार ट्रांसफार्मेशन Transformer hall cavern ट्रांसफार्मर हाल कैवर्न (गुफा) Transformer coupled amplifier ट्रांसफार्मर युग्मित प्रवर्धक Transformer
+ट्रांसफार्मर Transformer, air-core वायु-क्रोड ट्रांसफार्मर Transformer, alternating प्रत्यावर्ती धारा ट्रांसफार्मर
+current Transformer, auto
+ऑटो ट्रांसफार्मर Transformer, booster बूस्टर ट्रांसफार्मर Transformer, constant current स्थिर धारा ट्रांसफार्मर Transformer, constant voltage स्थिर वोल्टता ट्रांसफार्मर Transformer, current धारा ट्रांसफार्मर Transformer, distribution वितरण ट्रांसफार्मर Transformer, high reactance उच्च प्रतिघात ट्रांसफार्मर
+185
+Transformer, high voltage
+Transient, travelling wave
+Transformer, high voltage उच्च-वोल्टता ट्रांसफार्मर Transformer, humming of ट्रांसफार्मर गुंजन Transformer, impedance प्रतिबाधा सुमेलन ट्रांसफार्मर
+matching Transformer, instrument मापयंत्र ट्रांसफार्मर Transformer, intermediate मध्य आवृत्ति ट्रांसफार्मर
+frequency Transformer, matching सुमेलन ट्रांसफार्मर Transformer, neutral earthing न्यूट्रल भू-संपर्कन ट्रांसफार्मर Transformer, non-resonating अनुनादहीन ट्रांसफार्मर Transformer, oil immersed तेल निमज्जित ट्रांसफार्मर Transformer, phase shifting फेज-विस्थापन ट्रांसफार्मर Transformer, polyphase बहुफेज ट्रांसफार्मर Transformer, potential विभव ट्रांसफार्मर Transformer, receiving end अभिग्राही सिरा ट्रांसफार्मर Transformer, sending end प्रेषण सिरा ट्रांसफार्मर Transformer, singal phase एकल फेज ट्रांसफार्मर Transformer, step down अपचायी ट्रांसफार्मर Transformer, step-up उच्चायी ट्रांसफार्मर Transformer, synchronizing तुल्यकाली ट्रांसफार्मर Transformer, tap changing टैप परिवर्तनीय ट्रांसफार्मर Transformer, three phase त्रिफेज ट्रांसफार्मर Transformer, three winding त्रिकुंडली ट्रांसफार्मर Transformer, variable ratio परिवर्तनीय–अनुपात ट्रांसफार्मर Transient reactance क्षणिक प्रतिघात Transient, induction motor प्रेरण मोटर क्षणिका Transient, non-oscillatory अदोली क्षणिका Transient, synchronous तुल्यकाली मशीन क्षणिका
+machine Transient, travelling wave प्रगामी तरंग क्षणिका
+186
+Transistor
+Triode, power
+Transistor
+ट्रांजिस्टर Transit camp
+विश्राम शिविर, ट्रांजिट कैम्प Translucent
+पारभासी Transmission incentive पारेषण प्रोत्साहन Transmission licence पारेषण लाइसेंस Transmission line
+पारेषण लाइन, संचरण लाइन Transmission service पारेषण सेवा करार
+agreement Transmission service chargeपारेषण सेवा शुल्क Transmission
+पारेषण, संचरण Transmit
+भेजना, प्रेषित करना, संचारित
+करना Transmitter
+ट्रांसमिटर, प्रेषित्र Transparent
+पारदर्शी Transponder
+ट्रांसपोंडर, प्रेषानुकर Transportation
+1. परिवहन 2. अभिगमन
+3. दुलाई Transreceiver
+अभिग्राही, ट्रांसरिसीवर Transverse
+अनुप्रस्थ, आड़ा
+जाल, फंसना, पाश Trash rack
+मलबा जाली Treatment
+उपचार Trench
+खाई Trend
+प्रवृत्ति, झुकाव, रुझान Trespass
+अनधिकार प्रवेश Trial
+परीक्षण Tributary
+सहायक नदी
+कटाई-छटाई Trimmer capacitor ट्रिमर संधारित्र / ट्रिमर केपेसिटर Triode, power
+पावर ट्रायोड, शक्ति ट्रोयोड
+Trap
+Trim
+187
+Trip circuit
+Twisting
+Trip circuit Trip coil Trip relay Trip Trip, overload Trip, shunt Tripartite agreement Triple frequency current Triple frequency voltage Triple lap Triple line Triple point Triple pole switch Trunk line Tube cleaning system Tuned amplifier Tuned circuit Tuning coil
+ट्रिप परिपथ ट्रिप कुंडली ट्रिप रिले ट्रिप, विमोचन अतिभार ट्रिप शंट ट्रिप त्रिपक्षीय करार तीन गुणी आवृत्ति धारा तीन गुणी आवृत्ति वोल्टता त्रिस्तरित त्रिक रेखा त्रिक बिंदु त्रिध्रुवी स्विच ट्रंक लाइन नलिका सफाई व्यवस्था समस्वरित प्रवर्धक समस्वरित परिपथ समस्वरक कुंडली, ट्यूनिंग कॉयल समस्वरण संधारित्र, ट्यूनिंग कंडेन्सर समस्वरी सर्वो-क्रियाविधि समस्वरण, ट्यूनिंग सुरंग, टनल टरबाइन जनरेटर सेट टरबाइन टर्नकी, आद्योपांत कारोबार, टर्नओवर द्विक्रोड केबिल ऐंठन, मरोड़ना
+Tuning condenser
+Tuning servomechanism Tuning Tunnel Turbine generator set Turbine Turnkey Turnover Twin core cable Twisting
+188

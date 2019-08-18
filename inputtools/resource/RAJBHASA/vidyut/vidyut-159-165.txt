@@ -1,0 +1,113 @@
+﻿________________
+
+
+Relay, under current
+Remittance in transit
+Relay, under current न्यून धारा रिले Relay, voltage unbalance वोल्टता असंतुलन रिले Relaying
+1. पुनः बिछाना 2. रिले करना,
+प्रतिसारण Release knob
+मोचन धुंडी Release point
+मोचन बिंदु , रिलीज प्वाइंट Release
+छोड़ना, मुक्त करना, जारी
+करना, मोचन, विमोचन Release, no-volt
+निर्वोल्टता मोचन Release, over voltage अति वोल्टता मोचित्र Release, over-current अति धारा मोचित्र Release, reverse-current विपरीत धारा मोचित्र Release, under-voltage न्यून वोल्टता मोचित्र Released material
+जारी की गई सामग्री Reliability
+विश्वसनीयता Relief and rehabilitation राहत और पुनर्वास Relief valve
+मोचन वाल्व Relinquishment of charge कार्यभार त्याग Relocation
+पुनस्र्थापन Reluctance
+प्रतिष्टंभ, रिलक्टेंस Reluctance motor
+प्रतिष्टंभ मोटर, रिलक्टेंस मोटर Reluctance power
+प्रतिष्टंभ विद्युत, रिलक्टेंस
+विद्युत शक्ति Reluctance, core
+क्रोड- प्रतिष्टंभ, रिलक्टेंस क्रोड Reluctance, magnetic चुंबकीय प्रतिष्टंभ, चुंबकीय
+रिलक्टेंस Reluctance, pulsating स्पंदमान प्रतिष्टंभ, स्पंदमान
+रिलक्टेंस Remedial action
+समाधानकारी कार्रवाई Remittance in transit मार्गस्थ प्रेषण
+159
+Remittance
+Resettlement and rehabilitation
+Remittance
+1. प्रेषण 2. धन-प्रेषण Remote
+दूरस्थ, सुदूर, रिमोट Remote metering
+दूरस्थ मापत्र, रिमोट मीटरिंग Remote terminal unit रिमोट / दूरस्थ टर्मिनल यूनिट Renewal
+नवीकरण Renovation
+नवीनीकरण Reorientation
+पुनर्विन्यास Repayable
+प्रतिदेय Repaying capacity
+प्रतिदेय क्षमता Repayment of loan ऋण चुकौती Repetitive peak current पुनरावर्ती शिखर विद्युत धारा Repetitive peak voltage पुनरावर्ती शिखर वोल्टता Repetitive process पुनरावर्ती प्रक्रिया Replacement
+प्रतिस्थापन Replenish
+पुनःपूर्ति Representation & warranties ufafafelca ya 38afaei Repugnant
+प्रतिकूल, विरुद्ध Repulsion motor
+प्रतिकर्षण मोटर Repulsion start induction प्रतिकर्षण-स्टार्ट प्रेरण मोटर
+motor Requisition
+मांग, मांग पत्र Research and development अनुसंधान व विकास Reserve & surplus आरक्षित कोष एवं अधिशेष Reserve forest
+आरक्षित वन Reserve stock
+आरक्षित माल, आरक्षित स्टॉक Reserved
+आरक्षित Reservoir
+जलाशय Reservoir Impoundment जलाशय अवरोधन Resettlement and
+पुनर्स्थापन एवं पुनर्वास rehabilitation
+160
+Reshuffle
+Resistance, air
+Reshuffle
+फेरबदल Residual magnetism अवशिष्ट चुम्बकत्व Residual pressure
+अवशिष्ट दाब Residual temperature अवशिष्ट ताप Residual voltage
+अवशिष्ट वोल्टता Residual
+अवशिष्ट Resin
+राल, रेजिन Resin, bonding
+बंधक राल Resinoid
+रेजिनॉयड Resistance against flow प्रवाह प्रतिरोध Resistance box
+प्रतिरोध बॉक्स Resistance brazing प्रतिरोध ब्रेजन Resistance butt- welding प्रतिरोध बट वेल्डिंग Resistance coupled प्रतिरोध युग्मित प्रवर्धक / amplifier
+एम्प्लीफायर Resistance drop
+प्रतिरोध पात Resistance earthing प्रतिरोध भू-संपर्कन Resistance flash welding प्रतिरोध दमक-वेल्डिंग Resistance furnace प्रतिरोध भट्ठी Resistance heating, direct प्रत्यक्ष प्रतिरोध-तापन Resistance heating, indirect अप्रत्यक्ष प्रतिरोध-तापन Resistance measurement प्रतिरोध मापन Resistance noise
+प्रतिरोध रव Resistance pyrometer प्रतिरोध पायरोमीटर Resistance thermometer प्रतिरोध तापमापी Resistance voltage
+प्रतिरोध वोल्टता Resistance welding प्रतिरोध वेल्डिंग Resistance
+प्रतिरोध, प्रतिरोधक Resistance, A.C. plate ए.सी. प्लेट प्रतिरोध Resistance, air
+वायु प्रतिरोध
+161
+Resistance, anode feed
+Resistance, impact
+Resistance, anode feed एनोड प्रदाय प्रतिरोध Resistance, antenna ऐन्टेना प्रतिरोध Resistance, apparent आभासी प्रतिरोध Resistance, backward विपरीत दिशा प्रतिरोध Resistance, brush contact बुरुश-संपर्क प्रतिरोध Resistance, buffer
+बफर प्रतिरोध Resistance, carbon slab कार्बन स्लैब प्रतिरोध Resistance, carbon कार्बन प्रतिरोध Resistance, centre tapped मध्य टैपित प्रतिरोध Resistance, coefficient of प्रतिरोध गुणांक Resistance, contact संपर्क प्रतिरोध Resistance, control नियंत्रक प्रतिरोध Resistance, critical क्रांतिक प्रतिरोध Resistance, current limiting विद्युत धारा सीमक प्रतिरोध Resistance, D.C.
+दिष्ट धारा प्रतिरोध, डी.सी.
+प्रतिरोध Resistance, discharge विसर्जन प्रतिरोध Resistance, dynamic plate गतिक प्लेट प्रतिरोध Resistance, dynamic गतिक प्रतिरोध Resistance, effective प्रभावी प्रतिरोध Resistance, equivalent तुल्यमान प्रतिरोध Resistance, fault
+भू-संपर्कन दोष-प्रतिरोध Resistance, field discharge क्षेत्र-विसर्जन प्रतिरोध Resistance, form
+आकृति-प्रतिरोध Resistance, forward अग्रदिश प्रतिरोध Resistance, galvanometer गैल्वैनोमीटर प्रतिरोध Resistance, graded वर्गीकृत प्रतिरोध Resistance, grid
+ग्रिड प्रतिरोध Resistance, head
+अग्रभाग प्रतिरोध Resistance, impact संघट्ट प्रतिरोध
+162
+Resistance, insulation
+Resistor, plate load
+ज
+Resistance, insulation विद्युतरोधी-प्रतिरोध Resistance, negative ऋणात्मक प्रतिरोध Resistance, non-inductive प्रेरणहीन प्रतिरोध Resistance, ohmic
+ओमी प्रतिरोध Resistance, plate
+प्लेट-प्रतिरोध Resistance, reverse biased विपरीत अभिनत प्रतिरोध Resistance, shear
+अपरूपण प्रतिरोध Resistance, specific विशिष्ट प्रतिरोध Resistance, starting स्टार्टिंग प्रतिरोध Resistance, unbalancing असंतुलक प्रतिरोध Resistance, water jet जल प्रधार भू-संपर्कन प्रतिरोध
+earthing Resistance, wirewound तार कुंडलित प्रतिरोधक Resistant
+प्रतिरोधी Resistive load
+प्रतिरोधक भार Resistivity
+प्रतिरोधकता Resistor
+प्रतिरोधक Resistor, ballast
+धारा स्थिरक प्रतिरोधक Resistor, bleeder
+स्रावी प्रतिरोधक Resistor, carbon film कार्बन फिल्म प्रतिरोधक Resistor, cathode
+कैथोड प्रतिरोधक Resistor, charging
+आवेशन प्रतिरोधक Resistor, composite संयुक्त प्रतिरोधक Resistor, earthing
+भू-संपर्कन प्रतिरोधक Resistor, inductive
+प्रेरणिक प्रतिरोधक Resistor, metallized धातुकृत प्रतिरोधक Resistor, non linear
+अरेखीय प्रतिरोधक Resistor, non-inductive प्रेरणरहित प्रतिरोधक Resistor, non-reactive प्रतिघातरहित प्रतिरोधक Resistor, plate load प्लेट लोड प्रतिरोधक
+163
+Resistor, single tapped
+Restore
+Resistor, single tapped एकल टैप प्रतिरोधक Resonance characteristics 371HG 31197 T&TUT Resonance efficiency अनुनाद दक्षता Resonance frequency अनुनाद आवृत्ति Resonance isolator अनुनाद विलगक Resonance peak
+अनुनाद शिखर Resonance radiation अनुनाद विकिरण Resonance
+अनुनाद Resonance, amplitude आयाम अनुनाद Resonance, current विद्युत धारा अनुनाद Resonance, electrical विद्युत-अनुनाद Resonance, phase
+फेज-अनुनाद Resonance, series श्रेणी अनुनाद Resonant arm
+अनुनादी भुजा Resonant circuit
+अनुनादी परिपथ Resonant frequency अनुनादी आवृत्ति Resonant line
+अनुनादी लाइन Resonant shunt oscillographअनुनाद पार्श्वपथ दोलनलेखी Resonant window
+अनुनादी विंडो Resonating circuit meter अनुनादी परिपथमापी Resource crunch
+संसाधन–अभाव Resources
+संसाधन Response characteristics अनुक्रिया अभिलक्षण Response segment अनुक्रिया खंड Response, frequency Response, high frequency उच्च आवृत्ति अनुक्रिया Response, loudspeaker लाउडस्पीकर अनुक्रिया Response, microphone माइक्रोफोन अनुक्रिया Responsiveness
+अनुक्रियाशीलता Restore
+पुनः स्थापन
+164
