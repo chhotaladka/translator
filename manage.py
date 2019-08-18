@@ -5,11 +5,15 @@ import sys
 
 import multiprocessing
 from importlib import import_module
-server = import_module('translator.backend.google-selenium-asyncio.server')
-client = import_module('translator.backend.google-selenium-asyncio.api')
-selenium_server = multiprocessing.Process(target=server.main)
-selenium_server.daemon = True
-selenium_server.start()
+
+settings = import_module('demo.settings')
+selenium_server = None
+if settings.TRANSLATOR['BACKEND'] =='google-selenium-asyncio':
+    server = import_module('translator.backend.google-selenium-asyncio.server')
+    client = import_module('translator.backend.google-selenium-asyncio.api')
+    selenium_server = multiprocessing.Process(target=server.main)
+    selenium_server.daemon = True
+    selenium_server.start()
 
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'demo.settings')
@@ -26,5 +30,6 @@ def main():
 
 if __name__ == '__main__':
     main()
-    selenium_server.terminate()
-    selenium_server.join()
+    if selenium_server is not None:
+        selenium_server.terminate()
+        selenium_server.join()

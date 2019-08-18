@@ -5,7 +5,8 @@ backends = {'dummy': 'dummy',
             'google-api': 'google-api',
             'google-selenium': 'google-selenium',
             'google-selenium-asyncio':'google-selenium-asyncio',
-            'microsoft-api': 'microsoft-api',}
+            'microsoft-api': 'microsoft-api',
+            'bing-selenium': 'bing-selenium',}
 
 class Engine(object):
   def __init__(self, engine='microsoft-api'):
