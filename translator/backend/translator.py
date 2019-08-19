@@ -1,6 +1,10 @@
 from importlib import import_module
 from .keys import keys
 
+from django.core.cache import caches
+
+cache = caches['default']
+
 backends = {'dummy': 'dummy',
             'google-api': 'google-api',
             'google-selenium': 'google-selenium',
@@ -14,4 +18,13 @@ class Engine(object):
     self.client = self.backend.Client(key=keys.get(engine, None))
 
   def translate(self, text=None, src_lang='en', dst_lang='hi'):
-    return self.client.translate(text, src_lang, dst_lang)
+    translation = ''
+    translation = cache.get(text.strip())
+    if translation is None:
+        print('Cache miss')
+        translation = self.client.translate(text, src_lang, dst_lang)
+        cache.set(text.strip(), translation)
+    else:
+        print('Cache hit')
+
+    return translation

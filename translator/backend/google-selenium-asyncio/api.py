@@ -7,7 +7,7 @@ import socket
 HOST,PORT = '127.0.0.1', 8888
 
 class Client(object):
-  def __init__(self, key=None):
+  def __init__(self, key=None, lazy=True):
     self.key = key
     self.translation = ''
 

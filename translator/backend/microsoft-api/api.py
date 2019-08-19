@@ -4,7 +4,7 @@ import json
 import os
 
 class Client(object):
-  def __init__(self, key=None):
+  def __init__(self, key=None, lazy=True):
     self.key = key
     if key is not None:
       os.environ['MICROSOFT_APPLICATION_CREDENTIALS'] = key
