@@ -23,7 +23,7 @@ CREATE DATABASE transdb;
 * Create User `root` and set password `root1234`
 
 ```
-CREATE USER root WITH PASSWORD `root1234`;
+CREATE USER root WITH PASSWORD 'root1234';
 ```
 
 * Set encoding to utf8
