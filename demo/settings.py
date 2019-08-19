@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -52,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
     # 'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
@@ -90,6 +92,10 @@ DATABASES = {
         'USER': 'root', 
         'PASSWORD': 'root1234', 
         'PORT': '',
+    },
+    'tests': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -136,6 +142,21 @@ STATICFILES_DIRS = [os.path.join(PROJECT_APP_DIR, "static"),]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(PROJECT_APP_DIR, "media")
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'unique-snowflake',
+        'TIMEOUT' : 300,
+        'OPTIONS' : {
+                      'MAX_ENTRIES': 300,
+                      'CULL_FREQUENCY': 3,
+                    },
+    }
+}
+
+CACHE_MIDDLEWARE_ALIAS = 'default'
+
+
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
@@ -146,7 +167,7 @@ REST_FRAMEWORK = {
 
 TRANSLATOR = {
         'USE_REST': True,
-        'BACKEND': 'google-selenium-asyncio',
+        'BACKEND': 'google-selenium',
     }
 SUGGESTION = {
     'BACKEND': 'default',

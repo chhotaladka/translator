@@ -7,17 +7,22 @@ import time
 import os
 
 class Client(object):
-  def __init__(self, key=None):
+  def __init__(self, key=None, lazy=True):
     self.key = key
-    chrome_options = Options()
-    chrome_options.add_argument('--headless')
-
-    self.driver = webdriver.Chrome(executable_path = os.path.dirname(os.path.abspath(__file__))+"/../resources/chromedriver", chrome_options=chrome_options)
+    self.chrome_options = Options()
+    self.chrome_options.add_argument('--headless')
     self.url = "https://translate.google.com/#view=home&op=translate&sl=en&tl=hi"
-    self.driver.get(self.url)
+    self.driver = None
+    
+    if lazy == False:
+      self.driver = webdriver.Chrome(executable_path = os.path.dirname(os.path.abspath(__file__))+"/../resources/chromedriver", chrome_options=self.chrome_options)
+      self.driver.get(self.url)
 
   def translate(self, text=None, src_lang='en', dst_lang='hi'):
     if text is not None and len(text.strip()) > 0:
+      if self.driver == None:
+        self.driver = webdriver.Chrome(executable_path = os.path.dirname(os.path.abspath(__file__))+"/../resources/chromedriver", chrome_options=self.chrome_options)
+        self.driver.get(self.url)
       translation = ''
       try:
         #self.driver.get("https://translate.google.com/#view=home&op=translate&sl=en&tl=hi")
@@ -39,4 +44,5 @@ class Client(object):
       return (translation)
 
   def __del__(self):
-    self.driver.quit()
+    if self.driver is not None:
+      self.driver.quit()

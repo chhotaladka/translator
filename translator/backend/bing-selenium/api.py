@@ -7,17 +7,21 @@ import time
 import os
 
 class Client(object):
-  def __init__(self, key=None):
+  def __init__(self, key=None, lazy=True):
     self.key = key
-    chrome_options = Options()
-    chrome_options.add_argument('--headless')
-
-    self.driver = webdriver.Chrome(executable_path = os.path.dirname(os.path.abspath(__file__))+"/../resources/chromedriver", chrome_options=chrome_options)
+    self.chrome_options = Options()
+    self.chrome_options.add_argument('--headless')
     self.url = "https://www.bing.com/translator?from=en&to=hi"
-    self.driver.get(self.url)
+    self.driver = None
+    if lazy==False:
+      self.driver = webdriver.Chrome(executable_path = os.path.dirname(os.path.abspath(__file__))+"/../resources/chromedriver", chrome_options=self.chrome_options)
+      self.driver.get(self.url)
 
   def translate(self, text=None, src_lang='en', dst_lang='hi'):
     if text is not None and len(text.strip()) > 0:
+      if self.driver==None:
+        self.driver = webdriver.Chrome(executable_path = os.path.dirname(os.path.abspath(__file__))+"/../resources/chromedriver", chrome_options=self.chrome_options)
+        self.driver.get(self.url)
       translation = ''
       try:
         src = self.driver.find_element_by_id("tta_input")
