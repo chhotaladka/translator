@@ -301,7 +301,7 @@
 			this.textEntry.replaceTextAtSelection( input.length, replacement.output );
 
 			e.stopPropagation();
-
+			suggestions.triggerSuggest();
 			return false;
 		},
 
