@@ -151,8 +151,30 @@ var inputtools = {
 
 var suggestions = {
 
-	// Max number of suggestions
-	max_suggest: 6,
+	/**
+	 * Init/constructor function
+	 *
+	 * @param {string} id element id of textarea
+	 * @return {boolean}
+	 */
+	init: function(id) {
+		console.info("init");
+			// Text input element
+			this.element = document.getElementById(id);
+			// check if the element is input/textarea/editiable
+
+			// Max number of suggestions
+			this.max_suggest = 6;
+
+			//
+			this.context = '';
+			this.contextLength = 0;
+			this.cursorStart = 0;
+			this.cursorEnd = 0;
+
+			// input word for suggestions
+			this.input = '';
+	},
 
 	// Create html elements for input suggestions
 	createElements: function() {
@@ -191,14 +213,20 @@ var suggestions = {
 
 	// Listen for events and bind to handlers
 	listen: function () {
-		console.log("listen");
-		document
-			.getElementById("body")
-			.addEventListener("keydown", event => {
+		console.info("listen");
+		this.element.addEventListener("keydown", event => {
 				suggestions.keypress(event);
 	  		// do something
-			});
+		});
 		//			.addEventListener( 'keydown', inputtools.keypress);
+	},
+
+	triggerSuggest: function() {
+		console.log("triggerSuggest");
+		this.cursorEnd = this.element.selectionStart;
+		const a = this.element.value;
+		this.input = a.substr(this.cursorStart, this.cursorEnd);
+		console.debug("word = text[", this.cursorStart, this.cursorEnd, "] = ", this.input);
 	},
 
 	/**
@@ -208,27 +236,27 @@ var suggestions = {
 	 * @return {boolean}
 	 */
 	keypress: function ( e ) {
-		//console.log($('#body').prop('selectionStart') + ',' + $('#body').prop('selectionEnd'));
-		console.log(e.code);
-		//console.log(this);
-		return false;
+		console.debug("keypress:", e.code, this.element.selectionStart, this.element.selectionEnd);
+
 		var altGr = false,
 			c, input, replacement;
 
-		if ( !this.active ) {
+		if ( !inputtools.isActive() ) {
 			return true;
 		}
 
-		if ( !this.inputmethod ) {
-			return true;
+		if (e.which === 13 || e.which === 32) {
+			this.contextLength = 0;
+			this.context = '';
+			this.cursorStart = this.cursorEnd = this.element.selectionStart;
 		}
 
 		// handle backspace
-		if ( e.which === 8 ) {
-			// Blank the context
-			this.context = '';
-			return true;
-		}
+		// if ( e.which === 8 ) {
+		// 	// Blank the context
+		// 	this.context = '';
+		// 	return true;
+		// }
 
 		if ( e.altKey || e.altGraphKey ) {
 			altGr = true;
@@ -239,39 +267,40 @@ var suggestions = {
 		// but do process extended keymaps
 		if ( ( e.which < 32 && e.which !== 13 && !altGr ) || e.ctrlKey || e.metaKey ) {
 			// Blank the context
-			this.context = '';
-
-			return true;
+			// this.context = '';
+			console.info('Not sure what to do');
+			// return true;
 		}
 
 		c = String.fromCharCode( e.which );
 
 		// Append the character being typed to the preceding few characters,
 		// to provide context for the transliteration regexes.
-		input = this.textEntry.getTextBeforeSelection( this.inputmethod.maxKeyLength );
-		replacement = this.transliterate( input + c, this.context, altGr );
+		//input = this.textEntry.getTextBeforeSelection( this.inputmethod.maxKeyLength );
+		//replacement = this.transliterate( input + c, this.context, altGr );
 
 		// Update the context
 		this.context += c;
 
-		if ( this.context.length > this.inputmethod.contextLength ) {
-			// The buffer is longer than needed, truncate it at the front
-			this.context = this.context.substring(
-				this.context.length - this.inputmethod.contextLength
-			);
-		}
+		// if ( this.context.length > this.inputmethod.contextLength ) {
+		// 	// The buffer is longer than needed, truncate it at the front
+		// 	this.context = this.context.substring(
+		// 		this.context.length - this.inputmethod.contextLength
+		// 	);
+		// }
 
 		// Allow rules to explicitly define whether we match something.
 		// Otherwise we cannot distinguish between no matching rule and
 		// rule that provides identical output but consumes the event
 		// to prevent normal behavior. See Udmurt layout which uses
 		// altgr rules to allow typing the original character.
-		if ( replacement.noop ) {
-			return true;
-		}
+		// if ( replacement.noop ) {
+		// 	return true;
+		// }
 
-		this.textEntry.replaceTextAtSelection( input.length, replacement.output );
+		//this.textEntry.replaceTextAtSelection( input.length, replacement.output );
 
+		console.log("END ",this.context, this.input, this.cursorStart, this.cursorEnd);
 		e.stopPropagation();
 
 		return false;
@@ -369,7 +398,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
 			if (createActionButtons()) {
 				bindEvents();
 			}
+
+			suggestions.init('body');
 			suggestions.createElements();
-			//suggestions.listen();
+			suggestions.listen();
 	});
 });
