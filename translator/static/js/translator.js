@@ -1,7 +1,7 @@
 // Translator APIs
 var translator = {
-  urls: { 'translate': '/rest/translate/',
-          'save': '/rest/save/'
+  urls: { 'translate': 'http://127.0.0.1:8000/rest/translate/',
+          'save': 'http://127.0.0.1:8000/rest/save/'
       },
   save_method: 'POST',
 
@@ -21,7 +21,7 @@ var translator = {
       },
 
   csrfSafeMethod: function(method){
-        return(/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+        return(/^(GET|HEAD|OPTIONS|TRACE|POST)$/.test(method));
     },
 
   handleAjaxError : function(xhRequest, ErrorText, thrownError){
@@ -46,15 +46,29 @@ var translator = {
   renderTranslation: function(response){
       console.log(response);
 
-      text = response['text']+'\n\n********\n\n'+response['translation'];
-      $('#body').val(text);
+      if ($('iframe').length == 0){
+        text = response['text']+'\n\n********\n\n'+response['translation'];
+        $('#body').val(text);
+      }
+      else{
+        text = response['text']+'<br/><br/>********<br/><br/>'+response['translation'];
+        iframe = $('iframe').contents();
+        iframe.find("body").html(text);
+      }
   },
 
   translate: function(event){
     console.log('Translating...');
 
     event.preventDefault();
-    text = $('#body').val();
+    var text = '';
+    if ($('iframe').length == 0){
+      text = $('#body').val();
+    }
+    else{
+      iframe = $('iframe').contents();
+      text = iframe.find("body").html();
+    }
 
     if (text.length >0){
       data = {'text': text};
