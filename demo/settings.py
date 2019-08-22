@@ -41,10 +41,12 @@ INSTALLED_APPS = [
     'translator.apps.TranslatorConfig',
     'inputtools.apps.InputtoolsConfig',
     'rest_framework',
+    'corsheaders',
     # 'debug_toolbar',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -173,3 +175,5 @@ SUGGESTION = {
     'BACKEND': 'default',
     'NUM_WORDS': 5,
 }
+
+CORS_ORIGIN_ALLOW_ALL = True
