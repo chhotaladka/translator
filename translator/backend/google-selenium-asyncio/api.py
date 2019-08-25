@@ -4,7 +4,12 @@ import time
 import os
 
 import socket
-HOST,PORT = '127.0.0.1', 8888
+from django.conf import settings
+
+print('settings: ', settings.TRANSLATOR)
+
+HOST = settings.TRANSLATOR.get('OPTIONS').get('ip')
+PORT = settings.TRANSLATOR.get('OPTIONS').get('port')
 
 class Client(object):
   def __init__(self, key=None, lazy=True):
