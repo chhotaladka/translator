@@ -61,13 +61,13 @@ var translator = {
     console.log('Translating...');
 
     var text = '';
-    console.log($('iframe'));
+    //console.log($('iframe'));
     if ($('form').has('iframe').length == 0){
-      console.log('Here')
+      //console.log('Here')
       text = $('#body').val();
-      console.log(text);
+      //console.log(text);
       if (text.indexOf('********') > 0){
-        console.log(text.indexOf('********'));
+        //console.log(text.indexOf('********'));
         text = text.slice(0, text.indexOf('********'));
       }
     }
@@ -75,7 +75,7 @@ var translator = {
       iframe = $('iframe').contents();
       text = iframe.find("body").html();
     }
-    console.log('text:'+text)
+    //console.log('text:'+text)
     if (text.length >0){
       data = {'text': text};
       $.ajaxSetup({
