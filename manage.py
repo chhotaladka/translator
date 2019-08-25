@@ -10,8 +10,13 @@ settings = import_module('demo.settings')
 selenium_server = None
 if settings.TRANSLATOR['BACKEND'] =='google-selenium-asyncio':
     server = import_module('translator.backend.google-selenium-asyncio.server')
-    client = import_module('translator.backend.google-selenium-asyncio.api')
-    selenium_server = multiprocessing.Process(target=server.main)
+    backend_settings = settings.TRANSLATOR['OPTIONS']
+    if backend_settings is not None:
+        ip = backend_settings.get('ip')
+        port = backend_settings.get('port')
+        selenium_server = multiprocessing.Process(target=server.main, args=(ip, port))
+    else:
+        selenium_server = multiprocessing.Process(target=server.main)
     selenium_server.daemon = True
     selenium_server.start()
 

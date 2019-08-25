@@ -89,10 +89,10 @@ WSGI_APPLICATION = 'demo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'transdb', 
-        'HOST': '127.0.0.1', 
-        'USER': 'root', 
-        'PASSWORD': 'root1234', 
+        'NAME': 'transdb',
+        'HOST': '127.0.0.1',
+        'USER': 'root',
+        'PASSWORD': 'root1234',
         'PORT': '',
     },
     'tests': {
@@ -169,8 +169,11 @@ REST_FRAMEWORK = {
 
 TRANSLATOR = {
         'USE_REST': True,
-        'BACKEND': 'google-selenium',
+        'BACKEND': 'google-selenium-asyncio',
+        'OPTIONS': {'ip': '127.0.0.1',
+                    'port': 10000},
     }
+
 SUGGESTION = {
     'BACKEND': 'default',
     'NUM_WORDS': 5,

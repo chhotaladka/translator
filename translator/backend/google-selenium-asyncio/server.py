@@ -128,7 +128,7 @@ def worker(name, queue):
         traceback.print_exc()
 
 
-def main():
+def main(ip='127.0.0.1', port=10000):
   global loop
   global server
   global coro
@@ -149,7 +149,7 @@ def main():
     for signame in ('SIGINT', 'SIGTERM'):
       loop.add_signal_handler(getattr(signal, signame),
                             functools.partial(handler, signame))
-    coro = loop.create_server(lambda:EchoServerClientProtocol(q), '127.0.0.1', 8888)
+    coro = loop.create_server(lambda:EchoServerClientProtocol(q), ip, port)
     server = loop.run_until_complete(coro)
     print('Serving on {}'. format(server.sockets[0].getsockname()))
     try:
@@ -178,4 +178,8 @@ def main():
       traceback.print_exc()
 
 if __name__ == '__main__':
-  main()
+  import sys
+  if len(sys.argv)==2:
+    main(sys.argv[0], sys.argv[1])
+  else:
+    main()
