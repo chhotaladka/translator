@@ -153,6 +153,7 @@ CACHES = {
                       'MAX_ENTRIES': 300,
                       'CULL_FREQUENCY': 3,
                     },
+        'KEY_FUNCTION': 'translator.keying.make_key',
     }
 }
 
