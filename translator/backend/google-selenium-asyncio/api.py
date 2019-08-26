@@ -6,7 +6,7 @@ import os
 import socket
 from django.conf import settings
 
-print('settings: ', settings.TRANSLATOR)
+#print('settings: ', settings.TRANSLATOR)
 
 HOST = settings.TRANSLATOR.get('OPTIONS').get('ip')
 PORT = settings.TRANSLATOR.get('OPTIONS').get('port')

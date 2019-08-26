@@ -5,6 +5,8 @@ var translator = {
       },
   save_method: 'POST',
 
+  current_curson_pos: 0,
+
   getCookie : function(name){
         var cookieValue = null;
         if (document.cookie && document.cookie != ''){
@@ -47,12 +49,29 @@ var translator = {
       console.log(response);
 
       if ($('form').has('iframe').length == 0){
-        text = response['text']+'\n\n********\n\n'+response['translation'];
+        /* Get updated text from the area (in case user has written more. */
+        text = $('#body').val();
+        translator.current_curson_pos = $('#body').prop('selectionEnd');
+        //console.log(text);
+        if (text.indexOf('********') > 0){
+          //console.log(text.indexOf('********'));
+          text = text.slice(0, text.indexOf('********'));
+        }
+
+        let reg = /(.*)(\n)*$/;
+        text = text.replace(reg, '$1');
+        text = text+'\n\n********\n\n'+response['translation'];
         $('#body').val(text);
+        $('#body').prop('selectionEnd', translator.current_curson_pos);
       }
       else{
-        text = response['text']+'<br/><br/>********<br/><br/>'+response['translation'];
         iframe = $('iframe').contents();
+        text = iframe.find("body").html();
+        if (text.indexOf('<br/><br/>********<br/><br/>') > 0){
+          //console.log(text.indexOf('********'));
+          text = text.slice(0, text.indexOf('<br/><br/>********<br/><br/>'));
+        }
+        text = text+'<br/><br/>********<br/><br/>'+response['translation'];
         iframe.find("body").html(text);
       }
   },
@@ -74,6 +93,10 @@ var translator = {
     else{
       iframe = $('iframe').contents();
       text = iframe.find("body").html();
+      if (text.indexOf('<br/><br/>********<br/><br/>') > 0){
+        //console.log(text.indexOf('********'));
+        text = text.slice(0, text.indexOf('<br/><br/>********<br/><br/>'));
+      }
     }
     //console.log('text:'+text)
     if (text.length >0){

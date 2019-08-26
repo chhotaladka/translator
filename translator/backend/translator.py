@@ -2,6 +2,7 @@ from importlib import import_module
 from .keys import keys
 
 from django.core.cache import caches
+from translator.keying import _smart_key
 
 cache = caches['default']
 
@@ -19,11 +20,11 @@ class Engine(object):
 
   def translate(self, text=None, src_lang='en', dst_lang='hi'):
     translation = ''
-    translation = cache.get(text.strip())
+    translation = cache.get(_smart_key(text.strip()))
     if translation is None:
         print('Cache miss')
         translation = self.client.translate(text, src_lang, dst_lang)
-        cache.set(text.strip(), translation)
+        cache.set(_smart_key(text.strip()), translation)
     else:
         print('Cache hit')
 
