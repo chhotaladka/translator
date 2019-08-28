@@ -6,6 +6,7 @@ var translator = {
   save_method: 'POST',
 
   current_curson_pos: 0,
+  last_translation:'',
 
   getCookie : function(name){
         var cookieValue = null;
@@ -47,6 +48,8 @@ var translator = {
 
   renderTranslation: function(response){
       console.log(response);
+
+      translator.last_translation = response['text'];
 
       if ($('form').has('iframe').length == 0){
         /* Get updated text from the area (in case user has written more. */
@@ -98,8 +101,10 @@ var translator = {
         text = text.slice(0, text.indexOf('<br/><br/>********<br/><br/>'));
       }
     }
-    //console.log('text:'+text)
-    if (text.length >0){
+
+    console.log('text:'+text);
+    console.log('Previous:'+ translator.last_translation);
+    if ((text.length >0) && (text.trim().localeCompare(translator.last_translation) != 0)){
       data = {'text': text};
       $.ajaxSetup({
                 beforeSend: function(xhr, settings) {
@@ -119,6 +124,9 @@ var translator = {
               success : translator.renderTranslation,
               error : translator.handleAjaxError
             });
+    }
+    else if(text.trim().localeCompare(translator.last_translation) == 0){
+      console.log('Previous text and current are the same.');
     }
 
     return(false);
