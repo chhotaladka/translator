@@ -50,4 +50,4 @@ exit
 python manage.py loadwordlist
 
  
-
+> Please note that some of the backends use Chrome driver for selenium. The version of chromedriver must be compatible with the current version of Google Chrome installed on the server machine. In case the two are incompatible, the server would throw an exception. Please download the compatible version of Chromedriver from [this link](https://chromedriver.chromium.org/downloads).
