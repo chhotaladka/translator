@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/abhishek/translator/translator/backend/resources/nmt_model/translate.ckpt"
+all_model_checkpoint_paths: "/home/abhishek/translator/translator/backend/resources/nmt_model/translate.ckpt"

@@ -20,6 +20,19 @@ if settings.TRANSLATOR['BACKEND'] =='google-selenium-asyncio':
     selenium_server.daemon = True
     selenium_server.start()
 
+elif settings.TRANSLATOR['BACKEND'] =='nmt':
+    server = import_module('translator.backend.nmt.server')
+    backend_settings = settings.TRANSLATOR['OPTIONS']
+    if backend_settings is not None:
+        ip = backend_settings.get('ip')
+        port = backend_settings.get('port')
+        nmt_server = multiprocessing.Process(target=server.start_nmt_thread, args=(ip, port))
+    else:
+        nmt_server = multiprocessing.Process(target=server.start_nmt_thread)
+    nmt_server.daemon = True
+    nmt_server.start()
+
+
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'demo.settings')
     try:
