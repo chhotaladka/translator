@@ -222,10 +222,21 @@ var suggestions = {
 	},
 
 	triggerSuggest: function() {
-		console.log("triggerSuggest");
+		console.debug("triggerSuggest");
 		this.cursorEnd = this.element.selectionStart;
+
 		const a = this.element.value;
-		this.input = a.substr(this.cursorStart, this.cursorEnd);
+		// If user has manually placed the cursor at some location in the text,
+		// in that case `this.cursorStart` needs a new value,
+		// that is begining of the word under the cursor.
+		let i = this.cursorEnd - 1;
+		let regex = /[\s!@#$%^&*(),.?":{}|<>]/g
+		while(a[i].match(regex) == null) {
+			i--;
+		}
+		this.cursorStart = i + 1;
+
+		this.input = a.substring(this.cursorStart, this.cursorEnd);
 		console.debug("word = text[", this.cursorStart, this.cursorEnd, "] = ", this.input);
 	},
 
@@ -236,7 +247,7 @@ var suggestions = {
 	 * @return {boolean}
 	 */
 	keypress: function ( e ) {
-		console.debug("keypress:", e.code, this.element.selectionStart, this.element.selectionEnd);
+		console.debug(" >> keypress:", e.code, e.which, this.element.selectionStart, this.element.selectionEnd);
 
 		var altGr = false,
 			c, input, replacement;
@@ -249,6 +260,7 @@ var suggestions = {
 			this.contextLength = 0;
 			this.context = '';
 			this.cursorStart = this.cursorEnd = this.element.selectionStart;
+			// Hide suggestion box TODO
 		}
 
 		// handle backspace
@@ -272,33 +284,10 @@ var suggestions = {
 			// return true;
 		}
 
-		c = String.fromCharCode( e.which );
-
-		// Append the character being typed to the preceding few characters,
-		// to provide context for the transliteration regexes.
-		//input = this.textEntry.getTextBeforeSelection( this.inputmethod.maxKeyLength );
-		//replacement = this.transliterate( input + c, this.context, altGr );
+		c = String.fromCharCode(e.which);
 
 		// Update the context
 		this.context += c;
-
-		// if ( this.context.length > this.inputmethod.contextLength ) {
-		// 	// The buffer is longer than needed, truncate it at the front
-		// 	this.context = this.context.substring(
-		// 		this.context.length - this.inputmethod.contextLength
-		// 	);
-		// }
-
-		// Allow rules to explicitly define whether we match something.
-		// Otherwise we cannot distinguish between no matching rule and
-		// rule that provides identical output but consumes the event
-		// to prevent normal behavior. See Udmurt layout which uses
-		// altgr rules to allow typing the original character.
-		// if ( replacement.noop ) {
-		// 	return true;
-		// }
-
-		//this.textEntry.replaceTextAtSelection( input.length, replacement.output );
 
 		console.log("END ",this.context, this.input, this.cursorStart, this.cursorEnd);
 		e.stopPropagation();
