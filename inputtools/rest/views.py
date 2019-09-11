@@ -8,7 +8,8 @@ from inputtools.backend import suggestions as suggest
 
 from inputtools.settings import suggestion_settings
 
-
+from indic_transliteration import sanscript
+from indic_transliteration.sanscript import transliterate
 
 
 class WordSuggestionView(viewsets.ViewSet):
@@ -22,7 +23,12 @@ class WordSuggestionView(viewsets.ViewSet):
         if serializer.is_valid():
             engine = suggest.Engine(engine=suggestion_settings.BACKEND)
             word = serializer.data.get('word')
+            lang = serializer.data.get('lang')
+            if 'en' == lang:
+                word = transliterate(word, sanscript.ITRANS, sanscript.DEVANAGARI)
             suggestions = engine.suggest(word)
+            if 'en' == lang:
+                suggestions.insert(0,word);
             result = WordSuggestionSerializer({"word": word, 
                                          "suggestions": suggestions}).data
             return Response(result, status=status.HTTP_200_OK)
