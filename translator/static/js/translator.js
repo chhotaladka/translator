@@ -205,7 +205,7 @@ translator.csrftoken = translator.getCookie('csrftoken');
                 var $el = $(el);
                 // Chrome Fix (Use keyup over keypress to detect backspace)
                 // thank you @palerdot
-                $el.is(':input') && $el.on('keyup keypress paste',function(e){
+                $el.on('keyup keypress paste',function(e){
                     // This catches the backspace button in chrome, but also prevents
                     // the event from triggering too preemptively. Without this line,
                     // using tab/shift+tab will make the focused element fire the callback.
@@ -228,7 +228,20 @@ translator.csrftoken = translator.getCookie('csrftoken');
     });
 })(jQuery);
 
-$('#body').donetyping(function(event){
+if ($('form').has('iframe').length == 0){
+  console.log('Bind donetyping to #body');
+  $('#body').donetyping(function(event){
   console.log('Event last fired @ ' + (new Date().toUTCString()));
   translator._translate();
-});
+  });
+}
+else{
+  console.log('Bind donetyping to iframe body');
+  iframe = $('iframe').contents();
+  body = iframe.find("body")[0];
+  console.log($(body));
+  $(body).donetyping(function(event){
+  console.log('Event last fired @ ' + (new Date().toUTCString()));
+  translator._translate();
+  });
+}
