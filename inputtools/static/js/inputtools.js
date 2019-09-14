@@ -4,6 +4,7 @@ const scriptsToLoad = [
 	"static/js/ime/src/jquery.ime.js",
 	"static/js/ime/src/jquery.ime.preferences.js",
 	"static/js/ime/src/jquery.ime.inputmethods.js",
+	"static/js/caret-position.js",
 	"static/js/translator.js"
 ];
 
@@ -151,6 +152,29 @@ var inputtools = {
 
 var suggestions = {
 
+	url: '/rest/inputtools/',
+
+	// Status of suggestions
+	active: false,
+
+	/**
+	 * Check whether the suggestions is active or not
+	 * @return {boolean}
+	 */
+	isActive: function () {
+		return this.active;
+	},
+
+	// Disable suggestions
+	disable: function () {
+		this.active = false;
+	},
+
+	// Enable suggestions
+	enable: function () {
+		this.active = true;
+	},
+
 	/**
 	 * Init/constructor function
 	 *
@@ -159,25 +183,35 @@ var suggestions = {
 	 */
 	init: function(id) {
 		console.info("init");
-			// Text input element
-			this.element = document.getElementById(id);
-			// check if the element is input/textarea/editiable
+		// Text input element
+		this.element = document.getElementById(id);
+		// check if the element is input/textarea/editiable
 
-			// Max number of suggestions
-			this.max_suggest = 6;
+		// Max number of suggestions
+		this.max_suggest = 6;
 
-			//
-			this.context = '';
-			this.contextLength = 0;
-			this.cursorStart = 0;
-			this.cursorEnd = 0;
+		//
+		this.context = '';
+		this.contextLength = 0;
+		this.cursorStart = 0;
+		this.cursorEnd = 0;
 
-			// input word for suggestions
-			this.input = '';
+		// input word for suggestions
+		this.input = '';
+
+		this.csrftoken = suggestions.getCookie('csrftoken');
+
+		// suggestion box html element, initialized to none
+		this.box = this.createBoxElements();
+		this.box_items = this.box.getElementsByClassName('ita-ppe-can-list')[0];
+		this.pos_left = 0;
+		this.pos_top = 0;
+		// display status of suggestion box
+		this.visible = false;
 	},
 
 	// Create html elements for input suggestions
-	createElements: function() {
+	createBoxElements: function() {
 		let box = document.createElement("div");
 		box.className = "ita-ppe-box";
 		box.setAttribute("style", "direction: ltr; display: none; -moz-user-select: none;");
@@ -208,7 +242,7 @@ var suggestions = {
 		div.appendChild(list);
 		box.appendChild(div);
 
-		document.body.appendChild(box);
+		return document.body.appendChild(box);
 	},
 
 	// Listen for events and bind to handlers
@@ -218,26 +252,158 @@ var suggestions = {
 				suggestions.keypress(event);
 	  		// do something
 		});
-		//			.addEventListener( 'keydown', inputtools.keypress);
+		document.addEventListener("click", (e) => {
+			// clicked anywhere other than suggestion box
+			// Hide suggestion box if active
+			if (!this.visible) {
+				return;
+			}
+	    const flyoutElement = this.box; // suggestion box
+	    let targetElement = e.target; // clicked element
+	    do {
+	        if (targetElement == flyoutElement) {
+	            // This is a click inside. Do nothing, just return.
+	            return;
+	        }
+	        // Go up the DOM
+	        targetElement = targetElement.parentNode;
+	    } while (targetElement);
+	    // This is a click outside suggestion box.
+	    this.hideBox();
+		});
+	},
+
+	resetPosition: function() {
+		this.pos_left = 0;
+		this.pos_top = 0;
+	},
+	setPosition: function() {//Calculate the caret position
+		let caret = getCaretCoordinates(this.element, this.cursorEnd);
+  	console.debug("** setting new position:", caret);
+		const domRect = this.element.getBoundingClientRect();
+		//console.debug(domRect, this.cursorEnd);
+		this.pos_left = caret.left + domRect.left;
+		this.pos_top = caret.top + domRect.top + 60; //TODO replce with actual line height
+	},
+	showBox: function() {
+		if (!this.visible) {
+			this.setPosition();//new position
+		}
+		this.box.style.left = this.pos_left+"px";
+		this.box.style.top = this.pos_top+"px";
+		this.box.style.display = "block";
+		this.visible = true;
+	},
+	hideBox: function() {
+		this.box.style.display = "none";
+		this.resetPosition();
+		this.visible = false;
+		this.context = '';
+	},
+	updateBoxEditStr: function() {
+		let edit = this.box.getElementsByClassName('ita-ppe-uds')[0];
+		edit.innerHTML = this.context;
+	},
+
+	renderSuggestions: function(response){
+			console.log(response);
+			let list = response['suggestions'];
+			if (list.length == 0) {//list should not be empty
+				list.push(response['word']);
+			}
+
+			this.updateBoxEditStr();
+			let num = Math.min(list.length, this.max_suggest);
+			this.box_items.innerHTML = "";
+
+			for (let x = 0; x < num; x++) {
+				var li = document.createElement("div");
+				li.className = "ita-ppe-can";
+				li.setAttribute("style", "-moz-user-select: none;");
+				li.innerHTML = '<span>' + x + '. </span><span>' + list[x] + '</span>';
+				this.box_items.appendChild(li);
+			}
+			this.box_items.firstChild.classList.add("ita-ppe-hlt");
+			this.showBox();
+	},
+
+	getCookie : function(name) {
+      var cookieValue = null;
+      if (document.cookie && document.cookie != ''){
+          var cookies = document.cookie.split(';');
+          for(var i=0; i < cookies.length; i++){
+              var cookie = jQuery.trim(cookies[i]);
+              if(cookie.substring(0, name.length+1) == (name + '=')){
+                  cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                  break;
+              }
+          }
+      }
+      return cookieValue;
+    },
+
+  csrfSafeMethod: function(method){
+        return(/^(GET|HEAD|OPTIONS|TRACE|POST)$/.test(method));
+    },
+
+  handleAjaxError : function(xhRequest, ErrorText, thrownError){
+        //alert( "Sorry, there was a problem!" );
+        console.log( "Error: " + thrownError );
+        console.log( "Status: " + ErrorText );
+        console.dir( xhRequest );
+    },
+
+	getSuggestions: function(word) {
+
+		word = word.trim();
+		if (word.length < 1) {
+			return false;
+		}
+		let data = {"word": word, "lang": "hi"};
+		$.ajaxSetup({
+							beforeSend: function(xhr, settings) {
+									if (!suggestions.csrfSafeMethod(settings.type) && !this.crossDomain) {
+											xhr.setRequestHeader("X-CSRFToken", suggestions.csrftoken);
+									}
+							}
+					});
+		$.ajax({
+						cache: false,
+						url : this.url,
+						type: 'POST',
+						dataType : "json",
+						contentType: "application/json;",
+						data : JSON.stringify(data),
+						context : this,
+						success : suggestions.renderSuggestions,
+						error : suggestions.handleAjaxError
+					});
 	},
 
 	triggerSuggest: function() {
-		console.debug("triggerSuggest");
+		console.debug("triggerSuggest:", this.cursorStart, this.cursorEnd);
 		this.cursorEnd = this.element.selectionStart;
-
 		const a = this.element.value;
 		// If user has manually placed the cursor at some location in the text,
 		// in that case `this.cursorStart` needs a new value,
-		// that is begining of the word under the cursor.
+		// currently, that is begining of the word under the cursor.
 		let i = this.cursorEnd - 1;
 		let regex = /[\s!@#$%^&*(),.?":{}|<>]/g
-		while(a[i].match(regex) == null) {
+		while(i) {
+			//console.debug("i=",i,"a[i]=",a[i]);
+			if(a[i].match(regex) != null) break;
 			i--;
 		}
-		this.cursorStart = i + 1;
-
+		this.cursorStart = i;
 		this.input = a.substring(this.cursorStart, this.cursorEnd);
-		console.debug("word = text[", this.cursorStart, this.cursorEnd, "] = ", this.input);
+		console.debug("word[", this.cursorStart, this.cursorEnd, "] = ", this.input);
+		//console.debug("context len", this.context.length);
+		// if (!this.context.length) { //update the context
+		// 	console.debug("updating context");
+		// 	this.context = this.input;
+		// }
+
+		this.getSuggestions(this.input);
 	},
 
 	/**
@@ -247,7 +413,7 @@ var suggestions = {
 	 * @return {boolean}
 	 */
 	keypress: function ( e ) {
-		console.debug(" >> keypress:", e.code, e.which, this.element.selectionStart, this.element.selectionEnd);
+		console.debug(" >> keypress START:", e.code, e.which, this.element.selectionStart, this.element.selectionEnd);
 
 		var altGr = false,
 			c, input, replacement;
@@ -256,21 +422,51 @@ var suggestions = {
 			return true;
 		}
 
+		// handle Enter(13) and Space(32)
 		if (e.which === 13 || e.which === 32) {
 			this.contextLength = 0;
 			this.context = '';
 			this.cursorStart = this.cursorEnd = this.element.selectionStart;
-			// Hide suggestion box TODO
+
+			if (this.visible) {
+				// Replace word with selected suggestion
+
+				// Hide suggestion box TODO
+				this.hideBox();
+				// caret should not go to the next line
+				//TODO
+			}
 		}
 
-		// handle backspace
-		// if ( e.which === 8 ) {
-		// 	// Blank the context
-		// 	this.context = '';
-		// 	return true;
-		// }
+		// handle Backspace(8) TODO
+		if ( e.which === 8 ) {
+			if (this.visible) {
+				//console.debug("backspace on context:", this.context, this.context.length);
+				// Update the context
+				if (this.context.length) {
+					this.context = this.context.slice(0, -1);
+					this.updateBoxEditStr();
+				}
+				if (this.context.length == 0) {
+					// Hide suggestion box TODO
+					this.hideBox();
+				} else {
+					this.triggerSuggest();
+				}
+			}
+			return true;
+		}
 
-		if ( e.altKey || e.altGraphKey ) {
+		// handle ArrowDown(40)
+		if (e.which === 40) {
+
+		}
+		// handle ArrowUp(38)
+		if (e.which === 38) {
+
+		}
+
+		if (e.altKey || e.altGraphKey) {
 			altGr = true;
 		}
 
@@ -284,12 +480,11 @@ var suggestions = {
 			// return true;
 		}
 
-		c = String.fromCharCode(e.which);
-
+		c = String.fromCharCode(e.which).toLowerCase();
 		// Update the context
 		this.context += c;
 
-		console.log("END ",this.context, this.input, this.cursorStart, this.cursorEnd);
+		console.log(" >> keypress END:",this.context, this.input, this.cursorStart, this.cursorEnd);
 		e.stopPropagation();
 
 		return false;
@@ -370,8 +565,8 @@ function createActionButtons() {
 function bindEvents() {
 	inputtools.registerIME();
 	inputtools.enableImButton('inputMethodButton');
-	translator.enableTranslateButton('translateButton');
-	translator.enableSaveButton('saveButton');
+	//translator.enableTranslateButton('translateButton');
+	//translator.enableSaveButton('saveButton');
 }
 
 document.addEventListener('DOMContentLoaded', function(event) {
@@ -389,7 +584,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
 			}
 
 			suggestions.init('body');
-			suggestions.createElements();
 			suggestions.listen();
 	});
 });
