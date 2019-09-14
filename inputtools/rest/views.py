@@ -29,8 +29,8 @@ class WordSuggestionView(viewsets.ViewSet):
             suggestions = engine.suggest(word)
             if 'en' == lang:
                 suggestions.insert(0,word);
-            result = WordSuggestionSerializer({"word": word, 
-                                         "suggestions": suggestions}).data
+            result = WordSuggestionSerializer({"word": serializer.data.get('word'), 
+                                         "suggestions": suggestions,"lang":lang}).data
             return Response(result, status=status.HTTP_200_OK)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
