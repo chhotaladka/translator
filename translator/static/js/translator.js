@@ -70,11 +70,16 @@ var translator = {
       else{
         iframe = $('iframe').contents();
         text = iframe.find("body").html();
-        if (text.indexOf('<br/><br/>********<br/><br/>') > 0){
-          //console.log(text.indexOf('********'));
-          text = text.slice(0, text.indexOf('<br/><br/>********<br/><br/>'));
+        translator.current_curson_pos = iframe.find("body").prop('selectionEnd');
+        console.log("Current cursor position: "+ translator.current_curson_pos);
+        if (text.indexOf('<br><br>********<br><br>') > 0){
+          console.log(text.indexOf('<br><br>********<br><br>'));
+          text = text.slice(0, text.indexOf('<br><br>********<br><br>'));
         }
-        text = text+'<br/><br/>********<br/><br/>'+response['translation'];
+        else{
+          console.log("Did not find br pattern.");
+        }
+        text = text+'<br><br>********<br><br>'+response['translation'];
         iframe.find("body").html(text);
       }
   },
@@ -96,9 +101,9 @@ var translator = {
     else{
       iframe = $('iframe').contents();
       text = iframe.find("body").html();
-      if (text.indexOf('<br/><br/>********<br/><br/>') > 0){
+      if (text.indexOf('<br><br>********<br><br>') > 0){
         //console.log(text.indexOf('********'));
-        text = text.slice(0, text.indexOf('<br/><br/>********<br/><br/>'));
+        text = text.slice(0, text.indexOf('<br><br>********<br><br>'));
       }
     }
 
