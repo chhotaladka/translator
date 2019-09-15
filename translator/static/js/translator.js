@@ -7,6 +7,7 @@ var translator = {
 
   current_curson_pos: 0,
   last_translation:'',
+  fastTranslate : false,
 
   getCookie : function(name){
         var cookieValue = null;
@@ -143,6 +144,15 @@ var translator = {
     return(false);
   },
 
+  enableFastTranslation: function(){
+      translator.fastTranslate = true;
+  },
+
+  disableFastTranslation: function(){
+    console.log("Remove donetyping property.");
+    translator.fastTranslate = false;
+  },
+
   saveTranslation: function(event){
     console.log('Saving...');
 
@@ -181,7 +191,6 @@ var translator = {
 };
 
 translator.csrftoken = translator.getCookie('csrftoken');
-
 // https://stackoverflow.com/a/14042239/1157639
 //
 // $('#element').donetyping(callback[, timeout=1000])
@@ -236,8 +245,10 @@ translator.csrftoken = translator.getCookie('csrftoken');
 if ($('form').has('iframe').length == 0){
   console.log('Bind donetyping to #body');
   $('#body').donetyping(function(event){
-  console.log('Event last fired @ ' + (new Date().toUTCString()));
-  translator._translate();
+    if(translator.fastTranslate){
+      console.log('Event last fired @ ' + (new Date().toUTCString()));
+      translator._translate();
+    }
   });
 }
 else{
@@ -246,7 +257,22 @@ else{
   body = iframe.find("body")[0];
   console.log($(body));
   $(body).donetyping(function(event){
-  console.log('Event last fired @ ' + (new Date().toUTCString()));
-  translator._translate();
+    if(translator.fastTranslate){
+      console.log('Event last fired @ ' + (new Date().toUTCString()));
+      translator._translate();
+    }
   });
 }
+
+var radioBtn = $('<input type="checkbox" id="toggleTranslation"/>');
+radioBtn.appendTo('#translatorWrapper');
+$('#toggleTranslation').click(function () {
+  if (this.checked == false) {
+    console.log('Disable');
+    translator.disableFastTranslation();
+  }
+  else{
+    console.log('Enable');
+    translator.enableFastTranslation()
+  }
+});
