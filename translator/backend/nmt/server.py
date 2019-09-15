@@ -22,7 +22,7 @@ server = None
 FLAGS = None
 
 # Number of threads FIXME get it from setting
-num_threads = 2
+num_threads = 1
 
 # queue
 q = None

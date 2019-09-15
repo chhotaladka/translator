@@ -3,7 +3,7 @@ from django.test.signals import setting_changed
 
 DEFAULTS = {
     'BACKEND': 'dummy',
-    'NUM_WORDS': 5,
+    'NUM_WORDS': 10,
     }
 
 class SuggestionSettings(object):
