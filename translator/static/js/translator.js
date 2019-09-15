@@ -1,13 +1,14 @@
 // Translator APIs
 var translator = {
-  urls: { 'translate': '/rest/translate/',
-          'save': '/rest/save/'
+  urls: { 'translate': 'http://127.0.0.1:8001/rest/translate/',
+          'save': 'http://127.0.0.1:8001/rest/save/'
       },
   save_method: 'POST',
 
   current_curson_pos: 0,
   last_translation:'',
   fastTranslate : false,
+  cookieDuration: 30, //days
 
   getCookie : function(name){
         var cookieValue = null;
@@ -23,6 +24,14 @@ var translator = {
         }
         return cookieValue;
       },
+
+  setCookie: function(name, value){
+      let date = new Date();
+      date.setTime(date.getTime()+(translator.cookieDuration*24*60*60*1000));
+      let expires = "; expires="+date.toUTCString();
+
+      document.cookie = name+"="+value+expires+"; path=/";
+    },
 
   csrfSafeMethod: function(method){
         return(/^(GET|HEAD|OPTIONS|TRACE|POST)$/.test(method));
@@ -146,11 +155,13 @@ var translator = {
 
   enableFastTranslation: function(){
       translator.fastTranslate = true;
+      translator.setCookie('fastTranslate', true);
   },
 
   disableFastTranslation: function(){
     console.log("Remove donetyping property.");
     translator.fastTranslate = false;
+    translator.setCookie('fastTranslate', false);
   },
 
   saveTranslation: function(event){
@@ -264,7 +275,14 @@ else{
   });
 }
 
-var radioBtn = $('<input type="checkbox" id="toggleTranslation"/>');
+translator.fastTranslate = eval(translator.getCookie('fastTranslate'));
+console.log(translator.fastTranslate);
+console.log(translator.fastTranslate == true? 'fastTranslate enabled': 'fastTranslate disabled');
+var radioBtn = $('<input type="checkbox" id="toggleTranslation" />');
+if (translator.fastTranslate){
+  radioBtn.prop('checked', true);
+}
+
 radioBtn.appendTo('#translatorWrapper');
 $('#toggleTranslation').click(function () {
   if (this.checked == false) {
