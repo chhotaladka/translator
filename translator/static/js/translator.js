@@ -1,7 +1,7 @@
 // Translator APIs
 var translator = {
-  urls: { 'translate': 'http://127.0.0.1:8001/rest/translate/',
-          'save': 'http://127.0.0.1:8001/rest/save/'
+  urls: { 'translate': '/rest/translate/',
+          'save': '/rest/save/'
       },
   save_method: 'POST',
 
