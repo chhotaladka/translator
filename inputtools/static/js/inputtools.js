@@ -188,7 +188,7 @@ var suggestions = {
 		// check if the element is input/textarea/editiable
 
 		// Max number of suggestions
-		this.max_suggest = 6;
+		this.max_suggest = 15;
 
 		//
 		this.context = '';
@@ -214,27 +214,32 @@ var suggestions = {
 	createBoxElements: function() {
 		let box = document.createElement("div");
 		box.className = "ita-ppe-box";
-		box.setAttribute("style", "direction: ltr; display: none; -moz-user-select: none;");
+		box.setAttribute("style", "direction: ltr; display: none; user-select: none;");
 		box.setAttribute("tabindex", "-1");
 
 		let edit = document.createElement("div");
 		edit.className = "ita-ppe-edit";
+		edit.setAttribute("style", "user-select: none;");
 		let span = document.createElement("span");
 		span.className = "ita-ppe-uds";
+		span.setAttribute("style", "user-select: none;");
 		edit.appendChild(span);
 		span = document.createElement("span");
 		span.className = "ita-ppe-cur";
+		span.setAttribute("style", "user-select: none;");
 		edit.appendChild(span);
 		box.appendChild(edit);
 
 		let div = document.createElement("div");
 		div.className = "ita-ppe-div";
+		div.setAttribute("style", "user-select: none;");
 		let list = document.createElement("div");
 		list.className = "ita-ppe-can-list";
+		list.setAttribute("style", "user-select: none;");
 		for(let x = 0; x < this.max_suggest; x++) {
 			var li = document.createElement("div");
 			li.className = "ita-ppe-can";
-			li.setAttribute("style", "-moz-user-select: none;");
+			li.setAttribute("style", "user-select: none;");
 			li.innerHTML = x + ". desolation";
 			list.appendChild(li);
 		}
@@ -271,6 +276,12 @@ var suggestions = {
 	    // This is a click outside suggestion box.
 	    this.hideBox();
 		});
+		this.element.addEventListener("blur", event => {
+			// Hide suggestion box if window goes out of focus
+			if (this.visible) {
+				this.hideBox();
+			}
+		});
 	},
 
 	resetPosition: function() {
@@ -299,28 +310,59 @@ var suggestions = {
 		this.resetPosition();
 		this.visible = false;
 		this.context = '';
+		this.cursorStart = this.cursorEnd = this.element.selectionStart;
 	},
 	updateBoxEditStr: function() {
 		let edit = this.box.getElementsByClassName('ita-ppe-uds')[0];
 		edit.innerHTML = this.context;
 	},
+	selectSuggestion: function() {
+		//replace the word at caret with the selected suggestion
+		let src = this.box_items.getElementsByClassName('ita-ppe-hlt')[0].lastChild.innerHTML;
+		src = src + ' '; //add space at the end
+		// there should always be a suggestion
+		let dst = this.element.value.substring(this.cursorStart, this.cursorEnd);
+		console.debug("src [%s] dst [%s] start %s end %s",src,dst,this.cursorStart,this.cursorEnd)
+		this.element.value = this.element.value.substring(0, this.cursorStart+1) + src + this.element.value.substring(this.cursorEnd+1);
+		// update cursor
+		this.element.selectionStart = this.element.selectionEnd = this.cursorStart + src.length + 1;
+	},
+	boxScrollDown: function() {
+		let curr = this.box_items.getElementsByClassName('ita-ppe-hlt')[0];
+		let next = curr.nextElementSibling;
+		if (next) {
+			next.classList.add("ita-ppe-hlt");
+			curr.classList.remove("ita-ppe-hlt");
+		} else {
+			//TODO move to top
+		}
+	},
+	boxScrollUp: function() {
+		let curr = this.box_items.getElementsByClassName('ita-ppe-hlt')[0];
+		let prev = curr.previousElementSibling;
+		if (prev) {
+			prev.classList.add("ita-ppe-hlt");
+			curr.classList.remove("ita-ppe-hlt");
+		} else {
+			//TODO move to top
+		}
+	},
 
 	renderSuggestions: function(response){
 			console.log(response);
 			let list = response['suggestions'];
-			if (list.length == 0) {//list should not be empty
-				list.push(response['word']);
-			}
+			// list should not be empty and first suggestion should be response['word'] itself
+			list.unshift(response['word']);
 
 			this.updateBoxEditStr();
 			let num = Math.min(list.length, this.max_suggest);
 			this.box_items.innerHTML = "";
 
-			for (let x = 0; x < num; x++) {
+			for (let x = 1; x <= num; x++) {
 				var li = document.createElement("div");
 				li.className = "ita-ppe-can";
-				li.setAttribute("style", "-moz-user-select: none;");
-				li.innerHTML = '<span>' + x + '. </span><span>' + list[x] + '</span>';
+				li.setAttribute("style", "user-select: none;");
+				li.innerHTML = '<span>' + x + '. </span><span>' + list[x-1] + '</span>';
 				this.box_items.appendChild(li);
 			}
 			this.box_items.firstChild.classList.add("ita-ppe-hlt");
@@ -424,17 +466,15 @@ var suggestions = {
 
 		// handle Enter(13) and Space(32)
 		if (e.which === 13 || e.which === 32) {
-			this.contextLength = 0;
-			this.context = '';
-			this.cursorStart = this.cursorEnd = this.element.selectionStart;
-
 			if (this.visible) {
+				console.log("Enter / Space pressed");
 				// Replace word with selected suggestion
-
+				this.selectSuggestion();
 				// Hide suggestion box TODO
 				this.hideBox();
 				// caret should not go to the next line
-				//TODO
+				e.preventDefault();
+				return;
 			}
 		}
 
@@ -459,11 +499,27 @@ var suggestions = {
 
 		// handle ArrowDown(40)
 		if (e.which === 40) {
-
+			if (this.visible) {
+				this.boxScrollDown();
+				e.preventDefault();
+			}
+			return true;
 		}
 		// handle ArrowUp(38)
 		if (e.which === 38) {
+			if (this.visible) {
+				this.boxScrollUp();
+				e.preventDefault();
+			}
+			return true;
+		}
 
+		// handle ArrowLeft(37) and ArrowRight(39)
+		if (e.which === 37 || e.which === 39) {
+			if (this.visible) {
+				e.preventDefault();
+			}
+			return true;
 		}
 
 		if (e.altKey || e.altGraphKey) {
@@ -477,7 +533,7 @@ var suggestions = {
 			// Blank the context
 			// this.context = '';
 			console.info('Not sure what to do');
-			// return true;
+			return true;
 		}
 
 		c = String.fromCharCode(e.which).toLowerCase();
