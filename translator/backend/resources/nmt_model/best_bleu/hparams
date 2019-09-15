@@ -4,7 +4,7 @@
     "avg_ckpts": false,
     "batch_size": 128,
     "beam_width": 0,
-    "best_bleu": 11.988865345877528,
+    "best_bleu": 13.248552237396094,
     "best_bleu_dir": "/home/abhishek/translator/translator/backend/resources/nmt_model/best_bleu",
     "bpe_delimiter": null,
     "check_special_token": true,

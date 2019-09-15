@@ -137,7 +137,7 @@ def decode_only(name,model, sess, subword_option,
                   sent_id,
                   tgt_eos=tgt_eos,
                   subword_option=subword_option)
-          ret_text += (translation + b"\n").decode("utf-8")
+          ret_text += (translation + b" ").decode("utf-8")
     except tf.errors.OutOfRangeError:
       utils.print_time(
               "  done, num sentences %d, num translations per input %d" %

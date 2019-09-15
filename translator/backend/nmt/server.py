@@ -16,9 +16,9 @@ from .tf_nmt.utils import misc_utils as utils
 from .tf_nmt.utils import vocab_utils
 import sys
 from importlib import import_module
+import logging
 
 server = None
-
 FLAGS = None
 
 # Number of threads FIXME get it from setting
@@ -29,6 +29,9 @@ q = None
 
 # List of workers
 workers = []
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # FATAL
+logging.getLogger('tensorflow').setLevel(logging.FATAL)
 
 def shutdown():
   """
@@ -76,32 +79,27 @@ def worker(name, queue):
     except:
         traceback.print_exc()
 
-def start_nmt_thread(ip='127.0.0.1', port=10000):
-  global FLAGS
-  global server
-  global q
-  global workers
-
+def start_server(q, ip, port):
   try:
-    q = Queue(num_threads)
-
-    FLAGS = tf_nmt.Hparam()
-    settings = import_module('demo.settings')
-    FLAGS.out_dir = settings.BASE_DIR + '/translator/backend/resources/nmt_model'
-    # FLAGS.hparams_path = '/home/abhishek/nmt-master/standard_hparams/wmt16_gnmt_8_layer.json'
-    tf.compat.v1.app.run(main=main, argv=[q])
-
+    ## run this in separate thread
+    print(f"server 1.0")
     loop = asyncio.new_event_loop()
+    print(f"server 2.0")
     asyncio.set_event_loop(loop)
+    print(f"server 3.0")
     for signame in ('SIGINT', 'SIGTERM'):
       loop.add_signal_handler(getattr(signal, signame),
                             functools.partial(handler, signame))
+    print(f"server 3.0")
     coro = loop.create_server(lambda:EchoServerClientProtocol(q), ip, port)
+    print(f"server 4.0")
     server = loop.run_until_complete(coro)
-    print('Serving on {}'. format(server.sockets[0].getsockname()))
+    print(f"server 5.0")
     try:
       #loop.run_forever()
+      print(f"server 6.0")
       loop.run_until_complete(server.wait_closed())
+      print(f"server 7.0")
       print("Moving on")
     except KeyboardInterrupt:
       pass
@@ -113,7 +111,7 @@ def start_nmt_thread(ip='127.0.0.1', port=10000):
     except:
       traceback.print_exc()
   except OSError:
-      print('Quitting thread')
+      print('Error in running server')
       for i in range(num_threads):
           q.put('stop')
       try:
@@ -124,6 +122,46 @@ def start_nmt_thread(ip='127.0.0.1', port=10000):
         pass
       traceback.print_exc()
 
+def nmt_thread(q):
+  global FLAGS
+  FLAGS = tf_nmt.Hparam()
+  settings = import_module('demo.settings')
+  FLAGS.out_dir = settings.BASE_DIR + '/translator/backend/resources/nmt_model'
+  # FLAGS.hparams_path = '/home/abhishek/nmt-master/standard_hparams/wmt16_gnmt_8_layer.json'
+  tf.compat.v1.app.run(main=main, argv=[q])
+
+
+def start_nmt_thread(ip='127.0.0.1', port=10000):
+  global FLAGS
+  global server
+  global q
+  global workers
+  # try:
+  q = Queue(num_threads)
+
+  nmt_thread_obj = Thread(target=nmt_thread, args=(q,));
+  nmt_thread_obj.start();
+  start_server(q, ip, port);
+    
+
+    # FLAGS = tf_nmt.Hparam()
+    # settings = import_module('demo.settings')
+    # FLAGS.out_dir = settings.BASE_DIR + '/translator/backend/resources/nmt_model'
+    # # FLAGS.hparams_path = '/home/abhishek/nmt-master/standard_hparams/wmt16_gnmt_8_layer.json'
+    # tf.compat.v1.app.run(main=main, argv=[q])
+
+
+  # except OSError:
+  #     print('Error in running tf app')
+  #     for i in range(num_threads):
+  #         q.put('stop')
+  #     try:
+  #       while True:
+  #           worker_thread = workers.pop()
+  #           worker_thread.join()
+  #     except IndexError:
+  #       pass
+  #     traceback.print_exc()
 
 
 def main(args):

@@ -5,6 +5,7 @@ from django.core.cache import caches
 from translator.keying import _smart_key
 
 import urllib.request
+from nltk import tokenize
 
 cache = caches['default']
 
@@ -27,12 +28,15 @@ class Engine(object):
 
   def translate(self, text=None, src_lang='en', dst_lang='hi'):
     translation = ''
-    translation = cache.get(_smart_key(text.strip()))
-    if translation is None:
-        print('Cache miss')
-        translation = self.client.translate(text, src_lang, dst_lang)
-        cache.set(_smart_key(text.strip()), translation)
-    else:
-        print('Cache hit')
-
-    return translation
+    sentences = tokenize.sent_tokenize(text)
+    ret = ""
+    for s in sentences:
+        translation = cache.get(_smart_key(s.strip()))
+        if translation is None:
+            print(f'Cache miss for {s}')
+            translation = self.client.translate(s, src_lang, dst_lang)
+            cache.set(_smart_key(s.strip()), translation)
+        else:
+            print(f'Cache hit for {s}')
+        ret += translation
+    return ret

@@ -6,6 +6,7 @@ from inputtools.models import Wordlist, BulkCreateManager
 import os
 import re
 from django.conf import settings
+import codecs
 
 
 LANGUAGE = ['hi', 'en']
@@ -76,18 +77,19 @@ def find_all_words_resource():
     final_words = []
     for filename in path_list:
         print(f"reading file {filename}");
-        text = open(filename, encoding="utf-8").read()
-        # This converts the encoded text to an internal unicode object, where
-        # all characters are properly recognized as an entity:
-        text = text
+        with codecs.open(filename, encoding="utf-8", errors='ignore') as f:
+            text = f.read()
+            # This converts the encoded text to an internal unicode object, where
+            # all characters are properly recognized as an entity:
+            text = text
 
-        word_list = pre_process(text)
-        print(word_list);
-        final_words.extend(word_list);
+            word_list = pre_process(text)
+            # print(word_list);
+            final_words.extend(word_list);
 
-    print(final_words);
-    print(f"Total words are {len(final_words)}");
-    return final_words
+    # print(final_words);
+    print(f"Total unique words are {len(set(final_words))}");
+    return set(final_words)
 
 
 class Command(BaseCommand):
