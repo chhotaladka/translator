@@ -35,7 +35,8 @@ class Engine(object):
         if translation is None:
             print(f'Cache miss for {s}')
             translation = self.client.translate(s, src_lang, dst_lang)
-            cache.set(_smart_key(s.strip()), translation)
+            if len(translation) > 0:
+                cache.set(_smart_key(s.strip()), translation)
         else:
             print(f'Cache hit for {s}')
         ret += translation
