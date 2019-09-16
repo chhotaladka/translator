@@ -4,6 +4,10 @@ Web APIs for English to Hindi translation
 ## Install PostgreSQL for suggestions
 sudo apt install postgresql postgresql-contrib libpq-dev
 
+## Install PostgreSQL for Centos 7
+yum install postgresql-devel postgresql postgresql-contrib
+
+## Install psycopg
 pip install psycopg2
 
 ## Configuring PostGREsql for Django
