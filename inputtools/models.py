@@ -38,5 +38,5 @@ class BulkCreateManager(object):
         self.instances.append(instance)
 
     def create(self):
-        print(f"Bulk create {self.model} : objs {len(self.instances)}");
+        print("Bulk create {s} : objs {l}".format(s=self.model, l=len(self.instances)));
         self.model.objects.bulk_create(self.instances,  ignore_conflicts=True)
