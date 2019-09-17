@@ -22,6 +22,8 @@ num_threads = 2
 q = None
 workers = []
 
+RELOAD_AFTER = 10
+
 def shutdown():
   global q
   global workers
@@ -102,6 +104,7 @@ class EchoServerClientProtocol(asyncio.Protocol):
 def worker(name, queue):
     chrome_options = Options()
     chrome_options.add_argument('--headless')
+    retry_count = 0
     #chrome_options.binary_location='/opt/google/chrome/google-chrome'
     try:
         driver = webdriver.Chrome(os.path.dirname(os.path.abspath(__file__))+"/../resources/chromedriver", chrome_options=chrome_options)
@@ -111,8 +114,17 @@ def worker(name, queue):
             try:
                 work = queue.get(timeout=0.1)
                 if isinstance(work, EchoServerClientProtocol):
+                    retry_count += 1
                     (work.translation, retry )= translate(driver, work.message, wait=0.9)
+                    if(retry is True):
+                        driver.get("https://translate.google.com/#view=home&op=translate&sl=en&tl=hi")
+                        (work.translation, retry )= translate(driver, work.message, wait=0.9)
                     work.send_response()
+                    if(retry_count%RELOAD_AFTER == 0):
+                        retry_count = 0
+                        driver.get("https://translate.google.com/#view=home&op=translate&sl=en&tl=hi")
+
+
                 elif isinstance(work, str):
                     if work=='stop':
                         break;
