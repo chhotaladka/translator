@@ -154,12 +154,13 @@ var translator = {
   },
 
   enableFastTranslation: function(){
+      console.log("enable fast translation.");
       translator.fastTranslate = true;
       translator.setCookie('fastTranslate', true);
   },
 
   disableFastTranslation: function(){
-    console.log("Remove donetyping property.");
+    console.log("Disable fast translation.");
     translator.fastTranslate = false;
     translator.setCookie('fastTranslate', false);
   },
@@ -275,22 +276,5 @@ else{
   });
 }
 
-translator.fastTranslate = eval(translator.getCookie('fastTranslate'));
-console.log(translator.fastTranslate);
-console.log(translator.fastTranslate == true? 'fastTranslate enabled': 'fastTranslate disabled');
-var radioBtn = $('<input type="checkbox" id="toggleTranslation" />');
-if (translator.fastTranslate){
-  radioBtn.prop('checked', true);
-}
 
-radioBtn.appendTo('#translatorWrapper');
-$('#toggleTranslation').click(function () {
-  if (this.checked == false) {
-    console.log('Disable');
-    translator.disableFastTranslation();
-  }
-  else{
-    console.log('Enable');
-    translator.enableFastTranslation()
-  }
-});
+translator.fastTranslate = eval(translator.getCookie('fastTranslate'));

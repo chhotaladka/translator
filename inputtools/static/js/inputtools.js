@@ -579,8 +579,10 @@ function createActionButtons() {
 	toggle.setAttribute("style", "display: flex;");
 	toggle.innerHTML =
 		'<span class="action-button__text" style="margin: 3px 8px 0px;">Auto-translate</span>' +
-		'<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded">' +
-			'<input type="checkbox" class="mdl-switch__input">' +
+		'<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded '+ 
+			((eval(translator.getCookie('fastTranslate'))==true)?'is-checked':'')+ '">' +
+			'<input type="checkbox" class="mdl-switch__input"' + 
+			((eval(translator.getCookie('fastTranslate'))==true)?'checked="checked"':'')+'>' +
   		'<span class="mdl-switch__label"></span>' +
 			'<div class="mdl-switch__track"></div>' +
 			'<div class="mdl-switch__thumb"><span class="mdl-switch__focus-helper"></span></div>' +
@@ -639,7 +641,7 @@ function createActionButtons() {
 function bindEvents() {
 	inputtools.registerIME();
 	inputtools.enableImButton('inputMethodButton');
-	//translator.enableTranslateButton('translateButton');
+	translator.enableTranslateButton('translateButton');
 	//translator.enableSaveButton('saveButton');
 	document.getElementById('translateSwitch').addEventListener("click", event => {
 			event.preventDefault();
