@@ -4,7 +4,7 @@ from .keys import keys
 from django.core.cache import caches
 from translator.keying import _smart_key
 
-import urllib.request
+#import urllib.request
 from nltk import tokenize
 
 cache = caches['default']
@@ -19,10 +19,10 @@ backends = {'dummy': 'dummy',
 
 class Engine(object):
   def __init__(self, engine='microsoft-api'):
-    if engine is not 'nmt':
-      if (urllib.request.urlopen("https://google.com/").getcode() != 200):
-        print('Internet not working. Fallback to offile tool')
-        engine = 'nmt'
+    #if engine is not 'nmt':
+    #  if (urllib.request.urlopen("https://google.com/").getcode() != 200):
+    #    print('Internet not working. Fallback to offile tool')
+    #    engine = 'nmt'
     self.backend = import_module('translator.backend.'+backends.get(engine, 'dummy')+'.api')
     self.client = self.backend.Client(key=keys.get(engine, None))
 
