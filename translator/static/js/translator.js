@@ -7,6 +7,8 @@ var translator = {
 
   current_curson_pos: 0,
   last_translation:'',
+  fastTranslate : false,
+  cookieDuration: 30, //days
 
   getCookie : function(name){
         var cookieValue = null;
@@ -22,6 +24,14 @@ var translator = {
         }
         return cookieValue;
       },
+
+  setCookie: function(name, value){
+      let date = new Date();
+      date.setTime(date.getTime()+(translator.cookieDuration*24*60*60*1000));
+      let expires = "; expires="+date.toUTCString();
+
+      document.cookie = name+"="+value+expires+"; path=/";
+    },
 
   csrfSafeMethod: function(method){
         return(/^(GET|HEAD|OPTIONS|TRACE|POST)$/.test(method));
@@ -143,6 +153,18 @@ var translator = {
     return(false);
   },
 
+  enableFastTranslation: function(){
+      console.log("enable fast translation.");
+      translator.fastTranslate = true;
+      translator.setCookie('fastTranslate', true);
+  },
+
+  disableFastTranslation: function(){
+    console.log("Disable fast translation.");
+    translator.fastTranslate = false;
+    translator.setCookie('fastTranslate', false);
+  },
+
   saveTranslation: function(event){
     console.log('Saving...');
 
@@ -181,7 +203,6 @@ var translator = {
 };
 
 translator.csrftoken = translator.getCookie('csrftoken');
-
 // https://stackoverflow.com/a/14042239/1157639
 //
 // $('#element').donetyping(callback[, timeout=1000])
@@ -236,8 +257,10 @@ translator.csrftoken = translator.getCookie('csrftoken');
 if ($('form').has('iframe').length == 0){
   console.log('Bind donetyping to #body');
   $('#body').donetyping(function(event){
-  console.log('Event last fired @ ' + (new Date().toUTCString()));
-  translator._translate();
+    if(translator.fastTranslate){
+      console.log('Event last fired @ ' + (new Date().toUTCString()));
+      translator._translate();
+    }
   });
 }
 else{
@@ -246,7 +269,12 @@ else{
   body = iframe.find("body")[0];
   console.log($(body));
   $(body).donetyping(function(event){
-  console.log('Event last fired @ ' + (new Date().toUTCString()));
-  translator._translate();
+    if(translator.fastTranslate){
+      console.log('Event last fired @ ' + (new Date().toUTCString()));
+      translator._translate();
+    }
   });
 }
+
+
+translator.fastTranslate = eval(translator.getCookie('fastTranslate'));

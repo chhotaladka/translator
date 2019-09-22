@@ -56,18 +56,13 @@ def translate(driver, text=None, wait=0.9):
     if text is not None and len(text.strip()) > 0:
       translation = ''
       try:
-        src = driver.find_element_by_id("source")
+        src = self.driver.find_element_by_id("tta_input")
         if src is not None:
           src.clear();
           src.send_keys(text)
           time.sleep(wait)
-          dest = driver.find_element_by_css_selector(".tlid-translation.translation")
-          children = dest.find_elements_by_css_selector("*")
-          for child in children:
-            if (child.tag_name).lower() == 'span':
-              translation += child.text
-            elif (child.tag_name).lower() == 'br':
-              translation += '\n'
+          dest = self.driver.find_element_by_id("tta_output")
+          translation = dest.get_attribute('value')
         retry=False
       except:
           traceback.print_exc()
@@ -108,7 +103,7 @@ def worker(name, queue):
     #chrome_options.binary_location='/opt/google/chrome/google-chrome'
     try:
         driver = webdriver.Chrome(os.path.dirname(os.path.abspath(__file__))+"/../resources/chromedriver", chrome_options=chrome_options)
-        driver.get("https://translate.google.com/#view=home&op=translate&sl=en&tl=hi")
+        driver.get("https://www.bing.com/translator?from=en&to=hi")
 
         while True:
             try:
@@ -117,12 +112,12 @@ def worker(name, queue):
                     retry_count += 1
                     (work.translation, retry )= translate(driver, work.message, wait=0.9)
                     if(retry is True):
-                        driver.get("https://translate.google.com/#view=home&op=translate&sl=en&tl=hi")
+                        driver.get("https://www.bing.com/translator?from=en&to=hi")
                         (work.translation, retry )= translate(driver, work.message, wait=0.9)
                     work.send_response()
                     if(retry_count%RELOAD_AFTER == 0):
                         retry_count = 0
-                        driver.get("https://translate.google.com/#view=home&op=translate&sl=en&tl=hi")
+                        driver.get("https://www.bing.com/translator?from=en&to=hi")
 
 
                 elif isinstance(work, str):

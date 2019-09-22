@@ -24,3 +24,4 @@ sqlparse==0.3.0
 urllib3==1.25.3
 tensorflow
 indic_transliteration
+nltk

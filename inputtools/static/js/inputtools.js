@@ -530,8 +530,6 @@ var suggestions = {
 		// as well as anything involving Ctrl, Meta and Alt,
 		// but do process extended keymaps
 		if ( ( e.which < 32 && e.which !== 13 && !altGr ) || e.ctrlKey || e.metaKey ) {
-			// Blank the context
-			// this.context = '';
 			console.info('Not sure what to do');
 			return true;
 		}
@@ -543,7 +541,7 @@ var suggestions = {
 		console.log(" >> keypress END:",this.context, this.input, this.cursorStart, this.cursorEnd);
 		e.stopPropagation();
 
-		return false;
+		return true;
 	},
 
 };
@@ -572,6 +570,25 @@ function createActionButtons() {
 	btn1.insertAdjacentHTML('beforeend', '<span class="action-button__text">हिन्दी</span>');
 	toolbar.appendChild(btn1);
 
+	let transGroup = document.createElement("div");
+	transGroup.setAttribute("style", "display: flex;");
+
+	var toggle = document.createElement("button");
+	toggle.setAttribute("class", "action-button bNone");
+	toggle.setAttribute("id", "translateSwitch");
+	toggle.setAttribute("style", "display: flex;");
+	toggle.innerHTML =
+		'<span class="action-button__text" style="margin: 3px 8px 0px;">Auto-translate</span>' +
+		'<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded '+ 
+			((eval(translator.getCookie('fastTranslate'))==true)?'is-checked':'')+ '">' +
+			'<input type="checkbox" class="mdl-switch__input"' + 
+			((eval(translator.getCookie('fastTranslate'))==true)?'checked="checked"':'')+'>' +
+  		'<span class="mdl-switch__label"></span>' +
+			'<div class="mdl-switch__track"></div>' +
+			'<div class="mdl-switch__thumb"><span class="mdl-switch__focus-helper"></span></div>' +
+		'</label>'
+	transGroup.appendChild(toggle);
+
 	var btn2 = document.createElement("button");
 	btn2.setAttribute("class", "action-button translate");
 	btn2.setAttribute("id", "translateButton");
@@ -583,20 +600,7 @@ function createActionButtons() {
 		'</svg>';
 	btn2.insertAdjacentHTML('beforeend', svg_translate);
 	btn2.insertAdjacentHTML('beforeend', '<span class="action-button__text">Translate</span>');
-	toolbar.appendChild(btn2);
-
-	var btn3 = document.createElement("button");
-	btn3.setAttribute("class", "action-button save");
-	btn3.setAttribute("id", "saveButton");
-	btn3.setAttribute("title", "Save Translation");
-	var svg_save =
-		'<svg name="cloud_upload" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">' +
-			'<path d="M0 0h24v24H0z" fill="none"/>' +
-			'<path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>' +
-		'</svg>';
-	btn3.insertAdjacentHTML('beforeend', svg_save);
-	btn3.insertAdjacentHTML('beforeend', '<span class="action-button__text">Save</span>');
-	toolbar.appendChild(btn3);
+	transGroup.appendChild(btn2);
 
 	var btn4 = document.createElement("a");
 	btn4.setAttribute("class", "action-button help");
@@ -611,7 +615,23 @@ function createActionButtons() {
 		'</svg>';
 	btn4.insertAdjacentHTML('beforeend', svg_help);
 	btn4.insertAdjacentHTML('beforeend', '<span class="action-button__text"></span>');
-	toolbar.appendChild(btn4);
+	transGroup.appendChild(btn4);
+
+	toolbar.appendChild(transGroup);
+
+	var btn3 = document.createElement("button");
+	btn3.setAttribute("class", "action-button save");
+	btn3.setAttribute("style", "display: none;");
+	btn3.setAttribute("id", "saveButton");
+	btn3.setAttribute("title", "Save Translation");
+	var svg_save =
+		'<svg name="cloud_upload" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">' +
+			'<path d="M0 0h24v24H0z" fill="none"/>' +
+			'<path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>' +
+		'</svg>';
+	btn3.insertAdjacentHTML('beforeend', svg_save);
+	btn3.insertAdjacentHTML('beforeend', '<span class="action-button__text">Save</span>');
+	toolbar.appendChild(btn3);
 
 	wrapper.appendChild(toolbar);
 	return true;
@@ -621,8 +641,28 @@ function createActionButtons() {
 function bindEvents() {
 	inputtools.registerIME();
 	inputtools.enableImButton('inputMethodButton');
-	//translator.enableTranslateButton('translateButton');
+	translator.enableTranslateButton('translateButton');
 	//translator.enableSaveButton('saveButton');
+	document.getElementById('translateSwitch').addEventListener("click", event => {
+			event.preventDefault();
+			event.stopPropagation();
+			const target = document.querySelector('#translateSwitch');
+			const checkbox = target.querySelector('input[type="checkbox"]');
+  		if (checkbox.checked) {
+				target.querySelector('label.mdl-switch').classList.remove('is-checked');
+				checkbox.checked = false;
+				document.getElementById('translateButton').removeAttribute("disabled");
+				//TODO disable automatic translation
+				translator.disableFastTranslation();
+			} else {
+				target.querySelector('label.mdl-switch').classList.add('is-checked');
+				checkbox.checked = true;
+				document.getElementById('translateButton').setAttribute("disabled", true);
+				//TODO enable automatic translation
+				translator.enableFastTranslation();
+			}
+
+	});
 }
 
 document.addEventListener('DOMContentLoaded', function(event) {
