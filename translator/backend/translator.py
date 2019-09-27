@@ -13,7 +13,7 @@ backends = {'dummy': 'dummy',
             'google-api': 'google-api',
             'google-selenium': 'google-selenium',
             'google-selenium-asyncio':'google-selenium-asyncio',
-            'bing-selenium-asyncio':'bing-selenium-asyncio'
+            'bing-selenium-asyncio':'bing-selenium-asyncio',
             'microsoft-api': 'microsoft-api',
             'bing-selenium': 'bing-selenium',
             'nmt': 'nmt'}
