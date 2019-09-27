@@ -7,6 +7,8 @@ from translator.keying import _smart_key
 import socket
 from nltk import tokenize
 
+import re
+
 cache = caches['default']
 
 backends = {'dummy': 'dummy',
@@ -44,16 +46,24 @@ class Engine(object):
 
   def translate(self, text=None, src_lang='en', dst_lang='hi'):
     translation = ''
-    sentences = tokenize.sent_tokenize(text)
+    paras = re.split("(.*\n?)",text);
+    print('------------------------------------------');
+    print(paras);
+    print('------------------------------------------');
     ret = ""
-    for s in sentences:
-        translation = cache.get(_smart_key(s.strip()))
-        if translation is None:
-            print(f'Cache miss for {s}')
-            translation = self.client.translate(s, src_lang, dst_lang)
-            if len(translation) > 0:
-                cache.set(_smart_key(s.strip()), translation)
-        else:
-            print(f'Cache hit for {s}')
-        ret += translation
+    for p in paras:
+      if len(p) > 0:
+        sentences = tokenize.sent_tokenize(p)
+        for s in sentences:
+            translation = cache.get(_smart_key(s.strip()))
+            if translation is None:
+                print(f'Cache miss for {s}')
+                translation = self.client.translate(s, src_lang, dst_lang)
+                if len(translation) > 0:
+                    cache.set(_smart_key(s.strip()), translation)
+            else:
+                print(f'Cache hit for {s}')
+            ret += translation
+      else:
+        ret += '\n'
     return ret
