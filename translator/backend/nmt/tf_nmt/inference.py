@@ -286,7 +286,8 @@ def quick_inference(ckpt, queue, hparams,scope=None):
         work = queue.get(timeout=0.1)
         if isinstance(work, EchoServerClientProtocol):
           infer_data = work.message.splitlines()
-          infer_data = [ x for x in infer_data if len(x)>0 ]  
+          infer_data = [ x for x in infer_data if len(x)>0 ]
+          print(infer_data);
           sess.run(
               infer_model.iterator.initializer,
               feed_dict={

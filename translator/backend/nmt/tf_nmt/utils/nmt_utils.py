@@ -97,6 +97,8 @@ def get_translation(nmt_outputs, sent_id, tgt_eos, subword_option):
   """Given batch decoding outputs, select a sentence and turn to text."""
   if tgt_eos: tgt_eos = tgt_eos.encode("utf-8")
   # Select a sentence
+  print(nmt_outputs);
+  print(sent_id)
   output = nmt_outputs[sent_id, :].tolist()
 
   # If there is an eos symbol in outputs, cut them at that point.
